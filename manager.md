@@ -22,6 +22,8 @@ Seudónimos y glosario: `agente.md §4`.
 | `cambios/<Cnnn>/` | ¿Qué cambio está en curso, con qué diseño, supuestos y delta? |
 | `openspec.py` | ¿Está el cambio listo para implementar / archivar? |
 | `entorno.md` | (nace con el primer hallazgo) Comportamiento real de LLMs, conectores y herramientas |
+| `README.md` | ¿Qué es coLLMena, explicado a alguien no técnico? |
+| `marketing/` | Prompts de diseño y textos de comunicación (identidad: `memoria.md D17`) |
 | `manager.md` (este) | ¿En qué orden, y cuándo está "listo" cada paso? |
 
 Docs de dominio previstos (se crean con la primera tarea de su tipo, no
@@ -65,6 +67,8 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
 - **S-08/S-09:** `D13` sin versiones; `D14` una sola bitácora de cambios
   .txt tipo commit para todo el proyecto; `D15` cambios a mano los cuenta la
   persona o los detecta el LLM.
+- **S-11:** `README.md` (descripción no técnica), prompt de landing en
+  `marketing/`; `D16` más LLMs (Grok, DeepSeek…), `D17` identidad visual.
 - **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q9`
   (conectar el LLM sin pasos técnicos), `Q11`, `Q12` (Office vs edición
   desde ChatGPT).

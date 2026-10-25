@@ -329,6 +329,32 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   usuario que modificó cada archivo.
 - **Impacto:** cierra `Q14`. Requisito para `COLAB` y `ACCESO`.
 
+### D16 — Visión multi-LLM ampliada: más asistentes del mercado
+- **Decisión:** coLLMena debe poder usarse con más asistentes que Claude y
+  ChatGPT; el dueño nombra Grok y DeepSeek (S-11). Los siete con más uso en
+  junio de 2026 según Similarweb: ChatGPT 53,8 %, Gemini 28,6 %, Claude
+  9,5 %, DeepSeek 3,7 %, Grok 2,1 %, Perplexity 1,2 %, Microsoft Copilot
+  1,2 % (fuente: momenticmarketing.com/blog/top-ai-chatbots).
+- **Razón:** usar la IA que cada uno prefiera es la promesa central (`D1`).
+- **Alternativas rechazadas:** limitarse a Claude y ChatGPT.
+- **Impacto:** el MVP sigue con Claude y ChatGPT (`D1`); el resto queda
+  "planificado". Cómo se conecta cada uno a Drive está pendiente (`Q15`).
+  Toda comunicación pública debe distinguir "en piloto" de "próximamente"
+  (no prometer lo que no existe).
+
+### D17 — Identidad visual de coLLMena
+- **Decisión:** estética **inspirada en Vercel** (minimalista, alto
+  contraste, cuadrícula fina), tipografía **Geist Sans + Geist Mono**,
+  paleta **negro, blanco y amarillo abeja** (acento `#FFC21A`, hover
+  `#E5A100`, negro `#0A0A0A`), motivo de **panal hexagonal** e ilustraciones
+  de **abejas robot** que transmiten tecnología/IA (dueño, S-11).
+- **Razón:** el nombre es una colmena; el robot conecta con la IA.
+- **Alternativas rechazadas:** —
+- **Impacto:** primer uso en `marketing/prompt-landing-claude-design.md`.
+  Reglas añadidas por el agente: nada de logotipos de otras marcas (solo sus
+  nombres como texto), nunca texto amarillo sobre blanco (contraste), sin
+  testimonios inventados.
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -372,6 +398,11 @@ formato portable de un proyecto (motor) y el servidor MCP.
   `C002`. Bloquea: diseño de `C002`.
 - [x] ~~**Q13**~~ → cerrada en S-09 como `D14` (una sola bitácora).
 - [x] ~~**Q14**~~ → cerrada en S-10 como `D15`.
+- [ ] **Q15** — Cómo se conectan Gemini, DeepSeek, Grok, Perplexity y
+  Copilot a la carpeta de Drive del grupo (conector nativo, MCP o nada) y
+  si sus políticas de datos son aceptables para documentos de un grupo
+  (p. ej. dónde se almacenan los datos). Revisar al detallar la Fase 2. No
+  bloquea el MVP.
 - [ ] **Q9** — Cómo conecta su LLM una persona no técnica. Tensión detectada
   en S-03 entre `D6`(b) y `D9`: en ChatGPT, un servidor MCP propio requiere
   activar funciones de desarrollador (`§2.2`), un paso técnico. Opciones a
