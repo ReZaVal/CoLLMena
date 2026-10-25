@@ -79,8 +79,8 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   el mismo archivo**, nunca crear uno nuevo; (2) en un proyecto de meses (la
   tesis va hasta marzo de 2027) las versiones intermedias se pierden: hay
   que marcar «conservar para siempre» en hitos, y el hito natural es cada
-  avance al profesor (`D4`). Si esto se puede hacer automáticamente vía API
-  es un supuesto a verificar.
+  avance al profesor (`D4`). → **(2) sin efecto desde S-08 por `D13`**: no
+  se conservan versiones; se lleva bitácora de cambios.
 - **ChatGPT con Drive:** según una nota de prensa de ~agosto de 2026, ChatGPT
   puede crear y editar archivos **nativos** de Google (Docs, Sheets, Slides)
   para usuarios de pago elegibles, con aprobación del usuario antes de
