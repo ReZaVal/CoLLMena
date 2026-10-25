@@ -1,4 +1,4 @@
-# learn.md — Bitácora de errores y aprendizaje de ZOr Harness
+# learn.md — Bitácora de errores y aprendizaje de coLLMena
 
 Registro de errores detectados (de diseño, código, plantillas, o del propio
 agente que dirige el proyecto) y de la regla que queda una vez resueltos. Es

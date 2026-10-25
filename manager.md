@@ -1,4 +1,4 @@
-# manager — Director de ZOr Harness
+# manager — Director de coLLMena
 
 No explica el cómo (eso está en los docs de dominio y en los diseños de cada
 cambio): dice en qué orden se hace el trabajo, qué documento es dueño de cada
@@ -51,19 +51,18 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
 --strict --cambio Cnnn` en verde. Recién ahí se implementa.
 
 ## Contexto activo (lo primero que se lee al arrancar; mantener corto)
-- **En qué estoy:** Fase 0. `T0.1` 🟡 — el dueño elige el nombre entre los
-  candidatos de `Q1` y crea el repo vacío; `T0.3` 🟡 — faltan datos del MBA.
-  Ningún cambio aprobado aún.
-- **Cambió en la última sesión (S-02):** arquitectura aprobada (`D6`); Drive
-  como primer almacén y parte de la oferta (`D7`); problema del producto
-  definido desde el dolor real del grupo (`D8`); entrega del MBA en marzo de
-  2027 (`D3`); glosario privado creado.
-- **S-03:** usuario final no técnico (`D9`) — regla de diseño para todo
-  cambio; abiertas `Q8` (Google Docs vs markdown) y `Q9` (conexión del LLM
-  sin pasos técnicos).
+- **En qué estoy:** Fase 0. `T0.1` 🟡 — nombre elegido (`D10`, coLLMena);
+  falta que el dueño cree el repo privado y vacío `collmena` en GitHub para
+  subir los commits. `T0.3` 🟡 — faltan datos del MBA. Ningún cambio aprobado.
+- **Cambió en las últimas sesiones (S-02 a S-04):** arquitectura aprobada
+  (`D6`); Drive como primer almacén (`D7`); problema del producto desde el
+  dolor real del grupo (`D8`); usuario final no técnico (`D9`); nombre
+  coLLMena (`D10`); entrega del MBA en marzo de 2027 (`D3`).
+- **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q8` (Google
+  Docs vs markdown), `Q9` (conectar el LLM sin pasos técnicos).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
-- **Próximos pasos:** `Q1` (nombre) → `T0.1`; datos del MBA y `Q7` →
-  `T0.3` → `T0.4`.
+- **Próximos pasos:** repo `collmena` → cerrar `T0.1`; datos del MBA y `Q7`
+  → `T0.3` → `T0.4`.
 
 ## Mapa de extractos por fase (qué leer/tocar sin abrir todo)
 Convención de anclas: `memoria.md` → `§n`, `Dn`, `Qn`; specs → `<CAP>-Rn`;

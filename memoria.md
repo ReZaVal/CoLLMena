@@ -1,4 +1,4 @@
-# memoria.md — Decisiones y contexto de ZOr Harness
+# memoria.md — Decisiones y contexto de coLLMena
 
 Fuente de verdad del **porqué**: decisiones de producto y diseño. Nunca
 re-proponer desde cero algo que ya está aquí (ni una alternativa rechazada)
@@ -187,17 +187,34 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   - Criterio de prueba: una persona no técnica del grupo usa una función sin
     ayuda de Renzo.
 
+### D10 — El producto se llama coLLMena
+- **Decisión:** nombre del producto **coLLMena** (juego entre "colmena" y
+  "LLM"). Repositorio: `collmena` (minúsculas). Hasta S-03 el nombre de
+  trabajo era "ZOr Harness".
+- **Razón:** elección del dueño (S-04) a partir del candidato "Kolmena":
+  colmena = grupo con roles distintos y un panal ordenado; "LLM" va escondido
+  en la palabra.
+- **Alternativas rechazadas:** Kolmena, Minka (muy usado; ya existe una app
+  así), Ayni (muy usado en Perú), Faena (connotación negativa fuera de Perú),
+  Quorum (ya usado por productos con IA).
+- **Consecuencias a gestionar (señaladas por el agente, no decididas):**
+  - Un usuario no técnico (`D9`) no sabe qué es "LLM": leerá "colmena". El
+    juego de palabras es un guiño, no el mensaje principal.
+  - Quien escuche el nombre escribirá "colmena" (una sola L) y llegará a
+    otras colmenas; una búsqueda de "collmena" en S-04 solo devolvió
+    resultados de "colmena". Conviene registrar también el dominio con una L
+    y que redirija.
+  - La mezcla de mayúsculas es para el logotipo; en URLs, correos y el repo
+    va en minúsculas.
+- **Impacto:** títulos de todos los documentos; repo `collmena` (`T0.1`).
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
 
 ## 5. Preguntas abiertas (pendientes de resolver con el usuario)
-- [ ] **Q1** — Nombre del producto y del repositorio ("ZOr Harness" es nombre
-  de trabajo). Criterio del dueño (S-02): nombre **vendedor** para una app de
-  trabajo en grupo con varios LLMs y conexión a Google Drive. Candidatos del
-  agente en S-02: Kolmena, Minka, Ayni, Faena (Quorum descartado: nombre ya
-  usado por productos con IA). Falta: elección del dueño + revisión de marca
-  en INDECOPI y de dominio. Bloquea: publicar el repo (`T0.1`).
+- [x] ~~**Q1**~~ → cerrada en S-04 como `D10` (coLLMena). Queda pendiente
+  la revisión de marca en INDECOPI y de dominio (`Q10`).
 - [x] ~~**Q2**~~ → cerrada en S-02 como `D6`.
 - [ ] **Q3** — ¿Qué plan de ChatGPT/Claude usan los compañeros del grupo? Si
   alguno usa plan gratuito, el piloto no puede depender de MCP. Bloquea: el
@@ -232,3 +249,7 @@ formato portable de un proyecto (motor) y el servidor MCP.
   solo donde la conexión sea simple; o una app propia que llame a los LLMs.
   Inferencia a confirmar, **no** un cambio de `D6`. Se verifica como
   supuesto en el diseño de `C002`.
+- [ ] **Q10** — Registro de marca "coLLMena" en INDECOPI (y otros países si
+  se sale de Perú) y compra de dominios (`collmena` y `colmena` con su
+  variante disponible). Decisión y trámite del dueño; el agente no es
+  abogado. No bloquea el piloto; bloquea cualquier lanzamiento público.
