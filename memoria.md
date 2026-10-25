@@ -88,6 +88,24 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   letsdatascience.com/news/chatgpt-adds-direct-editing-for-google-drive-files-503e4d8d.
   **Revalidar con documentación oficial de OpenAI.** Tensión con `D11`: ver
   `Q12`.
+- **Un .docx subido a Drive "se abre en Google Docs"** (observación del
+  dueño, S-07), pero hay **dos modos distintos** (fuente:
+  support.google.com/drive/answer/9276408):
+  - **Edición de Office** (por defecto): se ve la interfaz de Google Docs,
+    pero el archivo **sigue siendo .docx**; los cambios se guardan solos en
+    el mismo archivo en formato Office. Límites: algunas funciones de Office
+    no se muestran o se pierden (con aviso), los archivos muy grandes pueden
+    fallar al guardar, y los comentarios resueltos o borrados no se guardan
+    en el .docx.
+  - **Conversión a formato Google**: "Archivo → Guardar como Documentos de
+    Google", o el ajuste de Drive «Convertir archivos subidos al formato del
+    editor de Documentos de Google» (solo afecta a archivos subidos después
+    de activarlo). Que la conversión cree una copia aparte no está
+    confirmado por la fuente.
+  - Para el producto: las **personas** pueden editar Office en Drive sin
+    salir del navegador (`D9` y `D11` compatibles). La pregunta abierta es
+    solo si **ChatGPT** puede editar un archivo en modo Edición de Office o
+    únicamente archivos nativos (`Q12`).
 
 ## 3. Decisiones tomadas
 
@@ -297,9 +315,10 @@ formato portable de un proyecto (motor) y el servidor MCP.
   de `C001`.
 - [ ] **Q12** — Tensión entre `D11` (Office) y `D12` (editar si la persona
   elige): ChatGPT edita en Drive archivos **nativos** de Google; no está
-  confirmado que edite .docx/.xlsx/.pptx (`§2.5`). Opciones a evaluar (no
-  decididas): (a) entregables en formato nativo de Google y exportar a Office
-  al entregar; (b) mantener Office y que la edición desde ChatGPT pase por
+  confirmado que edite .docx/.xlsx/.pptx (`§2.5`); las personas sí pueden
+  editarlos en Drive con Edición de Office (S-07). Opciones a evaluar (no
+  decididas): (a) entregables en formato nativo de Google (p. ej. activando
+  la conversión automática de Drive) y exportar a Office al entregar; (b) mantener Office y que la edición desde ChatGPT pase por
   coLLMena (servidor propio); (c) mantener Office y, en ChatGPT, solo
   lectura + el LLM propone el texto. Se resuelve verificando en el diseño de
   `C002`. Bloquea: diseño de `C002`.
