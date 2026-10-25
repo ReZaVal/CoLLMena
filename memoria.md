@@ -298,6 +298,17 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   bitácora de cambios. Ya no es requisito congelar versiones en hitos
   (`§2.5`, consecuencia 2). Pendientes de diseño: `Q13` y `Q14`.
 
+### D14 — MVP: una sola bitácora de cambios para todo el proyecto
+- **Decisión:** en el MVP hay **un solo documento** de bitácora de cambios
+  (.txt) para todo el proyecto, con el documento afectado como campo de cada
+  entrada. Sin historial de versiones (reafirma `D13`). Dueño, S-09.
+- **Razón:** simplicidad para el MVP; además el LLM lee un solo archivo al
+  empezar cada sesión (ahorro de tokens, `D8`).
+- **Alternativas rechazadas:** una bitácora por documento.
+- **Impacto:** cierra `Q13`. Formato preliminar de entrada (borrador del
+  agente, se fija en el diseño de `C001`): número correlativo · fecha ·
+  integrante · LLM usado · documento · qué cambió · motivo · tarea.
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -339,9 +350,7 @@ formato portable de un proyecto (motor) y el servidor MCP.
   coLLMena (servidor propio); (c) mantener Office y, en ChatGPT, solo
   lectura + el LLM propone el texto. Se resuelve verificando en el diseño de
   `C002`. Bloquea: diseño de `C002`.
-- [ ] **Q13** — Estructura de la bitácora de cambios (`D13`): ¿un .txt por
-  documento, o uno solo para todo el proyecto con el documento como campo?
-  Bloquea: diseño de `C001`.
+- [x] ~~**Q13**~~ → cerrada en S-09 como `D14` (una sola bitácora).
 - [ ] **Q14** — ¿Cómo se registran los cambios que una **persona** hace a
   mano en Drive, sin pasar por el LLM? Esos no los ve nadie que pueda
   anotarlos. Opciones (no decididas): pedir al integrante que se lo cuente
