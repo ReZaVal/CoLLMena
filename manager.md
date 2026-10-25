@@ -63,7 +63,8 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
 - **S-06:** `D12` el LLM lee siempre y edita si la persona elige; hallazgos
   de Drive y ChatGPT en `memoria.md §2.5`.
 - **S-08/S-09:** `D13` sin versiones; `D14` una sola bitácora de cambios
-  .txt tipo commit para todo el proyecto; abierta `Q14`.
+  .txt tipo commit para todo el proyecto; `D15` cambios a mano los cuenta la
+  persona o los detecta el LLM.
 - **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q9`
   (conectar el LLM sin pasos técnicos), `Q11`, `Q12` (Office vs edición
   desde ChatGPT).

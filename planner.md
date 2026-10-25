@@ -153,6 +153,7 @@ que permite arrancar en frío la sesión que viene.
 | S-07 | 2026-10-25 | T0.3 (avance) | 🟡 | Hallazgo: Edición de Office en Drive mantiene el .docx; `Q12` acotada a si ChatGPT edita Office (`memoria.md §2.5`) | **T0.1 — repo `collmena`**; luego T0.3 |
 | S-08 | 2026-10-25 | T0.3 (avance) | 🟡 | `D13` bitácora de cambios en .txt tipo commit, sin versiones; abiertas `Q13` (una bitácora o varias) y `Q14` (cambios hechos a mano) | **T0.1 — repo `collmena`**; luego T0.3 |
 | S-09 | 2026-10-25 | T0.3 (avance) | 🟡 | `Q13` → `D14`: MVP con una sola bitácora .txt, sin versiones | **T0.1 — repo `collmena`**; luego T0.3 (`Q7`, `Q11`, `Q12`, `Q14`) |
+| S-10 | 2026-10-25 | T0.3 (avance) | 🟡 | `Q14` → `D15`: cambios a mano los cuenta la persona o los detecta el LLM (archivo, fecha, autor; el "qué" lo cuenta la persona) | **T0.1 — repo `collmena`**; luego T0.3 (`Q7`, `Q11`, `Q12`, datos del MBA) |
 
 ## 7. Cómo se mantiene vivo este plan
 - Al cerrar cada tarea: ✅ en §4 + fila en §6. 30 segundos.

@@ -309,6 +309,26 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   agente, se fija en el diseño de `C001`): número correlativo · fecha ·
   integrante · LLM usado · documento · qué cambió · motivo · tarea.
 
+### D15 — Cambios hechos a mano: se cuentan al LLM o el LLM los detecta
+- **Decisión:** los cambios que una persona hace directamente en Drive
+  entran a la bitácora (`D14`) de dos maneras: (1) la persona se los cuenta
+  al LLM, o (2) el LLM los **detecta al empezar la sesión** e informa qué
+  documentos cambiaron y quién los cambió (dueño, S-10).
+- **Razón:** la bitácora debe reflejar todo el trabajo, no solo lo que pasa
+  por el LLM.
+- **Alternativas rechazadas:** aceptar el hueco (registrar solo lo que pasa
+  por el LLM).
+- **Límite señalado por el agente:** sin historial de versiones (`D13`), el
+  LLM puede saber **qué archivo** cambió, **cuándo** y **quién** (si Drive
+  expone esos datos), pero **no qué texto** cambió. El "qué" y el "por qué"
+  los debe contar la persona. Flujo propuesto: el LLM detecta → informa
+  "el Capítulo 3 lo modificó la integrante 2 el martes" → pregunta qué se
+  hizo → registra la entrada.
+- **Supuestos a verificar en el diseño (`C001`/`C002`):** que el conector de
+  Drive de Claude y de ChatGPT expongan la fecha de modificación y el último
+  usuario que modificó cada archivo.
+- **Impacto:** cierra `Q14`. Requisito para `COLAB` y `ACCESO`.
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -351,12 +371,7 @@ formato portable de un proyecto (motor) y el servidor MCP.
   lectura + el LLM propone el texto. Se resuelve verificando en el diseño de
   `C002`. Bloquea: diseño de `C002`.
 - [x] ~~**Q13**~~ → cerrada en S-09 como `D14` (una sola bitácora).
-- [ ] **Q14** — ¿Cómo se registran los cambios que una **persona** hace a
-  mano en Drive, sin pasar por el LLM? Esos no los ve nadie que pueda
-  anotarlos. Opciones (no decididas): pedir al integrante que se lo cuente
-  al LLM al empezar su sesión; que el LLM compare la fecha de modificación
-  del archivo con la última entrada de la bitácora y pregunte; aceptar el
-  hueco. Bloquea: diseño de `C001`.
+- [x] ~~**Q14**~~ → cerrada en S-10 como `D15`.
 - [ ] **Q9** — Cómo conecta su LLM una persona no técnica. Tensión detectada
   en S-03 entre `D6`(b) y `D9`: en ChatGPT, un servidor MCP propio requiere
   activar funciones de desarrollador (`§2.2`), un paso técnico. Opciones a
