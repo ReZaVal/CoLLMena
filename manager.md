@@ -54,9 +54,11 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
 --strict --cambio Cnnn` en verde. Recién ahí se implementa.
 
 ## Contexto activo (lo primero que se lee al arrancar; mantener corto)
-- **En qué estoy:** Fase 0. `T0.1` 🟡 — nombre elegido (`D10`, coLLMena);
-  falta que el dueño cree el repo privado y vacío `collmena` en GitHub para
-  subir los commits. `T0.3` 🟡 — faltan datos del MBA. Ningún cambio aprobado.
+- **En qué estoy:** Fase 0. `T0.1` ✅ (S-13) — repo `ReZaVal/collmena`
+  publicado (privado, 14 commits). `T0.3` 🟡 — faltan datos del MBA. Ningún
+  cambio aprobado. Nota: GitHub informa que el repo "se movió" a
+  `ReZaVal/CoLLMena` (mayúsculas); `D10` dice `collmena` en minúsculas:
+  **por confirmar con el dueño** si se renombró a propósito.
 - **Cambió en las últimas sesiones (S-02 a S-04):** arquitectura aprobada
   (`D6`); Drive como primer almacén (`D7`); problema del producto desde el
   dolor real del grupo (`D8`); usuario final no técnico (`D9`); nombre
@@ -74,8 +76,7 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   (conectar el LLM sin pasos técnicos), `Q11`, `Q12` (Office vs edición
   desde ChatGPT).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
-- **Próximos pasos:** repo `collmena` → cerrar `T0.1`; datos del MBA y `Q7`
-  → `T0.3` → `T0.4`.
+- **Próximos pasos:** datos del MBA y `Q7` → `T0.3` → `T0.4`.
 
 ## Mapa de extractos por fase (qué leer/tocar sin abrir todo)
 Convención de anclas: `memoria.md` → `§n`, `Dn`, `Qn`; specs → `<CAP>-Rn`;

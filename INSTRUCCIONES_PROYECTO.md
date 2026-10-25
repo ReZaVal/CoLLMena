@@ -31,9 +31,9 @@ AL CERRAR (cuando el usuario lo pida o termine la tarea): corre el checklist de 
 ---
 
 ## Notas
-- **Fuente de verdad:** el repositorio `ReZaVal/collmena` (pendiente de crear,
-  `planner.md T0.1`). Mientras no exista, la copia vigente es la del último
-  chat o la que el usuario suba al conocimiento del proyecto.
+- **Fuente de verdad:** el repositorio `ReZaVal/collmena` (privado, publicado en
+  S-13, `planner.md T0.1`). Si un chat no puede clonarlo, la copia vigente es
+  la que el usuario suba al conocimiento del proyecto.
 - **Conocimiento del proyecto:** los archivos subidos a un proyecto de
   claude.ai son de solo lectura para el chat. Por eso la instrucción pide
   entregar los archivos modificados cuando no hay repositorio con escritura.
