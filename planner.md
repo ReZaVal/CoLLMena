@@ -155,6 +155,7 @@ que permite arrancar en frío la sesión que viene.
 | S-09 | 2026-10-25 | T0.3 (avance) | 🟡 | `Q13` → `D14`: MVP con una sola bitácora .txt, sin versiones | **T0.1 — repo `collmena`**; luego T0.3 (`Q7`, `Q11`, `Q12`, `Q14`) |
 | S-10 | 2026-10-25 | T0.3 (avance) | 🟡 | `Q14` → `D15`: cambios a mano los cuenta la persona o los detecta el LLM (archivo, fecha, autor; el "qué" lo cuenta la persona) | **T0.1 — repo `collmena`**; luego T0.3 (`Q7`, `Q11`, `Q12`, datos del MBA) |
 | S-11 | 2026-10-25 | soporte (no planificada) | ✅ | `README.md` con la descripción no técnica; prompt de landing en `marketing/`; `D16` (más LLMs), `D17` (identidad visual); abierta `Q15` | **T0.1 — repo `collmena`**; luego T0.3 |
+| S-12 | 2026-10-25 | soporte (no planificada) | ✅ | `INSTRUCCIONES_PROYECTO.md`: texto para las instrucciones del proyecto de claude.ai | **T0.1 — repo `collmena`** (sin repo, cada chat depende de que se suban los archivos); luego T0.3 |
 
 ## 7. Cómo se mantiene vivo este plan
 - Al cerrar cada tarea: ✅ en §4 + fila en §6. 30 segundos.

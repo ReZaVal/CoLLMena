@@ -23,6 +23,7 @@ Seudónimos y glosario: `agente.md §4`.
 | `openspec.py` | ¿Está el cambio listo para implementar / archivar? |
 | `entorno.md` | (nace con el primer hallazgo) Comportamiento real de LLMs, conectores y herramientas |
 | `README.md` | ¿Qué es coLLMena, explicado a alguien no técnico? |
+| `INSTRUCCIONES_PROYECTO.md` | Texto que va en las instrucciones del proyecto de claude.ai (cuelga el harness) |
 | `marketing/` | Prompts de diseño y textos de comunicación (identidad: `memoria.md D17`) |
 | `manager.md` (este) | ¿En qué orden, y cuándo está "listo" cada paso? |
 
