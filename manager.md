@@ -60,8 +60,11 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   coLLMena (`D10`); entrega del MBA en marzo de 2027 (`D3`).
 - **S-05:** formatos Office + .txt (`D11`); abierta `Q11` (separar
   entregables de documentos de control).
+- **S-06:** `D12` el LLM lee siempre y edita si la persona elige; hallazgos
+  de Drive y ChatGPT en `memoria.md §2.5`.
 - **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q9`
-  (conectar el LLM sin pasos técnicos), `Q11`.
+  (conectar el LLM sin pasos técnicos), `Q11`, `Q12` (Office vs edición
+  desde ChatGPT).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
 - **Próximos pasos:** repo `collmena` → cerrar `T0.1`; datos del MBA y `Q7`
   → `T0.3` → `T0.4`.

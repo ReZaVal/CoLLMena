@@ -67,6 +67,28 @@ convierten en requisitos.
 
 Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
 
+### 2.5 Hallazgos sobre Drive y ChatGPT (S-06, 2026-10-25)
+- **Versiones de archivos subidos (.docx/.xlsx/.pptx/.txt):** Drive las
+  guarda, pero cada versión antigua puede borrarse **a los 30 días o cuando
+  hay 100 versiones más nuevas**, salvo que se marque **«Conservar para
+  siempre»** (Manage versions → Keep forever). Una versión nueva se crea
+  subiéndola **sobre el mismo archivo** (Manage versions → Upload new
+  version); subir un archivo nuevo con el mismo nombre **no** continúa el
+  historial. Fuente: support.google.com/drive/answer/2409045.
+- **Consecuencias para el producto:** (1) toda escritura debe **reemplazar
+  el mismo archivo**, nunca crear uno nuevo; (2) en un proyecto de meses (la
+  tesis va hasta marzo de 2027) las versiones intermedias se pierden: hay
+  que marcar «conservar para siempre» en hitos, y el hito natural es cada
+  avance al profesor (`D4`). Si esto se puede hacer automáticamente vía API
+  es un supuesto a verificar.
+- **ChatGPT con Drive:** según una nota de prensa de ~agosto de 2026, ChatGPT
+  puede crear y editar archivos **nativos** de Google (Docs, Sheets, Slides)
+  para usuarios de pago elegibles, con aprobación del usuario antes de
+  actuar. No se confirma que edite .docx/.xlsx/.pptx. Fuente:
+  letsdatascience.com/news/chatgpt-adds-direct-editing-for-google-drive-files-503e4d8d.
+  **Revalidar con documentación oficial de OpenAI.** Tensión con `D11`: ver
+  `Q12`.
+
 ## 3. Decisiones tomadas
 
 ### D1 — Es un producto de ZOr Labs, multiusuario y multi-LLM
@@ -229,6 +251,18 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   Claude y ChatGPT pueden **escribir** esos formatos en Drive o solo leerlos
   (`Q9`).
 
+### D12 — El LLM siempre lee; edita solo si la persona lo elige
+- **Decisión:** el LLM debe poder **leer** todos los documentos del grupo y
+  **editarlos solo cuando la persona elige** que lo haga (dueño, S-06).
+- **Razón:** el usuario mantiene el control de su trabajo; coincide con
+  cómo ya operan los conectores comerciales (aprobación antes de editar,
+  `§2.5`).
+- **Alternativas rechazadas:** LLM de solo lectura (obliga a copiar y pegar);
+  LLM que edita sin preguntar.
+- **Impacto:** requisito de `ACCESO` y `COLAB` (confirmación antes de cada
+  edición); toda edición reemplaza el mismo archivo para no romper el
+  historial (`§2.5`).
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -261,6 +295,14 @@ formato portable de un proyecto (motor) y el servidor MCP.
 - [ ] **Q11** — ¿Se confirma la separación de `D11`: entregables en
   .docx/.pptx/.xlsx y documentos de control del LLM en .txt? Bloquea: diseño
   de `C001`.
+- [ ] **Q12** — Tensión entre `D11` (Office) y `D12` (editar si la persona
+  elige): ChatGPT edita en Drive archivos **nativos** de Google; no está
+  confirmado que edite .docx/.xlsx/.pptx (`§2.5`). Opciones a evaluar (no
+  decididas): (a) entregables en formato nativo de Google y exportar a Office
+  al entregar; (b) mantener Office y que la edición desde ChatGPT pase por
+  coLLMena (servidor propio); (c) mantener Office y, en ChatGPT, solo
+  lectura + el LLM propone el texto. Se resuelve verificando en el diseño de
+  `C002`. Bloquea: diseño de `C002`.
 - [ ] **Q9** — Cómo conecta su LLM una persona no técnica. Tensión detectada
   en S-03 entre `D6`(b) y `D9`: en ChatGPT, un servidor MCP propio requiere
   activar funciones de desarrollador (`§2.2`), un paso técnico. Opciones a

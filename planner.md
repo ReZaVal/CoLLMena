@@ -149,6 +149,7 @@ que permite arrancar en frío la sesión que viene.
 | S-03 | 2026-10-25 | T0.3 (avance) | 🟡 | `D9` usuario no técnico; abiertas `Q8` (formato de documentos) y `Q9` (conexión del LLM sin pasos técnicos) | **T0.1 — nombre + repo vacío**; luego T0.3 |
 | S-04 | 2026-10-25 | T0.1 (avance) | 🟡 | `Q1` → `D10` coLLMena; documentos renombrados; abierta `Q10` (marca y dominio) | **T0.1 — el dueño crea el repo privado vacío `collmena`; el agente sube los commits**; luego T0.3 |
 | S-05 | 2026-10-25 | T0.3 (avance) | 🟡 | `Q8` → `D11` (.docx/.pptx/.xlsx + .txt); abierta `Q11` | **T0.1 — repo `collmena`**; luego T0.3 |
+| S-06 | 2026-10-25 | T0.3 (avance) | 🟡 | `D12` (leer siempre, editar si la persona elige); hallazgos de versionado en Drive y edición en ChatGPT (`memoria.md §2.5`); abierta `Q12` | **T0.1 — repo `collmena`**; luego T0.3 (`Q7`, `Q11`, `Q12`, datos del MBA) |
 
 ## 7. Cómo se mantiene vivo este plan
 - Al cerrar cada tarea: ✅ en §4 + fila en §6. 30 segundos.
