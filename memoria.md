@@ -229,7 +229,7 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
 
 ### D10 — El producto se llama coLLMena
 - **Decisión:** nombre del producto **coLLMena** (juego entre "colmena" y
-  "LLM"). Repositorio: `collmena` (minúsculas). Hasta S-03 el nombre de
+  "LLM"). Repositorio: `collmena` (minúsculas; **ajustado por `D18`**). Hasta S-03 el nombre de
   trabajo era "ZOr Harness".
 - **Razón:** elección del dueño (S-04) a partir del candidato "Kolmena":
   colmena = grupo con roles distintos y un panal ordenado; "LLM" va escondido
@@ -245,8 +245,9 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
     resultados de "colmena". Conviene registrar también el dominio con una L
     y que redirija.
   - La mezcla de mayúsculas es para el logotipo; en URLs, correos y el repo
-    va en minúsculas.
-- **Impacto:** títulos de todos los documentos; repo `collmena` (`T0.1`).
+    va en minúsculas. (**Ajustado por `D18`**: ahora el nombre es coLLMena
+    también en el repo y los documentos.)
+- **Impacto:** títulos de todos los documentos; repo `coLLMena` (`T0.1`, ver `D18`).
 
 ### D11 — Formatos de documento: Office (.docx, .pptx, .xlsx) y .txt
 - **Decisión:** los documentos del grupo en Drive son **.docx, .pptx y
@@ -354,6 +355,27 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   Reglas añadidas por el agente: nada de logotipos de otras marcas (solo sus
   nombres como texto), nunca texto amarillo sobre blanco (contraste), sin
   testimonios inventados.
+
+### D18 — El nombre se escribe coLLMena en todos los nombres
+- **Decisión:** el producto, el repositorio y los documentos usan la grafía
+  **coLLMena** (`ReZaVal/coLLMena`), no `collmena` en minúsculas (dueño,
+  S-13: «todos los nombres deben ser coLLMena»). Ajusta la regla de `D10`
+  sobre minúsculas en el repo y las URLs.
+- **Razón:** una sola grafía en todo el proyecto.
+- **Alternativas rechazadas:** `collmena` en minúsculas para repo y URLs
+  (regla original de `D10`).
+- **Consecuencias a gestionar (señaladas por el agente, no decididas):**
+  - GitHub ya redirige el repo a `ReZaVal/CoLLMena` (con **C** mayúscula).
+    Lograr exactamente `coLLMena` (con **c** minúscula) lo hace el dueño en
+    Settings → Repository name; el agente no puede renombrar el repo.
+  - Los dominios y los correos no distinguen mayúsculas, así que ahí la forma
+    técnica seguirá en minúsculas. **Por confirmar** si eso cuenta como
+    excepción o si se busca otra solución (`Q10`).
+  - Las instrucciones del proyecto en claude.ai aún dicen `ReZaVal/collmena`;
+    GitHub no distingue mayúsculas en la ruta, así que sigue funcionando.
+- **Impacto:** `manager.md`, `planner.md` e `INSTRUCCIONES_PROYECTO.md` (se
+  reemplazó `collmena` por `coLLMena`). Se mantienen, a propósito, la
+  búsqueda histórica de "collmena" en `D10` y la compra de dominios en `Q10`.
 
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el

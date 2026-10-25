@@ -54,11 +54,10 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
 --strict --cambio Cnnn` en verde. Recién ahí se implementa.
 
 ## Contexto activo (lo primero que se lee al arrancar; mantener corto)
-- **En qué estoy:** Fase 0. `T0.1` ✅ (S-13) — repo `ReZaVal/collmena`
+- **En qué estoy:** Fase 0. `T0.1` ✅ (S-13) — repo `ReZaVal/coLLMena`
   publicado (privado, 14 commits). `T0.3` 🟡 — faltan datos del MBA. Ningún
-  cambio aprobado. Nota: GitHub informa que el repo "se movió" a
-  `ReZaVal/CoLLMena` (mayúsculas); `D10` dice `collmena` en minúsculas:
-  **por confirmar con el dueño** si se renombró a propósito.
+  cambio aprobado. `D18`: el nombre es coLLMena en todos lados; el dueño
+  debe ajustar la **c** inicial del repo en GitHub (hoy `CoLLMena`).
 - **Cambió en las últimas sesiones (S-02 a S-04):** arquitectura aprobada
   (`D6`); Drive como primer almacén (`D7`); problema del producto desde el
   dolor real del grupo (`D8`); usuario final no técnico (`D9`); nombre
@@ -72,6 +71,7 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   persona o los detecta el LLM.
 - **S-11:** `README.md` (descripción no técnica), prompt de landing en
   `marketing/`; `D16` más LLMs (Grok, DeepSeek…), `D17` identidad visual.
+- **S-13:** `D18` nombre coLLMena en todos los nombres; `T0.1` cerrada.
 - **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q9`
   (conectar el LLM sin pasos técnicos), `Q11`, `Q12` (Office vs edición
   desde ChatGPT).
