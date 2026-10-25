@@ -51,13 +51,16 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
 --strict --cambio Cnnn` en verde. Recién ahí se implementa.
 
 ## Contexto activo (lo primero que se lee al arrancar; mantener corto)
-- **En qué estoy:** harness recién instalado (2026-10-25). Siguiente tarea:
-  `T0.1` — publicar el repo (requiere `Q1`). Ningún cambio aprobado aún.
-- **Cambió en la última sesión:** se definieron `D1-D5`; se abrieron
-  `Q1-Q6`; borrador de propuesta `C001` (perfil MBA) esperando P1.
+- **En qué estoy:** Fase 0. `T0.1` 🟡 — el dueño elige el nombre entre los
+  candidatos de `Q1` y crea el repo vacío; `T0.3` 🟡 — faltan datos del MBA.
+  Ningún cambio aprobado aún.
+- **Cambió en la última sesión (S-02):** arquitectura aprobada (`D6`); Drive
+  como primer almacén y parte de la oferta (`D7`); problema del producto
+  definido desde el dolor real del grupo (`D8`); entrega del MBA en marzo de
+  2027 (`D3`); glosario privado creado.
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
-- **Próximos pasos:** cerrar Fase 0 (`T0.1-T0.4`), sobre todo `Q2`
-  (arquitectura) y `Q4` (datos del MBA y acuerdo del grupo).
+- **Próximos pasos:** `Q1` (nombre) → `T0.1`; datos del MBA y `Q7` →
+  `T0.3` → `T0.4`.
 
 ## Mapa de extractos por fase (qué leer/tocar sin abrir todo)
 Convención de anclas: `memoria.md` → `§n`, `Dn`, `Qn`; specs → `<CAP>-Rn`;
@@ -87,7 +90,7 @@ no existe donde dice esta tabla, es un error de la tabla → corregirla aquí.
 Dueño: `memoria.md`.
 - [x] Instalar el harness (2026-10-25).
 - [ ] Repo publicado en GitHub (`Q1`).
-- [ ] Arquitectura aprobada o corregida (`Q2` → `D6`).
+- [x] Arquitectura aprobada (`D6`, S-02).
 - [ ] Datos del MBA y acuerdo del grupo (`Q3-Q5`).
 Criterio de salida: `Q1`, `Q2`, `Q3` y `Q4` cerradas como `Dn`; cronograma
 recalculado con la fecha real de entrega del MBA.

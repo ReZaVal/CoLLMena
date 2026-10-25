@@ -19,7 +19,7 @@ salvo que cambie el alcance.
 |---|---|---|
 | Ritmo | 1-2 sesiones/semana (se planifica con **1,5**) | Cronograma en semanas, no en días |
 | Duración de sesión | 30-60 min | Tareas muy pequeñas: una puerta o un entregable acotado por sesión |
-| Deadline de negocio | Producto: ninguno (fechas referenciales). **Piloto: la entrega del trabajo de MBA, > 6 semanas desde 2026-10-25, fecha exacta pendiente (`Q4`)** | El piloto debe empezar con margen para que el grupo lo use en al menos un avance |
+| Deadline de negocio | Producto: ninguno (fechas referenciales). **Piloto: entrega de la tesis del MBA en marzo de 2027** (día exacto pendiente, `Q4`; actualizado en S-02) | El piloto debe empezar con margen para que el grupo lo use en al menos un avance antes de marzo |
 | Arranque del plan | 2026-10-26 | Semana 1 = 2026-10-26 → 2026-11-01 |
 
 **Unidad de estimación: la sesión.** No se estima en horas. Una tarea que no
@@ -33,9 +33,10 @@ cabe en una sesión está mal partida → hay que partirla.
 | 2 — Servidor MCP + adaptador | se detalla al cerrar la Fase 1 | — | — | — |
 | **Total planificado (Fases 0-1)** | 18 | 18 | ~12-13 | **cierre est. 2027-01-24** |
 
-⚠️ **Con el ritmo actual, el plan base llega tarde al piloto:** el kit
-estaría listo (`T1.12`) cerca de la semana 11, y la entrega del MBA es "más de
-6 semanas". Ver §5, «Dónde se puede romper el plan», y `memoria.md Q7`.
+⚠️ **Con el ritmo actual, el kit llega justo:** estaría listo (`T1.12`)
+cerca de la semana 11 (≈ enero 2027) y la entrega es en marzo de 2027. El
+grupo lo usaría solo ~6-8 semanas, y el problema de `memoria.md D8` lo sufre
+hoy. Ver §5, «Dónde se puede romper el plan», y `memoria.md Q7`.
 
 El cierre estimado es una proyección aritmética, no una promesa: se
 **recalcula al cerrar cada fase** con las sesiones realmente gastadas.
@@ -75,9 +76,9 @@ Dueño: `memoria.md`. Criterio de salida (`manager.md`): `Q1-Q4` cerradas como
 | ID | Cambio | Tarea | Dep. | Ses. | Escenarios que cierra | Leer | Tocar | Criterio de salida |
 |---|---|---|---|---|---|---|---|---|
 | ✅ T0.0 | soporte | Instalar el harness | — | 1 | — | skill base | todo el repo | `openspec.py validate --strict` en verde |
-| ⬜ T0.1 🔒 | soporte | Publicar el repo en GitHub (nombre `Q1`, privado) | T0.0 | 1 | — | `memoria.md D5`, `Q1` | remoto git, `memoria.md` | Repo privado con el commit inicial; `Q1` → `Dn` |
-| ⬜ T0.2 🔒 | soporte | Revisar y aprobar/corregir la arquitectura | T0.0 | 1 | — | `memoria.md §2`, `Q2` | `memoria.md §3` (→ `D6`) | `Q2` cerrada; `C001` ajustada si cambió algo |
-| ⬜ T0.3 🔒 | soporte | Datos del MBA, acuerdo del grupo, planes de LLM y rol del profesor | T0.0 | 1 | — | `memoria.md Q3-Q5`, `Q7` | `memoria.md`, `local_privado/glosario.md` | `Q3`, `Q4`, `Q7` cerradas (`Q5` puede quedar abierta) |
+| 🟡 T0.1 🔒 | soporte | Elegir nombre (`Q1`) y publicar el repo en GitHub (privado) | T0.0 | 1 | — | `memoria.md D5`, `D7`, `D8`, `Q1` | remoto git, `memoria.md` | Repo privado con el commit inicial; `Q1` → `Dn` |
+| ✅ T0.2 🔒 | soporte | Revisar y aprobar/corregir la arquitectura | T0.0 | 1 | — | `memoria.md §2`, `Q2` | `memoria.md §3` (→ `D6`) | `Q2` cerrada como `D6` (S-02) |
+| 🟡 T0.3 🔒 | soporte | Datos del MBA, acuerdo del grupo, planes de LLM y rol del profesor | T0.0 | 1 | — | `memoria.md Q3-Q5`, `Q7` | `memoria.md`, `local_privado/glosario.md` | `Q3`, `Q4`, `Q7` cerradas (`Q5` puede quedar abierta) |
 | ⬜ T0.4 | soporte | Recalcular el plan con la fecha real de entrega | T0.2, T0.3 | 1 | — | este archivo §1-§2 | este archivo §2, §4, §5 | Cronograma coherente con la entrega del MBA |
 
 **Riesgo de la fase:** que el grupo no acepte ser piloto (`Q4`). Entonces se
@@ -144,6 +145,7 @@ que permite arrancar en frío la sesión que viene.
 | Sesión | Fecha | Tarea | Estado | Qué quedó | Siguiente |
 |---|---|---|---|---|---|
 | S-01 | 2026-10-25 | T0.0 | ✅ | Harness instalado; `D1-D5`; `Q1-Q7` abiertas; `C001` en borrador | **T0.1 — Publicar el repo (requiere `Q1`)**; en paralelo, el usuario puede adelantar `Q4`/`Q7` con su grupo |
+| S-02 | 2026-10-25 | T0.2 (+ avance de T0.1 y T0.3) | ✅ T0.2 · 🟡 T0.1, T0.3 | `Q2` → `D6`; nuevas `D7` (Drive) y `D8` (problema: tokens, multi-LLM, versionado); `D3` con entrega en marzo 2027 y 4 integrantes; glosario creado; 4 nombres candidatos para `Q1` | **T0.1 — el dueño elige nombre y crea el repo vacío**; luego T0.3 con los datos del MBA y `Q7` |
 
 ## 7. Cómo se mantiene vivo este plan
 - Al cerrar cada tarea: ✅ en §4 + fila en §6. 30 segundos.

@@ -9,6 +9,10 @@
 > al MBA). No se aprueba antes de cerrar la Fase 0.
 
 ## Por qué
+Dolor observado en el grupo piloto (`memoria.md D8`): trabajan con LLMs en
+un solo chat que mezcla documentos y anotaciones, con alto consumo de tokens,
+sin repositorio ubicable y sin versiones de los documentos.
+
 El método del harness resuelve un problema que un grupo de MBA también tiene:
 cada integrante abre su LLM sin memoria del trabajo, se re-discuten
 decisiones ya tomadas, se repite el error que el profesor ya señaló y nadie

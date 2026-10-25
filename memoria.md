@@ -24,8 +24,8 @@ agnóstico de proveedor.
 
 **Restricciones duras.**
 - Capacidad del dueño: 1-2 sesiones/semana de 30-60 min (`planner.md §1`).
-- El piloto es un trabajo de MBA **real, con fecha de entrega** (> 6 semanas
-  desde el 2026-10-25): el producto no puede poner en riesgo esa entrega.
+- El piloto es un trabajo de MBA **real, con fecha de entrega** (marzo de
+  2027, `D3`): el producto no puede poner en riesgo esa entrega.
 - Los datos y el trabajo de los compañeros del MBA no entran al repositorio
   (`agente.md §4`).
 
@@ -89,8 +89,11 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   almacenes se soportan en la v1 está pendiente (`Q2`).
 
 ### D3 — El piloto es el trabajo grupal de MBA real del dueño
-- **Decisión:** la primera versión se valida con un trabajo grupal de MBA
-  real, con entrega a más de 6 semanas desde 2026-10-25.
+- **Decisión:** la primera versión se valida con el trabajo final (tesis) de
+  `CURSO_01` en `ESCUELA_01`, un MBA enfocado en sostenibilidad: **4
+  integrantes, entrega en marzo de 2027** (día exacto pendiente, `Q4`). El
+  tema real está en `local_privado/glosario.md` como `TEMA_01`.
+  (Actualizado en S-02; antes decía "entrega a más de 6 semanas".)
 - **Razón:** es un caso no tecnológico, con varias personas y varios LLMs:
   justo lo que el producto debe resolver.
 - **Alternativas rechazadas:** piloto con investigación académica, con
@@ -118,34 +121,79 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
 - **Impacto:** `openspec.py` y git disponibles; nombre del repo pendiente
   (`Q1`).
 
+### D6 — Arquitectura: motor + perfiles + infraestructura (aprobada en S-02)
+- **Decisión:** el producto se desarrolla bajo la arquitectura del harness:
+  (a) **motor** de método (principios, anclas, puertas, ciclo de cambio)
+  separado de los **perfiles** por tipo de proyecto y de la
+  **infraestructura** (almacén + acceso); (b) **servidor MCP remoto** como capa
+  multi-LLM, con la validación de puertas del lado del servidor; (c) almacén
+  con **puertos y adaptadores**; (d) piloto sin servidor antes del servidor.
+- **Razón:** el dueño: "es la arquitectura del harness, es lo que ya hemos
+  desarrollado". El motor ya está probado; lo nuevo son perfiles e
+  infraestructura.
+- **Alternativas rechazadas:** skill generalizado sin servidor como producto
+  final (no resuelve multiusuario de verdad); app web propia como único canal
+  (obliga a dejar el LLM de cada uno).
+- **Impacto:** fases 1-2 de `manager.md`; capacidades `MOTOR`, `PERFIL`,
+  `ACCESO`, `ALMACEN`, `VALID`, `COLAB`. Cuándo arranca el piloto frente al
+  calendario del MBA sigue en `Q7`.
+
+### D7 — Google Drive es parte de la propuesta de valor (primer adaptador)
+- **Decisión:** el producto se conecta con Google Drive para **almacenar y
+  editar** los documentos del grupo. Es el primer adaptador de `ALMACEN`.
+- **Razón:** pedido del dueño (S-02): el nombre y la oferta del producto
+  incluyen trabajo en grupo + varios LLMs + Drive.
+- **Alternativas rechazadas:** GitHub como almacén del usuario final
+  (excluye a no técnicos); almacén propio de ZOr Labs en la v1.
+- **Impacto:** `D2` sigue vigente (otros almacenes después), pero Drive va
+  primero. Cómo se implementa el **versionado** sobre Drive (historial nativo
+  de revisiones u otro mecanismo) es un supuesto a verificar en el cambio que
+  cree el adaptador.
+
+### D8 — El problema que resuelve el producto (validado en el piloto)
+- **Decisión:** el producto es un **espacio de trabajo de grupo** que:
+  (1) **optimiza el uso de tokens** del LLM, (2) permite que cada integrante
+  use **el LLM que prefiera**, y (3) da **control versionado de tareas y
+  documentos**.
+- **Razón:** hoy el grupo piloto trabaja con LLMs dentro de **un solo chat**
+  donde mezcla documentos y anotaciones: el consumo de tokens es alto (cada
+  mensaje re-carga todo el historial), no hay un repositorio ubicable y no hay
+  versiones de los documentos (dueño, S-02).
+- **Alternativas rechazadas:** —
+- **Impacto:** criterios de éxito de todos los cambios. (1) se apoya en la
+  lectura quirúrgica del harness (principio §1 del skill base: «Contexto
+  activo» + «Mapa de extractos» en vez de cargar todo); (3) en `planner.md` y
+  en el almacén versionado (`D7`).
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
 
 ## 5. Preguntas abiertas (pendientes de resolver con el usuario)
 - [ ] **Q1** — Nombre del producto y del repositorio ("ZOr Harness" es nombre
-  de trabajo). Bloquea: publicar el repo (`T0.1`).
-- [ ] **Q2** 🔒 — ¿Se aprueba la arquitectura recomendada por el agente?
-  (a) separar **motor** (principios, anclas, puertas, ciclo de cambio) de
-  **perfiles** (vocabulario por tipo de proyecto) y de **infraestructura**
-  (almacén + acceso); (b) **servidor MCP remoto** como capa multi-LLM, con
-  validación de puertas del lado del servidor; (c) almacén con **puertos y
-  adaptadores**, v1 con un solo adaptador (Google Drive); (d) **piloto sin
-  servidor** primero. Bloquea: fases 1-2 (`T0.2`).
+  de trabajo). Criterio del dueño (S-02): nombre **vendedor** para una app de
+  trabajo en grupo con varios LLMs y conexión a Google Drive. Candidatos del
+  agente en S-02: Kolmena, Minka, Ayni, Faena (Quorum descartado: nombre ya
+  usado por productos con IA). Falta: elección del dueño + revisión de marca
+  en INDECOPI y de dominio. Bloquea: publicar el repo (`T0.1`).
+- [x] ~~**Q2**~~ → cerrada en S-02 como `D6`.
 - [ ] **Q3** — ¿Qué plan de ChatGPT/Claude usan los compañeros del grupo? Si
   alguno usa plan gratuito, el piloto no puede depender de MCP. Bloquea: el
   diseño del kit del piloto.
-- [ ] **Q4** — Datos del trabajo de MBA: curso/tema, número de integrantes,
-  fechas de avances con el profesor, fecha exacta de entrega, y **si el grupo
-  acepta usar la herramienta** (es su trabajo y su nota). Bloquea: cronograma
-  de la fase 1 y el arranque del piloto.
+- [ ] **Q4** — Datos del trabajo de MBA. Ya se sabe (S-02, ver `D3`): tesis
+  de MBA en sostenibilidad, 4 integrantes, entrega en marzo de 2027, el grupo
+  ya usa LLMs. Falta: día exacto de entrega, fechas de avances con el
+  profesor, y **acuerdo explícito del grupo** para usar la herramienta (que
+  ya usen LLMs no equivale a aceptar ser piloto). El dueño enviará los datos.
+  Bloquea: cronograma fino de la fase 1 y el arranque del piloto.
 - [ ] **Q5** — Rol del profesor: ¿solo cierra puertas vía avances (fuera de la
   herramienta) o tendría acceso a ella? Bloquea: diseño de roles.
 - [ ] **Q6** — Modelo comercial y licencia (pago, freemium, código abierto).
   No bloquea la fase 1; sí la fase 3.
 - [ ] **Q7** 🔒 — Con 1,5 sesiones/semana el kit del piloto estaría listo
-  hacia la semana 11, probablemente después de la entrega del MBA. ¿Qué se
-  hace? (a) piloto temprano manual con el skill actual adaptado; (b) subir el
+  hacia la semana 11 (≈ enero 2027). Con entrega en marzo de 2027 sí llega,
+  pero el grupo solo lo usaría en el último tramo y hoy ya sufre el problema
+  de `D8`. ¿Qué se hace? (a) piloto temprano manual con el skill actual adaptado; (b) subir el
   ritmo en la Fase 1; (c) fusionar C001 y C002; (d) el MBA solo aporta
   requisitos y el piloto es otro proyecto. Detalle en `planner.md §5`.
   Recomendación del agente: (a). Bloquea: `T0.4` y el orden de la Fase 1.
