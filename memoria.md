@@ -281,6 +281,23 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   edición); toda edición reemplaza el mismo archivo para no romper el
   historial (`§2.5`).
 
+### D13 — Trazabilidad de documentos: bitácora de cambios en .txt (no versiones)
+- **Decisión:** no hace falta conservar versiones de los documentos. Lo que
+  se requiere es un **registro de cambios en .txt** de los documentos que se
+  creen, que funcione **como los commits de GitHub**: cada cambio queda
+  anotado (dueño, S-08).
+- **Razón:** al grupo le importa saber **qué cambió, quién, cuándo y por
+  qué**, no volver a una versión anterior.
+- **Alternativas rechazadas:** depender del historial de versiones de Drive
+  y marcar «conservar para siempre» en cada hito (`§2.5`).
+- **Consecuencia aceptada (señalada por el agente):** un commit de git
+  guarda el mensaje **y** el contenido; esta bitácora guarda solo el
+  mensaje. No permite recuperar el texto anterior de un documento; si alguna
+  vez hiciera falta, queda el historial de Drive de los últimos 30 días.
+- **Impacto:** precisa el punto (3) de `D8`: "control versionado" =
+  bitácora de cambios. Ya no es requisito congelar versiones en hitos
+  (`§2.5`, consecuencia 2). Pendientes de diseño: `Q13` y `Q14`.
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -322,6 +339,15 @@ formato portable de un proyecto (motor) y el servidor MCP.
   coLLMena (servidor propio); (c) mantener Office y, en ChatGPT, solo
   lectura + el LLM propone el texto. Se resuelve verificando en el diseño de
   `C002`. Bloquea: diseño de `C002`.
+- [ ] **Q13** — Estructura de la bitácora de cambios (`D13`): ¿un .txt por
+  documento, o uno solo para todo el proyecto con el documento como campo?
+  Bloquea: diseño de `C001`.
+- [ ] **Q14** — ¿Cómo se registran los cambios que una **persona** hace a
+  mano en Drive, sin pasar por el LLM? Esos no los ve nadie que pueda
+  anotarlos. Opciones (no decididas): pedir al integrante que se lo cuente
+  al LLM al empezar su sesión; que el LLM compare la fecha de modificación
+  del archivo con la última entrada de la bitácora y pregunte; aceptar el
+  hueco. Bloquea: diseño de `C001`.
 - [ ] **Q9** — Cómo conecta su LLM una persona no técnica. Tensión detectada
   en S-03 entre `D6`(b) y `D9`: en ChatGPT, un servidor MCP propio requiere
   activar funciones de desarrollador (`§2.2`), un paso técnico. Opciones a
