@@ -58,8 +58,10 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   (`D6`); Drive como primer almacén (`D7`); problema del producto desde el
   dolor real del grupo (`D8`); usuario final no técnico (`D9`); nombre
   coLLMena (`D10`); entrega del MBA en marzo de 2027 (`D3`).
-- **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q8` (Google
-  Docs vs markdown), `Q9` (conectar el LLM sin pasos técnicos).
+- **S-05:** formatos Office + .txt (`D11`); abierta `Q11` (separar
+  entregables de documentos de control).
+- **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q9`
+  (conectar el LLM sin pasos técnicos), `Q11`.
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
 - **Próximos pasos:** repo `collmena` → cerrar `T0.1`; datos del MBA y `Q7`
   → `T0.3` → `T0.4`.

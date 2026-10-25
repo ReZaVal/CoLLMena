@@ -208,6 +208,27 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
     va en minúsculas.
 - **Impacto:** títulos de todos los documentos; repo `collmena` (`T0.1`).
 
+### D11 — Formatos de documento: Office (.docx, .pptx, .xlsx) y .txt
+- **Decisión:** los documentos del grupo en Drive son **.docx, .pptx y
+  .xlsx**, y pueden ser **.txt** (dueño, S-05). No Google Docs nativos ni
+  markdown visible para el usuario.
+- **Razón:** son los formatos que el usuario no técnico (`D9`) ya conoce y
+  que se entregan en el MBA (tesis, presentación, cálculos).
+- **Alternativas rechazadas:** Google Docs nativos; markdown como formato
+  visible al usuario.
+- **Interpretación del agente a confirmar (`Q11`):** separar
+  **documentos de trabajo** (los entregables que el grupo edita: .docx,
+  .pptx, .xlsx) de **documentos de control** (decisiones, plan, aprendizajes
+  y contexto que mantiene el LLM: .txt con estructura simple). Razón: el
+  texto plano lo lee cualquier LLM sin conversión, gasta menos tokens que un
+  .docx (`D8`) y cualquiera lo abre en Drive.
+- **Impacto:** el motor debe leer/escribir .txt para el control y leer (y
+  quizá escribir) Office para el trabajo. Supuestos a verificar en el diseño
+  de `C001`/`C002`: (a) si el historial de versiones de Drive cubre archivos
+  .docx/.pptx/.xlsx/.txt subidos (requisito de versionado de `D8`); (b) si
+  Claude y ChatGPT pueden **escribir** esos formatos en Drive o solo leerlos
+  (`Q9`).
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -236,10 +257,9 @@ formato portable de un proyecto (motor) y el servidor MCP.
   ritmo en la Fase 1; (c) fusionar C001 y C002; (d) el MBA solo aporta
   requisitos y el piloto es otro proyecto. Detalle en `planner.md §5`.
   Recomendación del agente: (a). Bloquea: `T0.4` y el orden de la Fase 1.
-- [ ] **Q8** — Formato de los documentos del grupo en Drive: ¿Google Docs
-  (lo que un usuario no técnico sabe abrir y editar) o archivos markdown (lo
-  que el motor usa hoy)? Inferencia del agente a confirmar: `D9` empuja a
-  Google Docs, y entonces el motor debe leer/escribir Docs. Bloquea: diseño
+- [x] ~~**Q8**~~ → cerrada en S-05 como `D11` (Office + .txt).
+- [ ] **Q11** — ¿Se confirma la separación de `D11`: entregables en
+  .docx/.pptx/.xlsx y documentos de control del LLM en .txt? Bloquea: diseño
   de `C001`.
 - [ ] **Q9** — Cómo conecta su LLM una persona no técnica. Tensión detectada
   en S-03 entre `D6`(b) y `D9`: en ChatGPT, un servidor MCP propio requiere
