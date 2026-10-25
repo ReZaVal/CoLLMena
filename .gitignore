@@ -1,0 +1,4 @@
+# Todo lo real del piloto (trabajo de MBA, datos de terceros, glosario) vive aquí y nunca se versiona.
+local_privado/
+__pycache__/
+.DS_Store
