@@ -1,4 +1,4 @@
-# planner.md — Plan de tareas, sesiones y cronograma de coLLMena
+# planner.md — Plan de tareas, sesiones y cronograma de CoLLMena
 
 Descompone las fases de `manager.md` en **tareas atómicas ejecutables en una
 sesión**, les pone dependencias, estimación y fecha referencial, y define cómo
@@ -147,16 +147,16 @@ que permite arrancar en frío la sesión que viene.
 | S-01 | 2026-10-25 | T0.0 | ✅ | Harness instalado; `D1-D5`; `Q1-Q7` abiertas; `C001` en borrador | **T0.1 — Publicar el repo (requiere `Q1`)**; en paralelo, el usuario puede adelantar `Q4`/`Q7` con su grupo |
 | S-02 | 2026-10-25 | T0.2 (+ avance de T0.1 y T0.3) | ✅ T0.2 · 🟡 T0.1, T0.3 | `Q2` → `D6`; nuevas `D7` (Drive) y `D8` (problema: tokens, multi-LLM, versionado); `D3` con entrega en marzo 2027 y 4 integrantes; glosario creado; 4 nombres candidatos para `Q1` | **T0.1 — el dueño elige nombre y crea el repo vacío**; luego T0.3 con los datos del MBA y `Q7` |
 | S-03 | 2026-10-25 | T0.3 (avance) | 🟡 | `D9` usuario no técnico; abiertas `Q8` (formato de documentos) y `Q9` (conexión del LLM sin pasos técnicos) | **T0.1 — nombre + repo vacío**; luego T0.3 |
-| S-04 | 2026-10-25 | T0.1 (avance) | 🟡 | `Q1` → `D10` coLLMena; documentos renombrados; abierta `Q10` (marca y dominio) | **T0.1 — el dueño crea el repo privado vacío `coLLMena`; el agente sube los commits**; luego T0.3 |
-| S-05 | 2026-10-25 | T0.3 (avance) | 🟡 | `Q8` → `D11` (.docx/.pptx/.xlsx + .txt); abierta `Q11` | **T0.1 — repo `coLLMena`**; luego T0.3 |
-| S-06 | 2026-10-25 | T0.3 (avance) | 🟡 | `D12` (leer siempre, editar si la persona elige); hallazgos de versionado en Drive y edición en ChatGPT (`memoria.md §2.5`); abierta `Q12` | **T0.1 — repo `coLLMena`**; luego T0.3 (`Q7`, `Q11`, `Q12`, datos del MBA) |
-| S-07 | 2026-10-25 | T0.3 (avance) | 🟡 | Hallazgo: Edición de Office en Drive mantiene el .docx; `Q12` acotada a si ChatGPT edita Office (`memoria.md §2.5`) | **T0.1 — repo `coLLMena`**; luego T0.3 |
-| S-08 | 2026-10-25 | T0.3 (avance) | 🟡 | `D13` bitácora de cambios en .txt tipo commit, sin versiones; abiertas `Q13` (una bitácora o varias) y `Q14` (cambios hechos a mano) | **T0.1 — repo `coLLMena`**; luego T0.3 |
-| S-09 | 2026-10-25 | T0.3 (avance) | 🟡 | `Q13` → `D14`: MVP con una sola bitácora .txt, sin versiones | **T0.1 — repo `coLLMena`**; luego T0.3 (`Q7`, `Q11`, `Q12`, `Q14`) |
-| S-10 | 2026-10-25 | T0.3 (avance) | 🟡 | `Q14` → `D15`: cambios a mano los cuenta la persona o los detecta el LLM (archivo, fecha, autor; el "qué" lo cuenta la persona) | **T0.1 — repo `coLLMena`**; luego T0.3 (`Q7`, `Q11`, `Q12`, datos del MBA) |
-| S-11 | 2026-10-25 | soporte (no planificada) | ✅ | `README.md` con la descripción no técnica; prompt de landing en `marketing/`; `D16` (más LLMs), `D17` (identidad visual); abierta `Q15` | **T0.1 — repo `coLLMena`**; luego T0.3 |
-| S-12 | 2026-10-25 | soporte (no planificada) | ✅ | `INSTRUCCIONES_PROYECTO.md`: texto para las instrucciones del proyecto de claude.ai | **T0.1 — repo `coLLMena`** (sin repo, cada chat depende de que se suban los archivos); luego T0.3 |
-| S-13 | 2026-10-25 | T0.1 | ✅ | Harness recuperado del zip del chat original (14 commits) y publicado en `ReZaVal/coLLMena` (privado, `main`); historial sin datos del MBA; GitHub avisa que el repo se movió a `CoLLMena`; el dueño pide coLLMena en todos los nombres → `D18` | **T0.3** (`Q7`, `Q11`, `Q12`, `Q15`, datos del MBA); luego T0.4 |
+| S-04 | 2026-10-25 | T0.1 (avance) | 🟡 | `Q1` → `D10` CoLLMena; documentos renombrados; abierta `Q10` (marca y dominio) | **T0.1 — el dueño crea el repo privado vacío `CoLLMena`; el agente sube los commits**; luego T0.3 |
+| S-05 | 2026-10-25 | T0.3 (avance) | 🟡 | `Q8` → `D11` (.docx/.pptx/.xlsx + .txt); abierta `Q11` | **T0.1 — repo `CoLLMena`**; luego T0.3 |
+| S-06 | 2026-10-25 | T0.3 (avance) | 🟡 | `D12` (leer siempre, editar si la persona elige); hallazgos de versionado en Drive y edición en ChatGPT (`memoria.md §2.5`); abierta `Q12` | **T0.1 — repo `CoLLMena`**; luego T0.3 (`Q7`, `Q11`, `Q12`, datos del MBA) |
+| S-07 | 2026-10-25 | T0.3 (avance) | 🟡 | Hallazgo: Edición de Office en Drive mantiene el .docx; `Q12` acotada a si ChatGPT edita Office (`memoria.md §2.5`) | **T0.1 — repo `CoLLMena`**; luego T0.3 |
+| S-08 | 2026-10-25 | T0.3 (avance) | 🟡 | `D13` bitácora de cambios en .txt tipo commit, sin versiones; abiertas `Q13` (una bitácora o varias) y `Q14` (cambios hechos a mano) | **T0.1 — repo `CoLLMena`**; luego T0.3 |
+| S-09 | 2026-10-25 | T0.3 (avance) | 🟡 | `Q13` → `D14`: MVP con una sola bitácora .txt, sin versiones | **T0.1 — repo `CoLLMena`**; luego T0.3 (`Q7`, `Q11`, `Q12`, `Q14`) |
+| S-10 | 2026-10-25 | T0.3 (avance) | 🟡 | `Q14` → `D15`: cambios a mano los cuenta la persona o los detecta el LLM (archivo, fecha, autor; el "qué" lo cuenta la persona) | **T0.1 — repo `CoLLMena`**; luego T0.3 (`Q7`, `Q11`, `Q12`, datos del MBA) |
+| S-11 | 2026-10-25 | soporte (no planificada) | ✅ | `README.md` con la descripción no técnica; prompt de landing en `marketing/`; `D16` (más LLMs), `D17` (identidad visual); abierta `Q15` | **T0.1 — repo `CoLLMena`**; luego T0.3 |
+| S-12 | 2026-10-25 | soporte (no planificada) | ✅ | `INSTRUCCIONES_PROYECTO.md`: texto para las instrucciones del proyecto de claude.ai | **T0.1 — repo `CoLLMena`** (sin repo, cada chat depende de que se suban los archivos); luego T0.3 |
+| S-13 | 2026-10-25 | T0.1 | ✅ | Harness recuperado del zip del chat original (14 commits) y publicado en `ReZaVal/CoLLMena` (privado, `main`); historial sin datos del MBA; GitHub avisa que el repo se movió a `CoLLMena`; el dueño pide CoLLMena en todos los nombres → `D18` | **T0.3** (`Q7`, `Q11`, `Q12`, `Q15`, datos del MBA); luego T0.4 |
 
 ## 7. Cómo se mantiene vivo este plan
 - Al cerrar cada tarea: ✅ en §4 + fila en §6. 30 segundos.

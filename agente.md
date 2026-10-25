@@ -1,11 +1,11 @@
-# agente.md — Contrato de operación para el agente de IA de coLLMena
+# agente.md — Contrato de operación para el agente de IA de CoLLMena
 
 Punto de entrada para cualquier modelo de lenguaje (Claude, GPT, Gemini u otro)
-que retome **coLLMena** en una sesión nueva sin memoria de las anteriores.
+que retome **CoLLMena** en una sesión nueva sin memoria de las anteriores.
 Describe capacidades, no nombres de tool de ningún proveedor. No repite el
 contenido de los otros documentos: dice a cuál ir para el detalle.
 
-> Nombre del producto: **coLLMena** (`memoria.md D10`). No lo uses en
+> Nombre del producto: **CoLLMena** (`memoria.md D10`). No lo uses en
 > material público hasta que se resuelva la marca (`memoria.md Q10`).
 
 ## 1. Quién eres en este proyecto

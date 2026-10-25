@@ -1,4 +1,4 @@
-# memoria.md — Decisiones y contexto de coLLMena
+# memoria.md — Decisiones y contexto de CoLLMena
 
 Fuente de verdad del **porqué**: decisiones de producto y diseño. Nunca
 re-proponer desde cero algo que ya está aquí (ni una alternativa rechazada)
@@ -227,9 +227,9 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   - Criterio de prueba: una persona no técnica del grupo usa una función sin
     ayuda de Renzo.
 
-### D10 — El producto se llama coLLMena
-- **Decisión:** nombre del producto **coLLMena** (juego entre "colmena" y
-  "LLM"). Repositorio: `collmena` (minúsculas; **ajustado por `D18`**). Hasta S-03 el nombre de
+### D10 — El producto se llama CoLLMena
+- **Decisión:** nombre del producto **CoLLMena** (juego entre "colmena" y
+  "LLM"). Repositorio: `collmena` (minúsculas; **ajustado por `D18`**: ahora `CoLLMena`). Hasta S-03 el nombre de
   trabajo era "ZOr Harness".
 - **Razón:** elección del dueño (S-04) a partir del candidato "Kolmena":
   colmena = grupo con roles distintos y un panal ordenado; "LLM" va escondido
@@ -245,9 +245,9 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
     resultados de "colmena". Conviene registrar también el dominio con una L
     y que redirija.
   - La mezcla de mayúsculas es para el logotipo; en URLs, correos y el repo
-    va en minúsculas. (**Ajustado por `D18`**: ahora el nombre es coLLMena
+    va en minúsculas. (**Ajustado por `D18`**: ahora el nombre es CoLLMena
     también en el repo y los documentos.)
-- **Impacto:** títulos de todos los documentos; repo `coLLMena` (`T0.1`, ver `D18`).
+- **Impacto:** títulos de todos los documentos; repo `CoLLMena` (`T0.1`, ver `D18`).
 
 ### D11 — Formatos de documento: Office (.docx, .pptx, .xlsx) y .txt
 - **Decisión:** los documentos del grupo en Drive son **.docx, .pptx y
@@ -331,7 +331,7 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
 - **Impacto:** cierra `Q14`. Requisito para `COLAB` y `ACCESO`.
 
 ### D16 — Visión multi-LLM ampliada: más asistentes del mercado
-- **Decisión:** coLLMena debe poder usarse con más asistentes que Claude y
+- **Decisión:** CoLLMena debe poder usarse con más asistentes que Claude y
   ChatGPT; el dueño nombra Grok y DeepSeek (S-11). Los siete con más uso en
   junio de 2026 según Similarweb: ChatGPT 53,8 %, Gemini 28,6 %, Claude
   9,5 %, DeepSeek 3,7 %, Grok 2,1 %, Perplexity 1,2 %, Microsoft Copilot
@@ -343,7 +343,7 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   Toda comunicación pública debe distinguir "en piloto" de "próximamente"
   (no prometer lo que no existe).
 
-### D17 — Identidad visual de coLLMena
+### D17 — Identidad visual de CoLLMena
 - **Decisión:** estética **inspirada en Vercel** (minimalista, alto
   contraste, cuadrícula fina), tipografía **Geist Sans + Geist Mono**,
   paleta **negro, blanco y amarillo abeja** (acento `#FFC21A`, hover
@@ -356,25 +356,24 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   nombres como texto), nunca texto amarillo sobre blanco (contraste), sin
   testimonios inventados.
 
-### D18 — El nombre se escribe coLLMena en todos los nombres
+### D18 — El nombre se escribe CoLLMena en todos los nombres
 - **Decisión:** el producto, el repositorio y los documentos usan la grafía
-  **coLLMena** (`ReZaVal/coLLMena`), no `collmena` en minúsculas (dueño,
-  S-13: «todos los nombres deben ser coLLMena»). Ajusta la regla de `D10`
-  sobre minúsculas en el repo y las URLs.
-- **Razón:** una sola grafía en todo el proyecto.
+  **CoLLMena**, igual que el repositorio `ReZaVal/CoLLMena` (dueño, S-13).
+  Ajusta la regla de `D10` sobre minúsculas en el repo y las URLs.
+- **Razón:** una sola grafía en todo el proyecto, la misma que ya tiene el
+  repositorio en GitHub.
 - **Alternativas rechazadas:** `collmena` en minúsculas para repo y URLs
-  (regla original de `D10`).
+  (regla original de `D10`); `coLLMena` con **c** minúscula (propuesta
+  intermedia de S-13, corregida por el dueño en el mismo turno).
 - **Consecuencias a gestionar (señaladas por el agente, no decididas):**
-  - GitHub ya redirige el repo a `ReZaVal/CoLLMena` (con **C** mayúscula).
-    Lograr exactamente `coLLMena` (con **c** minúscula) lo hace el dueño en
-    Settings → Repository name; el agente no puede renombrar el repo.
   - Los dominios y los correos no distinguen mayúsculas, así que ahí la forma
     técnica seguirá en minúsculas. **Por confirmar** si eso cuenta como
     excepción o si se busca otra solución (`Q10`).
   - Las instrucciones del proyecto en claude.ai aún dicen `ReZaVal/collmena`;
     GitHub no distingue mayúsculas en la ruta, así que sigue funcionando.
-- **Impacto:** `manager.md`, `planner.md` e `INSTRUCCIONES_PROYECTO.md` (se
-  reemplazó `collmena` por `coLLMena`). Se mantienen, a propósito, la
+    Conviene pegar la versión vigente de `INSTRUCCIONES_PROYECTO.md`.
+- **Impacto:** todos los documentos, `README.md` y `marketing/` (se reemplazó
+  `coLLMena`/`collmena` por `CoLLMena`). Se mantienen, a propósito, la
   búsqueda histórica de "collmena" en `D10` y la compra de dominios en `Q10`.
 
 ## 4. Contrato de datos / estructura
@@ -382,7 +381,7 @@ Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
 
 ## 5. Preguntas abiertas (pendientes de resolver con el usuario)
-- [x] ~~**Q1**~~ → cerrada en S-04 como `D10` (coLLMena). Queda pendiente
+- [x] ~~**Q1**~~ → cerrada en S-04 como `D10` (CoLLMena). Queda pendiente
   la revisión de marca en INDECOPI y de dominio (`Q10`).
 - [x] ~~**Q2**~~ → cerrada en S-02 como `D6`.
 - [ ] **Q3** — ¿Qué plan de ChatGPT/Claude usan los compañeros del grupo? Si
@@ -415,7 +414,7 @@ formato portable de un proyecto (motor) y el servidor MCP.
   editarlos en Drive con Edición de Office (S-07). Opciones a evaluar (no
   decididas): (a) entregables en formato nativo de Google (p. ej. activando
   la conversión automática de Drive) y exportar a Office al entregar; (b) mantener Office y que la edición desde ChatGPT pase por
-  coLLMena (servidor propio); (c) mantener Office y, en ChatGPT, solo
+  CoLLMena (servidor propio); (c) mantener Office y, en ChatGPT, solo
   lectura + el LLM propone el texto. Se resuelve verificando en el diseño de
   `C002`. Bloquea: diseño de `C002`.
 - [x] ~~**Q13**~~ → cerrada en S-09 como `D14` (una sola bitácora).
@@ -433,7 +432,7 @@ formato portable de un proyecto (motor) y el servidor MCP.
   solo donde la conexión sea simple; o una app propia que llame a los LLMs.
   Inferencia a confirmar, **no** un cambio de `D6`. Se verifica como
   supuesto en el diseño de `C002`.
-- [ ] **Q10** — Registro de marca "coLLMena" en INDECOPI (y otros países si
+- [ ] **Q10** — Registro de marca "CoLLMena" en INDECOPI (y otros países si
   se sale de Perú) y compra de dominios (`collmena` y `colmena` con su
   variante disponible). Decisión y trámite del dueño; el agente no es
   abogado. No bloquea el piloto; bloquea cualquier lanzamiento público.

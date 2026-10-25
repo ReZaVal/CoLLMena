@@ -1,4 +1,4 @@
-# coLLMena
+# CoLLMena
 
 **El espacio de trabajo ordenado para tu grupo y su inteligencia artificial.**
 
@@ -18,7 +18,7 @@ mezclado. Con el tiempo pasa esto:
 - Nadie encuentra nada: ¿dónde quedó la última versión del capítulo 2?
 - Cada uno trabaja por su lado y no se sabe quién cambió qué.
 
-## ¿Qué es coLLMena?
+## ¿Qué es CoLLMena?
 
 Piensa en una **colmena**: muchas abejas, cada una haciendo lo suyo, pero
 todas trabajan en el mismo panal, donde cada cosa tiene su lugar.
@@ -38,7 +38,7 @@ todas trabajan en el mismo panal, donde cada cosa tiene su lugar.
 - **Tú mandas.** La IA puede leer todo, pero solo modifica un documento si tú
   se lo pides.
 
-**En una frase:** coLLMena hace que tu grupo trabaje con inteligencia
+**En una frase:** CoLLMena hace que tu grupo trabaje con inteligencia
 artificial como un equipo ordenado, y no como un chat desordenado, sin que
 nadie tenga que saber de tecnología.
 
@@ -51,7 +51,7 @@ nadie tenga que saber de tecnología.
 
 ---
 
-## Para quien desarrolla coLLMena
+## Para quien desarrolla CoLLMena
 
 Este repositorio se dirige con un *harness* de documentación + Spec-Driven
 Development, para que cualquier agente de IA retome el trabajo sin memoria de

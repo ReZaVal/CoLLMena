@@ -1,4 +1,4 @@
-# learn.md — Bitácora de errores y aprendizaje de coLLMena
+# learn.md — Bitácora de errores y aprendizaje de CoLLMena
 
 Registro de errores detectados (de diseño, código, plantillas, o del propio
 agente que dirige el proyecto) y de la regla que queda una vez resueltos. Es

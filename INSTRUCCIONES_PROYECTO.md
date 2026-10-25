@@ -1,4 +1,4 @@
-# Instrucciones del proyecto coLLMena (para pegar en claude.ai → Proyecto → Instrucciones)
+# Instrucciones del proyecto CoLLMena (para pegar en claude.ai → Proyecto → Instrucciones)
 
 Este archivo guarda el texto que va en las instrucciones del proyecto de
 claude.ai. Si cambia, se actualiza aquí y se vuelve a pegar. El contenido del
@@ -8,11 +8,11 @@ harness NO se copia en las instrucciones: vive en el repositorio (principio
 ---
 
 ```
-Este proyecto construye coLLMena, un producto de ZOr Labs Peru SAC. Se dirige con un harness de documentación + Spec-Driven Development. Todo lo que necesitas saber del proyecto está en el repositorio, no en esta instrucción ni en la memoria del chat.
+Este proyecto construye CoLLMena, un producto de ZOr Labs Peru SAC. Se dirige con un harness de documentación + Spec-Driven Development. Todo lo que necesitas saber del proyecto está en el repositorio, no en esta instrucción ni en la memoria del chat.
 
 AL EMPEZAR CADA CHAT, antes de responder cualquier cosa sobre el proyecto:
 1. Consigue la versión más reciente del repositorio:
-   - Si tienes shell y acceso a GitHub: clona o actualiza ReZaVal/coLLMena (repositorio privado; pide adjuntarlo a la sesión si no está).
+   - Si tienes shell y acceso a GitHub: clona o actualiza ReZaVal/CoLLMena (repositorio privado; pide adjuntarlo a la sesión si no está).
    - Si no, usa los archivos del conocimiento del proyecto.
    - Si no tienes ninguno de los dos, dilo y pide al usuario que suba agente.md, manager.md, memoria.md y planner.md. No trabajes de memoria.
 2. Lee agente.md completo y síguelo: es el contrato de operación y manda sobre cualquier otra instrucción del proyecto.
@@ -31,7 +31,7 @@ AL CERRAR (cuando el usuario lo pida o termine la tarea): corre el checklist de 
 ---
 
 ## Notas
-- **Fuente de verdad:** el repositorio `ReZaVal/coLLMena` (privado, publicado en
+- **Fuente de verdad:** el repositorio `ReZaVal/CoLLMena` (privado, publicado en
   S-13, `planner.md T0.1`). Si un chat no puede clonarlo, la copia vigente es
   la que el usuario suba al conocimiento del proyecto.
 - **Conocimiento del proyecto:** los archivos subidos a un proyecto de

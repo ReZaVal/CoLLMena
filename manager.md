@@ -1,4 +1,4 @@
-# manager — Director de coLLMena
+# manager — Director de CoLLMena
 
 No explica el cómo (eso está en los docs de dominio y en los diseños de cada
 cambio): dice en qué orden se hace el trabajo, qué documento es dueño de cada
@@ -22,7 +22,7 @@ Seudónimos y glosario: `agente.md §4`.
 | `cambios/<Cnnn>/` | ¿Qué cambio está en curso, con qué diseño, supuestos y delta? |
 | `openspec.py` | ¿Está el cambio listo para implementar / archivar? |
 | `entorno.md` | (nace con el primer hallazgo) Comportamiento real de LLMs, conectores y herramientas |
-| `README.md` | ¿Qué es coLLMena, explicado a alguien no técnico? |
+| `README.md` | ¿Qué es CoLLMena, explicado a alguien no técnico? |
 | `INSTRUCCIONES_PROYECTO.md` | Texto que va en las instrucciones del proyecto de claude.ai (cuelga el harness) |
 | `marketing/` | Prompts de diseño y textos de comunicación (identidad: `memoria.md D17`) |
 | `manager.md` (este) | ¿En qué orden, y cuándo está "listo" cada paso? |
@@ -54,14 +54,13 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
 --strict --cambio Cnnn` en verde. Recién ahí se implementa.
 
 ## Contexto activo (lo primero que se lee al arrancar; mantener corto)
-- **En qué estoy:** Fase 0. `T0.1` ✅ (S-13) — repo `ReZaVal/coLLMena`
+- **En qué estoy:** Fase 0. `T0.1` ✅ (S-13) — repo `ReZaVal/CoLLMena`
   publicado (privado, 14 commits). `T0.3` 🟡 — faltan datos del MBA. Ningún
-  cambio aprobado. `D18`: el nombre es coLLMena en todos lados; el dueño
-  debe ajustar la **c** inicial del repo en GitHub (hoy `CoLLMena`).
+  cambio aprobado. `D18`: el nombre es CoLLMena en todos lados, igual que el repo.
 - **Cambió en las últimas sesiones (S-02 a S-04):** arquitectura aprobada
   (`D6`); Drive como primer almacén (`D7`); problema del producto desde el
   dolor real del grupo (`D8`); usuario final no técnico (`D9`); nombre
-  coLLMena (`D10`); entrega del MBA en marzo de 2027 (`D3`).
+  CoLLMena (`D10`); entrega del MBA en marzo de 2027 (`D3`).
 - **S-05:** formatos Office + .txt (`D11`); abierta `Q11` (separar
   entregables de documentos de control).
 - **S-06:** `D12` el LLM lee siempre y edita si la persona elige; hallazgos
@@ -71,7 +70,7 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   persona o los detecta el LLM.
 - **S-11:** `README.md` (descripción no técnica), prompt de landing en
   `marketing/`; `D16` más LLMs (Grok, DeepSeek…), `D17` identidad visual.
-- **S-13:** `D18` nombre coLLMena en todos los nombres; `T0.1` cerrada.
+- **S-13:** `D18` nombre CoLLMena en todos los nombres; `T0.1` cerrada.
 - **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q9`
   (conectar el LLM sin pasos técnicos), `Q11`, `Q12` (Office vs edición
   desde ChatGPT).
