@@ -58,6 +58,9 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   como primer almacén y parte de la oferta (`D7`); problema del producto
   definido desde el dolor real del grupo (`D8`); entrega del MBA en marzo de
   2027 (`D3`); glosario privado creado.
+- **S-03:** usuario final no técnico (`D9`) — regla de diseño para todo
+  cambio; abiertas `Q8` (Google Docs vs markdown) y `Q9` (conexión del LLM
+  sin pasos técnicos).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
 - **Próximos pasos:** `Q1` (nombre) → `T0.1`; datos del MBA y `Q7` →
   `T0.3` → `T0.4`.

@@ -51,8 +51,8 @@ usarán lo que salga de aquí en un trabajo con nota. Cualquier cosa que se
 comparta con ellos requiere confirmación (`agente.md §4`).
 
 ## Criterio de éxito
-Todos los escenarios del delta en verde **y** un integrante que no participó
-en el diseño puede, con solo los documentos generados, decir qué entregable
+Todos los escenarios del delta en verde **y** un integrante **no técnico**
+(`memoria.md D9`) que no participó en el diseño puede, sin ayuda, con solo los documentos generados, decir qué entregable
 está en curso, qué decidió el grupo y qué falta para el próximo avance.
 
 ## Aprobación (P1)

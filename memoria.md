@@ -165,6 +165,28 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   activo» + «Mapa de extractos» en vez de cargar todo); (3) en `planner.md` y
   en el almacén versionado (`D7`).
 
+### D9 — El usuario final NO es técnico
+- **Decisión:** el producto debe poder usarlo gente sin conocimientos de
+  programación ni de tecnología. Su valor es **facilitar el uso de LLMs en un
+  espacio compartido** a quien no sabe nada de estas herramientas (dueño,
+  S-03).
+- **Razón:** el grupo piloto y el mercado objetivo (estudiantes de MBA,
+  equipos de investigación) no son técnicos.
+- **Alternativas rechazadas:** producto para desarrolladores o usuarios
+  avanzados de IA.
+- **Impacto:** regla de diseño para **todos** los cambios:
+  - El usuario nunca instala nada, nunca escribe comandos, nunca ve git,
+    Python, markdown crudo ni IDs como `D3`, `T1.4` o `C001`. Esa maquinaria
+    existe para el LLM, no para la persona.
+  - Habla en lenguaje llano: "revisión del profesor", "decisiones del grupo",
+    "lo que falta para el próximo avance"; nada de "puerta P4" o "delta".
+  - El versionado es automático (no depende de que alguien "haga commit").
+  - Conectar el LLM y Drive debe tomar minutos y sin pasos técnicos; si un
+    paso requiere configuración técnica, es un **riesgo de producto**, no un
+    detalle (ver `Q9`).
+  - Criterio de prueba: una persona no técnica del grupo usa una función sin
+    ayuda de Renzo.
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -197,3 +219,16 @@ formato portable de un proyecto (motor) y el servidor MCP.
   ritmo en la Fase 1; (c) fusionar C001 y C002; (d) el MBA solo aporta
   requisitos y el piloto es otro proyecto. Detalle en `planner.md §5`.
   Recomendación del agente: (a). Bloquea: `T0.4` y el orden de la Fase 1.
+- [ ] **Q8** — Formato de los documentos del grupo en Drive: ¿Google Docs
+  (lo que un usuario no técnico sabe abrir y editar) o archivos markdown (lo
+  que el motor usa hoy)? Inferencia del agente a confirmar: `D9` empuja a
+  Google Docs, y entonces el motor debe leer/escribir Docs. Bloquea: diseño
+  de `C001`.
+- [ ] **Q9** — Cómo conecta su LLM una persona no técnica. Tensión detectada
+  en S-03 entre `D6`(b) y `D9`: en ChatGPT, un servidor MCP propio requiere
+  activar funciones de desarrollador (`§2.2`), un paso técnico. Opciones a
+  evaluar (no decididas): usar los **conectores nativos de Drive** que ya
+  traen Claude y ChatGPT + instrucciones del proyecto para el piloto; MCP
+  solo donde la conexión sea simple; o una app propia que llame a los LLMs.
+  Inferencia a confirmar, **no** un cambio de `D6`. Se verifica como
+  supuesto en el diseño de `C002`.

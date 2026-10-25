@@ -146,6 +146,7 @@ que permite arrancar en frío la sesión que viene.
 |---|---|---|---|---|---|
 | S-01 | 2026-10-25 | T0.0 | ✅ | Harness instalado; `D1-D5`; `Q1-Q7` abiertas; `C001` en borrador | **T0.1 — Publicar el repo (requiere `Q1`)**; en paralelo, el usuario puede adelantar `Q4`/`Q7` con su grupo |
 | S-02 | 2026-10-25 | T0.2 (+ avance de T0.1 y T0.3) | ✅ T0.2 · 🟡 T0.1, T0.3 | `Q2` → `D6`; nuevas `D7` (Drive) y `D8` (problema: tokens, multi-LLM, versionado); `D3` con entrega en marzo 2027 y 4 integrantes; glosario creado; 4 nombres candidatos para `Q1` | **T0.1 — el dueño elige nombre y crea el repo vacío**; luego T0.3 con los datos del MBA y `Q7` |
+| S-03 | 2026-10-25 | T0.3 (avance) | 🟡 | `D9` usuario no técnico; abiertas `Q8` (formato de documentos) y `Q9` (conexión del LLM sin pasos técnicos) | **T0.1 — nombre + repo vacío**; luego T0.3 |
 
 ## 7. Cómo se mantiene vivo este plan
 - Al cerrar cada tarea: ✅ en §4 + fila en §6. 30 segundos.
