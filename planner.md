@@ -78,7 +78,7 @@ Dueño: `memoria.md`. Criterio de salida (`manager.md`): `Q1-Q4` cerradas como
 | ✅ T0.0 | soporte | Instalar el harness | — | 1 | — | skill base | todo el repo | `openspec.py validate --strict` en verde |
 | ✅ T0.1 🔒 | soporte | Elegir nombre (`Q1`) y publicar el repo en GitHub (privado) | T0.0 | 1 | — | `memoria.md D5`, `D7`, `D8`, `Q1` | remoto git, `memoria.md` | Repo privado con el commit inicial; `Q1` → `Dn` |
 | ✅ T0.2 🔒 | soporte | Revisar y aprobar/corregir la arquitectura | T0.0 | 1 | — | `memoria.md §2`, `Q2` | `memoria.md §3` (→ `D6`) | `Q2` cerrada como `D6` (S-02) |
-| 🟡 T0.3 🔒 | soporte | Datos del MBA, acuerdo del grupo, planes de LLM y rol del profesor | T0.0 | 1 | — | `memoria.md Q3-Q5`, `Q7` | `memoria.md`, `local_privado/glosario.md` | `Q3`, `Q4`, `Q7` cerradas (`Q5` puede quedar abierta) |
+| 🟡 T0.3 🔒 | soporte | Datos del MBA, acuerdo del grupo, planes de LLM y rol del profesor | T0.0 | 1 | — | `memoria.md Q3-Q5`, `Q7` | `memoria.md`, `local_privado/glosario.md` | `Q3` ✅ (S-14, `D20`) y `Q5` ✅ (`D23`); faltan `Q4` y `Q7` |
 | ⬜ T0.4 | soporte | Recalcular el plan con la fecha real de entrega | T0.2, T0.3 | 1 | — | este archivo §1-§2 | este archivo §2, §4, §5 | Cronograma coherente con la entrega del MBA |
 
 **Riesgo de la fase:** que el grupo no acepte ser piloto (`Q4`). Entonces se
@@ -157,6 +157,7 @@ que permite arrancar en frío la sesión que viene.
 | S-11 | 2026-10-25 | soporte (no planificada) | ✅ | `README.md` con la descripción no técnica; prompt de landing en `marketing/`; `D16` (más LLMs), `D17` (identidad visual); abierta `Q15` | **T0.1 — repo `CoLLMena`**; luego T0.3 |
 | S-12 | 2026-10-25 | soporte (no planificada) | ✅ | `INSTRUCCIONES_PROYECTO.md`: texto para las instrucciones del proyecto de claude.ai | **T0.1 — repo `CoLLMena`** (sin repo, cada chat depende de que se suban los archivos); luego T0.3 |
 | S-13 | 2026-10-25 | T0.1 | ✅ | Harness recuperado del zip del chat original (14 commits) y publicado en `ReZaVal/CoLLMena` (privado, `main`); historial sin datos del MBA; GitHub avisa que el repo se movió a `CoLLMena`; el dueño pide CoLLMena en todos los nombres → `D18` | **T0.3** (`Q7`, `Q11`, `Q12`, `Q15`, datos del MBA); luego T0.4 |
+| S-14 | 2026-10-25 | T0.3 (avance) | 🟡 | `D19` el MBA es un caso de uso; `D20` LLM de plan gratuito a pago, con inicio de sesión propio (cierra `Q3`, `Q9`); `D21` panal y .txt de control (cierra `Q11`); `D22` Drive + edición Google/Office + registro en cada carga (cierra `Q12`); `D23` el profesor sin rol y carpeta de contexto por panal (cierra `Q5`); abiertas `Q16` (alcance de panal) y `Q17` (planes gratuitos y Drive) | **T0.3** (`Q4`, `Q7`, `Q16`, `Q17`); luego T0.4 |
 
 ## 7. Cómo se mantiene vivo este plan
 - Al cerrar cada tarea: ✅ en §4 + fila en §6. 30 segundos.

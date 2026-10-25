@@ -140,6 +140,7 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   software o con consultoría/DMAIC.
 - **Impacto:** fase 1 del plan; la fecha de entrega del MBA restringe el
   cronograma. El proyecto del MBA es del grupo, no del producto (`agente.md §4`).
+  Matizado por `D19`: el MBA es un caso de uso, no el fin del proyecto.
 
 ### D4 — En el MBA, las puertas se cierran con los avances al profesor
 - **Decisión:** hoy el grupo decide trabajando en conjunto, presenta avances
@@ -376,6 +377,66 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   `coLLMena`/`collmena` por `CoLLMena`). Se mantienen, a propósito, la
   búsqueda histórica de "collmena" en `D10` y la compra de dominios en `Q10`.
 
+### D19 — El MBA es un caso de uso; el fin es el proyecto CoLLMena
+- **Decisión:** el trabajo de MBA es **un caso de uso** de CoLLMena, no el fin
+  del proyecto. El fin es **construir CoLLMena** (dueño, S-14).
+- **Razón:** precisa el alcance de `D3`; coincide con `D1` (cualquier usuario y
+  cualquier tipo de proyecto).
+- **Alternativas rechazadas:** —
+- **Impacto:** `D3` sigue vigente como piloto, pero ninguna decisión de
+  producto se toma solo por lo que necesite el MBA: el perfil MBA es el primer
+  perfil, no el único (`D6`). `Q7` sigue abierta (no se elige ninguna opción).
+
+### D20 — Cada persona usa su propio LLM con su cuenta, gratuita o de pago
+- **Decisión:** los planes de los LLM pueden ir **desde los gratuitos hasta los
+  de pago**. Lo que importa es que cada persona **inicie sesión en su propia
+  app, con su propia IA**. Conectar el LLM = iniciar sesión en su app (dueño,
+  S-14).
+- **Razón:** `D1` (cada uno usa el LLM que prefiera) y `D9` (sin pasos
+  técnicos).
+- **Alternativas rechazadas:** exigir un plan de pago; configurar conexiones
+  técnicas por persona.
+- **Impacto:** cierra `Q3` y `Q9` (como principio). No reabre `D6`, pero el
+  piloto y el MVP **no pueden depender** de funciones exclusivas de planes de
+  pago (p. ej. servidor MCP propio en ChatGPT, `§2.2`). Qué puede leer cada LLM
+  de Drive en plan gratuito queda abierto en `Q17`.
+
+### D21 — Panal: cada tarea donde se decide usar el harness
+- **Decisión:** los .docx/.pptx/.xlsx se cuelgan en Drive; los **.txt son las
+  decisiones de usar el harness para una tarea determinada**, que de aquí en
+  adelante se denomina **panal** (dueño, S-14).
+- **Razón:** el nombre y el motivo de panal ya son parte de la identidad
+  (`D10`, `D17`).
+- **Alternativas rechazadas:** —
+- **Impacto:** cierra `Q11` (entregables en Office, control en .txt). Nuevo
+  término del vocabulario del producto: en lenguaje llano para la persona
+  (`D9`). Su alcance exacto queda en `Q16`.
+
+### D22 — Los archivos viven en Drive; se editan en Google u Office; cada carga registra el cambio
+- **Decisión:** los archivos se cuelgan en Drive, se pueden **editar en Google**
+  y también **descargar y editar en Office**. Lo importante es que **en cada
+  carga se registre qué cambios se hicieron** (dueño, S-14).
+- **Razón:** coherente con `D13`-`D15`: lo que importa es saber qué cambió, no
+  conservar versiones.
+- **Alternativas rechazadas:** —
+- **Impacto:** cierra `Q12` como tensión de formato: las personas pueden usar
+  cualquiera de las dos vías. Si ChatGPT edita Office queda como supuesto a
+  verificar en `C002`, ya no como bloqueo. Quién escribe la entrada de cada
+  carga y si es obligatoria queda en `Q16`.
+
+### D23 — El profesor no tiene rol; cada panal tiene una carpeta de contexto
+- **Decisión:** el profesor **no cumple rol** en la herramienta. Sí debe haber,
+  **en cada panal, una carpeta** donde se carga la información para que los LLM
+  tengan contexto (dueño, S-14).
+- **Razón:** los LLM necesitan contexto; el producto no necesita un rol extra
+  para eso.
+- **Alternativas rechazadas:** rol «profesor» o «aprobador externo» dentro de la
+  herramienta.
+- **Impacto:** cierra `Q5`; `COLAB` no define rol de profesor. `D4` sigue: los
+  avances al profesor ocurren fuera de la herramienta. Qué va en la carpeta y
+  cuándo la lee el LLM queda en `Q16`. El contexto real vive en el Drive del
+  grupo, nunca en este repositorio (`agente.md §4`).
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -384,17 +445,15 @@ formato portable de un proyecto (motor) y el servidor MCP.
 - [x] ~~**Q1**~~ → cerrada en S-04 como `D10` (CoLLMena). Queda pendiente
   la revisión de marca en INDECOPI y de dominio (`Q10`).
 - [x] ~~**Q2**~~ → cerrada en S-02 como `D6`.
-- [ ] **Q3** — ¿Qué plan de ChatGPT/Claude usan los compañeros del grupo? Si
-  alguno usa plan gratuito, el piloto no puede depender de MCP. Bloquea: el
-  diseño del kit del piloto.
+- [x] ~~**Q3**~~ → cerrada en S-14 como `D20` (de planes gratuitos a de
+  pago; lo que importa es el inicio de sesión de cada uno). Deja abierta `Q17`.
 - [ ] **Q4** — Datos del trabajo de MBA. Ya se sabe (S-02, ver `D3`): tesis
   de MBA en sostenibilidad, 4 integrantes, entrega en marzo de 2027, el grupo
   ya usa LLMs. Falta: día exacto de entrega, fechas de avances con el
   profesor, y **acuerdo explícito del grupo** para usar la herramienta (que
   ya usen LLMs no equivale a aceptar ser piloto). El dueño enviará los datos.
   Bloquea: cronograma fino de la fase 1 y el arranque del piloto.
-- [ ] **Q5** — Rol del profesor: ¿solo cierra puertas vía avances (fuera de la
-  herramienta) o tendría acceso a ella? Bloquea: diseño de roles.
+- [x] ~~**Q5**~~ → cerrada en S-14 como `D23` (el profesor no tiene rol).
 - [ ] **Q6** — Modelo comercial y licencia (pago, freemium, código abierto).
   No bloquea la fase 1; sí la fase 3.
 - [ ] **Q7** 🔒 — Con 1,5 sesiones/semana el kit del piloto estaría listo
@@ -404,19 +463,14 @@ formato portable de un proyecto (motor) y el servidor MCP.
   ritmo en la Fase 1; (c) fusionar C001 y C002; (d) el MBA solo aporta
   requisitos y el piloto es otro proyecto. Detalle en `planner.md §5`.
   Recomendación del agente: (a). Bloquea: `T0.4` y el orden de la Fase 1.
+  Actualización S-14: el dueño aclara que el MBA es un caso de uso, no el fin
+  (`D19`); `Q7` sigue abierta.
 - [x] ~~**Q8**~~ → cerrada en S-05 como `D11` (Office + .txt).
-- [ ] **Q11** — ¿Se confirma la separación de `D11`: entregables en
-  .docx/.pptx/.xlsx y documentos de control del LLM en .txt? Bloquea: diseño
-  de `C001`.
-- [ ] **Q12** — Tensión entre `D11` (Office) y `D12` (editar si la persona
-  elige): ChatGPT edita en Drive archivos **nativos** de Google; no está
-  confirmado que edite .docx/.xlsx/.pptx (`§2.5`); las personas sí pueden
-  editarlos en Drive con Edición de Office (S-07). Opciones a evaluar (no
-  decididas): (a) entregables en formato nativo de Google (p. ej. activando
-  la conversión automática de Drive) y exportar a Office al entregar; (b) mantener Office y que la edición desde ChatGPT pase por
-  CoLLMena (servidor propio); (c) mantener Office y, en ChatGPT, solo
-  lectura + el LLM propone el texto. Se resuelve verificando en el diseño de
-  `C002`. Bloquea: diseño de `C002`.
+- [x] ~~**Q11**~~ → cerrada en S-14 como `D21` (entregables en Office, control
+  en .txt).
+- [x] ~~**Q12**~~ → cerrada en S-14 como `D22` (edición en Google u Office; lo
+  importante es registrar el cambio en cada carga). Si ChatGPT edita Office
+  se verifica en `C002`, sin bloquear.
 - [x] ~~**Q13**~~ → cerrada en S-09 como `D14` (una sola bitácora).
 - [x] ~~**Q14**~~ → cerrada en S-10 como `D15`.
 - [ ] **Q15** — Cómo se conectan Gemini, DeepSeek, Grok, Perplexity y
@@ -424,15 +478,24 @@ formato portable de un proyecto (motor) y el servidor MCP.
   si sus políticas de datos son aceptables para documentos de un grupo
   (p. ej. dónde se almacenan los datos). Revisar al detallar la Fase 2. No
   bloquea el MVP.
-- [ ] **Q9** — Cómo conecta su LLM una persona no técnica. Tensión detectada
-  en S-03 entre `D6`(b) y `D9`: en ChatGPT, un servidor MCP propio requiere
-  activar funciones de desarrollador (`§2.2`), un paso técnico. Opciones a
-  evaluar (no decididas): usar los **conectores nativos de Drive** que ya
-  traen Claude y ChatGPT + instrucciones del proyecto para el piloto; MCP
-  solo donde la conexión sea simple; o una app propia que llame a los LLMs.
-  Inferencia a confirmar, **no** un cambio de `D6`. Se verifica como
-  supuesto en el diseño de `C002`.
+- [x] ~~**Q9**~~ → cerrada en S-14 como `D20` (cada persona conecta su LLM
+  iniciando sesión en su propia app). El mecanismo concreto para leer Drive
+  en cada LLM y plan sigue en `Q17`.
 - [ ] **Q10** — Registro de marca "CoLLMena" en INDECOPI (y otros países si
   se sale de Perú) y compra de dominios (`collmena` y `colmena` con su
   variante disponible). Decisión y trámite del dueño; el agente no es
   abogado. No bloquea el piloto; bloquea cualquier lanzamiento público.
+- [ ] **Q16** — Alcance de **panal** (`D21`, `D22`, `D23`). Interpretación del
+  agente, a confirmar: un panal es la unidad de trabajo (una tarea) a la que
+  se aplica el harness; contiene sus .txt de control, sus entregables y su
+  carpeta de contexto, y un proyecto tiene varios panales. Preguntas: (a) ¿es
+  así, o el panal es el proyecto entero? (b) la entrada de «qué cambió» en
+  cada carga, ¿la escribe la persona, el LLM al detectarla (`D15`), o ambos, y
+  es obligatoria? (c) la carpeta de contexto: ¿qué información y en qué
+  formatos?, ¿el LLM la lee siempre al empezar o solo cuando se le pide
+  (costo de tokens, `D8`)? Bloquea: diseño de `C001`.
+- [ ] **Q17** — Planes gratuitos y lectura de Drive (`D20`). No está
+  verificado qué puede leer o editar de Drive cada LLM en plan gratuito. Si
+  alguno no puede, hace falta un camino alternativo que no sea técnico (p. ej.
+  que la persona suba o pegue el archivo). Se verifica como supuesto en `C002`
+  con documentación oficial. Bloquea: diseño de `C002`.

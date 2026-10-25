@@ -71,11 +71,15 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
 - **S-11:** `README.md` (descripción no técnica), prompt de landing en
   `marketing/`; `D16` más LLMs (Grok, DeepSeek…), `D17` identidad visual.
 - **S-13:** `D18` nombre CoLLMena en todos los nombres; `T0.1` cerrada.
-- **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q9`
-  (conectar el LLM sin pasos técnicos), `Q11`, `Q12` (Office vs edición
-  desde ChatGPT).
+- **S-14:** `D19` el MBA es un caso de uso, no el fin; `D20` LLM de plan
+  gratuito a pago con inicio de sesión propio; `D21` panal; `D22` Drive,
+  edición en Google u Office y registro en cada carga; `D23` el profesor sin
+  rol y carpeta de contexto por panal. Cerradas `Q3`, `Q5`, `Q9`, `Q11`, `Q12`.
+- **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q4` (datos y
+  acuerdo del grupo), `Q16` (alcance de panal), `Q17` (planes gratuitos y
+  Drive).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
-- **Próximos pasos:** datos del MBA y `Q7` → `T0.3` → `T0.4`.
+- **Próximos pasos:** `Q4`, `Q7`, `Q16`, `Q17` → cerrar `T0.3` → `T0.4`.
 
 ## Mapa de extractos por fase (qué leer/tocar sin abrir todo)
 Convención de anclas: `memoria.md` → `§n`, `Dn`, `Qn`; specs → `<CAP>-Rn`;
@@ -106,7 +110,7 @@ Dueño: `memoria.md`.
 - [x] Instalar el harness (2026-10-25).
 - [ ] Repo publicado en GitHub (`Q1`).
 - [x] Arquitectura aprobada (`D6`, S-02).
-- [ ] Datos del MBA y acuerdo del grupo (`Q3-Q5`).
+- [ ] Datos del MBA y acuerdo del grupo (`Q4`; `Q3` y `Q5` cerradas en S-14).
 Criterio de salida: `Q1`, `Q2`, `Q3` y `Q4` cerradas como `Dn`; cronograma
 recalculado con la fecha real de entrega del MBA.
 
