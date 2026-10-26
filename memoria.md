@@ -107,6 +107,35 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
     solo si **ChatGPT** puede editar un archivo en modo Edición de Office o
     únicamente archivos nativos (`Q12`).
 
+### 2.6 Lectura de Drive por LLM y plan (S-14, 2026-10-25; documentación oficial)
+- **Claude:** el conector de Drive está disponible para todos los usuarios,
+  incluido el plan gratuito; en Team y Enterprise lo activa antes un
+  propietario de la organización. Lee Google Docs, Sheets, Slides, PDF y
+  archivos de Office (.docx, .xlsx, .pptx); la página no lista .txt ni código.
+  Solo extrae texto (no procesa imágenes) y lo que se lee debe caber en la
+  ventana de contexto. Fuente:
+  support.claude.com/en/articles/10166901-use-google-workspace-connectors.
+- **Gemini:** en la app (web y móvil) se pueden adjuntar archivos de Drive;
+  hace falta tener activada la actividad de Keep y Google Workspace conectado
+  a Gemini Apps, y en cuentas de trabajo o escuela lo habilita el
+  administrador. Hasta 10 archivos por consulta y 100 MB por archivo (salvo
+  video); carpetas de código hasta 5.000 archivos y 100 MB. Google AI Pro y
+  Ultra amplían los límites; la página no da las cifras del plan gratuito.
+  Fuente: support.google.com/gemini/answer/14903178.
+- **ChatGPT:** la documentación oficial **no dice qué planes pueden conectar
+  Drive**: depende del plan, la ubicación y los ajustes del espacio de
+  trabajo, y no confirma el plan gratuito. Las acciones dedicadas son para
+  Docs, Sheets y Slides; no lista otros formatos. La sincronización individual
+  ya no está disponible: la sincronización la administra el administrador de
+  un espacio de trabajo elegible. Fuentes:
+  help.openai.com/articles/10929079 y
+  help.openai.com/en/articles/10847137-chatgpt-apps-with-sync.
+- **Lectura del agente (inferencia a confirmar):** con `D20` (de gratis a
+  pago), en ChatGPT gratuito no se puede asumir que lea Drive. El camino
+  alternativo más simple sería que la persona suba o pegue el archivo en el
+  chat; el mapa de contexto de `D27`, al ser un .txt corto, lo facilitaría.
+  Esta verificación es documental: no sustituye probar con cuentas reales.
+
 ## 3. Decisiones tomadas
 
 ### D1 — Es un producto de ZOr Labs, multiusuario y multi-LLM
@@ -523,6 +552,17 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   de los compañeros entra al repositorio, y el agente no decide por ellos; si
   participan en la prueba, su aceptación es suya.
 
+### D32 — Cada panal elige un framework refinado del SDD para que el grupo fije sus reglas
+- **Decisión:** para cada proyecto (panal), el dueño quiere **elegir un
+  framework refinado del SDD** para que el grupo **establezca las reglas de lo
+  que se quiere hacer para terminar el proyecto** (dueño, S-14). Confirma lo
+  que `D29` dejaba en `Q16`.
+- **Razón:** el método ordena el proyecto y las reglas las pone el grupo
+  (`D29`, `D9`).
+- **Alternativas rechazadas:** —
+- **Impacto:** cierra `Q16`. Quién elige el framework y qué frameworks hay
+  queda en `Q19`. Es el tema central del perfil de `C001` (`PERFIL`).
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -569,17 +609,19 @@ formato portable de un proyecto (motor) y el servidor MCP.
   se sale de Perú) y compra de dominios (`collmena` y `colmena` con su
   variante disponible). Decisión y trámite del dueño; el agente no es
   abogado. No bloquea el piloto; bloquea cualquier lanzamiento público.
-- [ ] **Q16** — Detalle de **panal** (`D24`, `D29`). Ya cerrado: el LLM
-  redacta el registro con confirmación de la persona (`D25`) y es obligatorio
-  (`D30`). Falta: el dueño dice que el panal define **objetivo y reglas** con
-  SDD u otro framework refinado. Interpretación del agente, a confirmar: el
-  «framework refinado» es el motor del harness adaptado por perfil (`D6`), y
-  las «reglas» son las decisiones y restricciones del proyecto (hoy,
-  `memoria.md` y las specs). ¿Es así? Bloquea: diseño de `C001`.
-- [ ] **Q17** — Planes gratuitos y lectura de Drive (`D20`). No está
-  verificado qué puede leer o editar de Drive cada LLM en plan gratuito. Si
-  alguno no puede, hace falta un camino alternativo que no sea técnico (p. ej.
-  que la persona suba o pegue el archivo). Se verifica como supuesto en `C002`
-  con documentación oficial. Bloquea: diseño de `C002`.
+- [x] ~~**Q16**~~ → cerrada en S-14 como `D32` (cada panal elige un framework
+  refinado del SDD para que el grupo fije sus reglas). Deja abierta `Q19`.
+- [ ] **Q17** — Planes gratuitos y lectura de Drive (`D20`). Verificado en
+  S-14 con documentación oficial (`§2.6`): Claude (incluido el plan gratuito)
+  y Gemini (con Workspace conectado) leen archivos de Drive; **ChatGPT: la
+  documentación no confirma que el plan gratuito pueda conectar Drive**. Falta:
+  (a) confirmarlo con una cuenta gratuita real de ChatGPT; (b) decidir el
+  camino alternativo no técnico si no puede (p. ej. que la persona suba o
+  pegue el archivo). Bloquea: diseño de `C002`.
+- [ ] **Q19** — ¿Quién elige el framework de cada panal y qué frameworks hay?
+  Inferencia del agente, a confirmar: el dueño del producto define un
+  catálogo de frameworks refinados del SDD por tipo de proyecto (el primero,
+  el perfil MBA de `C001`) y el grupo elige uno al crear su panal. Bloquea:
+  diseño de `C001`.
 - [x] ~~**Q18**~~ → cerrada en S-14 como `D27` (mapa de contexto + conversión
   a texto).

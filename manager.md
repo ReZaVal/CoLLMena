@@ -79,11 +79,12 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   ahorro de tokens; `D27` mapa de contexto + conversión a texto; `D28` sin
   video ni audio; `D29` el panal define objetivo y reglas; `D30` registro
   obligatorio; `D31` Q4 es referencial (prueba de producto). Cerradas `Q3`,
-  `Q4`, `Q5`, `Q9`, `Q11`, `Q12`, `Q18`.
-- **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q16` (qué son objetivo y reglas del panal), `Q17`
-  (planes gratuitos y Drive).
+  `Q4`, `Q5`, `Q9`, `Q11`, `Q12`, `Q16`, `Q18`. `D32`: cada panal elige un
+  framework refinado del SDD; lectura de Drive por LLM verificada (`§2.6`).
+- **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q17` (ChatGPT gratuito y Drive), `Q19` (quién elige
+  el framework).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
-- **Próximos pasos:** `Q7`, `Q16`, `Q17` → cerrar `T0.3` → `T0.4`.
+- **Próximos pasos:** `Q7` (y `Q17`, `Q19` para el diseño) → cerrar `T0.3` → `T0.4`.
 
 ## Mapa de extractos por fase (qué leer/tocar sin abrir todo)
 Convención de anclas: `memoria.md` → `§n`, `Dn`, `Qn`; specs → `<CAP>-Rn`;
