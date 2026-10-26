@@ -78,12 +78,12 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   LLM redacta el registro y la persona confirma; `D26` contexto multiformato y
   ahorro de tokens; `D27` mapa de contexto + conversión a texto; `D28` sin
   video ni audio; `D29` el panal define objetivo y reglas; `D30` registro
-  obligatorio. Cerradas `Q3`, `Q5`, `Q9`, `Q11`, `Q12`, `Q18`.
-- **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q4` (datos y
-  acuerdo del grupo), `Q16` (qué son objetivo y reglas del panal), `Q17`
+  obligatorio; `D31` Q4 es referencial (prueba de producto). Cerradas `Q3`,
+  `Q4`, `Q5`, `Q9`, `Q11`, `Q12`, `Q18`.
+- **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q16` (qué son objetivo y reglas del panal), `Q17`
   (planes gratuitos y Drive).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
-- **Próximos pasos:** `Q4`, `Q7`, `Q16`, `Q17` → cerrar `T0.3` → `T0.4`.
+- **Próximos pasos:** `Q7`, `Q16`, `Q17` → cerrar `T0.3` → `T0.4`.
 
 ## Mapa de extractos por fase (qué leer/tocar sin abrir todo)
 Convención de anclas: `memoria.md` → `§n`, `Dn`, `Qn`; specs → `<CAP>-Rn`;
@@ -114,7 +114,7 @@ Dueño: `memoria.md`.
 - [x] Instalar el harness (2026-10-25).
 - [ ] Repo publicado en GitHub (`Q1`).
 - [x] Arquitectura aprobada (`D6`, S-02).
-- [ ] Datos del MBA y acuerdo del grupo (`Q4`; `Q3` y `Q5` cerradas en S-14).
+- [ ] Datos del MBA y acuerdo del grupo (`Q4` referencial por `D31`, pendiente confirmar que no exige acuerdo formal; `Q3` y `Q5` cerradas en S-14).
 Criterio de salida: `Q1`, `Q2`, `Q3` y `Q4` cerradas como `Dn`; cronograma
 recalculado con la fecha real de entrega del MBA.
 

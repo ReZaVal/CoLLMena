@@ -131,7 +131,7 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
 ### D3 — El piloto es el trabajo grupal de MBA real del dueño
 - **Decisión:** la primera versión se valida con el trabajo final (tesis) de
   `CURSO_01` en `ESCUELA_01`, un MBA enfocado en sostenibilidad: **4
-  integrantes, entrega en marzo de 2027** (día exacto pendiente, `Q4`). El
+  integrantes, entrega en marzo de 2027** (fecha de referencia, `D31`). El
   tema real está en `local_privado/glosario.md` como `TEMA_01`.
   (Actualizado en S-02; antes decía "entrega a más de 6 semanas".)
 - **Razón:** es un caso no tecnológico, con varias personas y varios LLMs:
@@ -511,6 +511,18 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   hace cumplir (p. ej., que el LLM detecte archivos sin entrada al empezar,
   `D15`) es inferencia del agente: se diseña en `C001`/`C002`.
 
+### D31 — Los datos del trabajo de MBA son referenciales: es una prueba de producto
+- **Decisión:** `Q4` es **referencial**: el trabajo de tesis de maestría es una
+  **prueba de producto** de CoLLMena (dueño, S-14).
+- **Razón:** `D19`: el MBA es un caso de uso, no el fin del proyecto.
+- **Alternativas rechazadas:** —
+- **Impacto:** cierra `Q4` como bloqueo. `D3` sigue: marzo de 2027 es fecha de
+  referencia. **Inferencia del agente, a confirmar:** no hace falta el día
+  exacto ni el acuerdo formal del grupo para cerrar `T0.3` y recalcular el
+  plan (`T0.4`). Sigue vigente `agente.md §4`: nada del trabajo ni de los datos
+  de los compañeros entra al repositorio, y el agente no decide por ellos; si
+  participan en la prueba, su aceptación es suya.
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -521,12 +533,8 @@ formato portable de un proyecto (motor) y el servidor MCP.
 - [x] ~~**Q2**~~ → cerrada en S-02 como `D6`.
 - [x] ~~**Q3**~~ → cerrada en S-14 como `D20` (de planes gratuitos a de
   pago; lo que importa es el inicio de sesión de cada uno). Deja abierta `Q17`.
-- [ ] **Q4** — Datos del trabajo de MBA. Ya se sabe (S-02, ver `D3`): tesis
-  de MBA en sostenibilidad, 4 integrantes, entrega en marzo de 2027, el grupo
-  ya usa LLMs. Falta: día exacto de entrega, fechas de avances con el
-  profesor, y **acuerdo explícito del grupo** para usar la herramienta (que
-  ya usen LLMs no equivale a aceptar ser piloto). El dueño enviará los datos.
-  Bloquea: cronograma fino de la fase 1 y el arranque del piloto.
+- [x] ~~**Q4**~~ → cerrada en S-14 como `D31` (datos referenciales; el trabajo
+  de tesis es una prueba de producto).
 - [x] ~~**Q5**~~ → cerrada en S-14 como `D23` (el profesor no tiene rol).
 - [ ] **Q6** — Modelo comercial y licencia (pago, freemium, código abierto).
   No bloquea la fase 1; sí la fase 3.
@@ -538,7 +546,9 @@ formato portable de un proyecto (motor) y el servidor MCP.
   requisitos y el piloto es otro proyecto. Detalle en `planner.md §5`.
   Recomendación del agente: (a). Bloquea: `T0.4` y el orden de la Fase 1.
   Actualización S-14: el dueño aclara que el MBA es un caso de uso, no el fin
-  (`D19`); `Q7` sigue abierta.
+  (`D19`); `Q7` sigue abierta. Además `D31` vuelve referencial la fecha de
+  entrega; falta confirmar si marzo de 2027 deja de ser restricción dura
+  (`§1`), lo que cambia el peso de las opciones (a)-(d).
 - [x] ~~**Q8**~~ → cerrada en S-05 como `D11` (Office + .txt).
 - [x] ~~**Q11**~~ → cerrada en S-14 como `D21` (entregables en Office, control
   en .txt).
