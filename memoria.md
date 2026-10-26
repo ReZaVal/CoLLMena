@@ -410,7 +410,7 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
 - **Alternativas rechazadas:** —
 - **Impacto:** cierra `Q11` (entregables en Office, control en .txt). Nuevo
   término del vocabulario del producto: en lenguaje llano para la persona
-  (`D9`). Su alcance exacto queda en `Q16`.
+  (`D9`). Aclarado por `D24`: el panal es un proyecto dentro de CoLLMena.
 
 ### D22 — Los archivos viven en Drive; se editan en Google u Office; cada carga registra el cambio
 - **Decisión:** los archivos se cuelgan en Drive, se pueden **editar en Google**
@@ -422,7 +422,7 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
 - **Impacto:** cierra `Q12` como tensión de formato: las personas pueden usar
   cualquiera de las dos vías. Si ChatGPT edita Office queda como supuesto a
   verificar en `C002`, ya no como bloqueo. Quién escribe la entrada de cada
-  carga y si es obligatoria queda en `Q16`.
+  carga: `D25`; si es obligatoria queda en `Q16`.
 
 ### D23 — El profesor no tiene rol; cada panal tiene una carpeta de contexto
 - **Decisión:** el profesor **no cumple rol** en la herramienta. Sí debe haber,
@@ -433,9 +433,43 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
 - **Alternativas rechazadas:** rol «profesor» o «aprobador externo» dentro de la
   herramienta.
 - **Impacto:** cierra `Q5`; `COLAB` no define rol de profesor. `D4` sigue: los
-  avances al profesor ocurren fuera de la herramienta. Qué va en la carpeta y
-  cuándo la lee el LLM queda en `Q16`. El contexto real vive en el Drive del
+  avances al profesor ocurren fuera de la herramienta. Qué formatos va en la
+  carpeta: `D26`; cómo y cuándo la lee el LLM: `Q18`. El contexto real vive en el Drive del
   grupo, nunca en este repositorio (`agente.md §4`).
+
+### D24 — El panal es un proyecto dentro de CoLLMena
+- **Decisión:** un **panal es un proyecto dentro del producto CoLLMena** (dueño,
+  S-14).
+- **Razón:** aclara el alcance de `D21`: el panal no es una tarea suelta, es el
+  proyecto.
+- **Alternativas rechazadas:** panal como tarea suelta (lectura inicial del
+  agente en `Q16`, corregida por el dueño).
+- **Impacto:** el panal reúne sus .txt de control, sus entregables y su carpeta
+  de contexto (`D21`, `D23`). Cuántos panales tiene un grupo y cómo se
+  relacionan con las tareas y cambios internos queda en `Q16`.
+
+### D25 — El registro de cada carga lo puede redactar el LLM, confirmado por la persona
+- **Decisión:** la entrada de «qué cambió» de cada carga (`D22`) **puede
+  escribirla el LLM**, y **la persona la confirma** (dueño, S-14).
+- **Razón:** coherente con `D9` (la persona no hace trabajo técnico) y con
+  `D12` (la persona mantiene el control).
+- **Alternativas rechazadas:** —
+- **Impacto:** refina `D15`: el LLM redacta y la persona confirma. Límite
+  señalado por el agente: sin versiones (`D13`), si la persona editó a mano el
+  LLM no puede ver qué texto cambió; redactará con lo que la persona le diga.
+  Si el registro es obligatorio queda en `Q16`.
+
+### D26 — El contexto de cada panal es multiformato y hay que gastar menos tokens al leerlo
+- **Decisión:** la carpeta de contexto (`D23`) puede contener **documentos,
+  Excel, PowerPoint, videos, PDF, audio, archivos de texto y código**. Los LLM
+  **tienen que leerlos** para tener contexto, y hay que **resolver cómo gastar
+  menos tokens** al hacerlo (dueño, S-14).
+- **Razón:** `D8` (1): optimizar el uso de tokens es parte del problema que
+  resuelve el producto.
+- **Alternativas rechazadas:** —
+- **Impacto:** cómo se lee y se resume cada formato queda en `Q18`. Qué
+  formatos puede leer cada LLM y plan se verifica en `Q17`; que todos lean
+  video y audio es una inferencia a confirmar, no un hecho.
 
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
@@ -485,17 +519,25 @@ formato portable de un proyecto (motor) y el servidor MCP.
   se sale de Perú) y compra de dominios (`collmena` y `colmena` con su
   variante disponible). Decisión y trámite del dueño; el agente no es
   abogado. No bloquea el piloto; bloquea cualquier lanzamiento público.
-- [ ] **Q16** — Alcance de **panal** (`D21`, `D22`, `D23`). Interpretación del
-  agente, a confirmar: un panal es la unidad de trabajo (una tarea) a la que
-  se aplica el harness; contiene sus .txt de control, sus entregables y su
-  carpeta de contexto, y un proyecto tiene varios panales. Preguntas: (a) ¿es
-  así, o el panal es el proyecto entero? (b) la entrada de «qué cambió» en
-  cada carga, ¿la escribe la persona, el LLM al detectarla (`D15`), o ambos, y
-  es obligatoria? (c) la carpeta de contexto: ¿qué información y en qué
-  formatos?, ¿el LLM la lee siempre al empezar o solo cuando se le pide
-  (costo de tokens, `D8`)? Bloquea: diseño de `C001`.
+- [ ] **Q16** — Detalles de **panal**. Ya cerrado: es un proyecto (`D24`) y
+  el LLM puede redactar el registro de cada carga con confirmación de la
+  persona (`D25`). Falta: (a) ¿el registro de cada carga es obligatorio?; (b)
+  interpretación del agente, a confirmar: cada panal es una carpeta de Drive
+  con sus propios .txt de control, sus entregables y su carpeta de contexto, y
+  dentro del panal hay tareas y cambios. ¿Es así? Bloquea: diseño de `C001`.
 - [ ] **Q17** — Planes gratuitos y lectura de Drive (`D20`). No está
   verificado qué puede leer o editar de Drive cada LLM en plan gratuito. Si
   alguno no puede, hace falta un camino alternativo que no sea técnico (p. ej.
   que la persona suba o pegue el archivo). Se verifica como supuesto en `C002`
   con documentación oficial. Bloquea: diseño de `C002`.
+- [ ] **Q18** — Cómo leer el contexto de cada panal gastando menos tokens
+  (`D26`). Opciones, no decididas: (a) **mapa de contexto**: un .txt con una
+  ficha corta por archivo (qué es, de qué trata, cuándo consultarlo); el LLM
+  lee el mapa y abre el archivo solo si lo necesita, como el «Mapa de
+  extractos» del harness (`D8`); (b) **convertir a texto una vez**: PDF, audio
+  y video se transcriben o extraen a .txt la primera vez y después se lee el
+  .txt; cuesta tokens una sola vez y exige un LLM capaz de leer ese formato;
+  (c) **búsqueda en servidor** que trae solo los fragmentos relevantes: ahorra
+  más, pero necesita servidor (Fase 2, `D6`) y choca con `D20` si exige
+  configuración técnica. Recomendación del agente: (a) + (b) para el MVP y (c)
+  en la Fase 2. Bloquea: diseño de `C001` y `C002`.
