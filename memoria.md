@@ -422,7 +422,7 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
 - **Impacto:** cierra `Q12` como tensión de formato: las personas pueden usar
   cualquiera de las dos vías. Si ChatGPT edita Office queda como supuesto a
   verificar en `C002`, ya no como bloqueo. Quién escribe la entrada de cada
-  carga: `D25`; si es obligatoria queda en `Q16`.
+  carga: `D25`; es obligatoria (`D30`).
 
 ### D23 — El profesor no tiene rol; cada panal tiene una carpeta de contexto
 - **Decisión:** el profesor **no cumple rol** en la herramienta. Sí debe haber,
@@ -445,8 +445,7 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
 - **Alternativas rechazadas:** panal como tarea suelta (lectura inicial del
   agente en `Q16`, corregida por el dueño).
 - **Impacto:** el panal reúne sus .txt de control, sus entregables y su carpeta
-  de contexto (`D21`, `D23`). Cuántos panales tiene un grupo y cómo se
-  relacionan con las tareas y cambios internos queda en `Q16`.
+  de contexto (`D21`, `D23`). Precisado por `D29`.
 
 ### D25 — El registro de cada carga lo puede redactar el LLM, confirmado por la persona
 - **Decisión:** la entrada de «qué cambió» de cada carga (`D22`) **puede
@@ -457,19 +456,60 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
 - **Impacto:** refina `D15`: el LLM redacta y la persona confirma. Límite
   señalado por el agente: sin versiones (`D13`), si la persona editó a mano el
   LLM no puede ver qué texto cambió; redactará con lo que la persona le diga.
-  Si el registro es obligatorio queda en `Q16`.
+  El registro es obligatorio (`D30`).
 
 ### D26 — El contexto de cada panal es multiformato y hay que gastar menos tokens al leerlo
 - **Decisión:** la carpeta de contexto (`D23`) puede contener **documentos,
-  Excel, PowerPoint, videos, PDF, audio, archivos de texto y código**. Los LLM
+  Excel, PowerPoint, videos, PDF, audio, archivos de texto y código** (video y
+  audio quedan fuera por `D28`). Los LLM
   **tienen que leerlos** para tener contexto, y hay que **resolver cómo gastar
   menos tokens** al hacerlo (dueño, S-14).
 - **Razón:** `D8` (1): optimizar el uso de tokens es parte del problema que
   resuelve el producto.
 - **Alternativas rechazadas:** —
-- **Impacto:** cómo se lee y se resume cada formato queda en `Q18`. Qué
-  formatos puede leer cada LLM y plan se verifica en `Q17`; que todos lean
-  video y audio es una inferencia a confirmar, no un hecho.
+- **Impacto:** cómo se lee y se resume cada formato: `D27`. Qué formatos
+  puede leer cada LLM y plan se verifica en `Q17`. Video y audio quedan
+  fuera (`D28`).
+
+### D27 — Ahorro de tokens en el MVP: mapa de contexto + conversión a texto
+- **Decisión:** el MVP combina **(a) mapa de contexto** (un .txt con una ficha
+  corta por archivo; el LLM lee el mapa y abre un archivo solo si lo necesita)
+  y **(b) convertir a texto una vez** los formatos que lo requieran, para leer
+  después el .txt (dueño, S-14).
+- **Razón:** `D8` (1): gastar menos tokens. Se apoya en la lectura quirúrgica
+  del harness.
+- **Alternativas rechazadas:** —
+- **Impacto:** cierra `Q18`. La búsqueda en servidor (c) no se descarta ni se
+  decide: se evalúa en la Fase 2 (`D6`). Qué formatos requieren conversión (el
+  PDF es el caso claro) se verifica en `Q17`.
+
+### D28 — Video y audio no entran
+- **Decisión:** **video y audio no van** en la carpeta de contexto (dueño,
+  S-14). Corrige `D26`.
+- **Razón:** no indicada por el dueño.
+- **Alternativas rechazadas:** transcribir video y audio.
+- **Impacto:** el contexto puede tener documentos, Excel, PowerPoint, PDF,
+  archivos de texto y código. `Q17` ya no verifica video ni audio.
+
+### D29 — El panal define un objetivo y reglas con el framework SDD u otro refinado
+- **Decisión:** cada panal es un proyecto **en el que se define un objetivo y
+  reglas**, con ayuda del **framework SDD u otro framework refinado** (dueño,
+  S-14). Precisa `D24`.
+- **Razón:** el método ordena el proyecto; el producto lo ofrece a quien no lo
+  conoce (`D9`).
+- **Alternativas rechazadas:** la estructura interna que propuso el agente en
+  `Q16` (panal con tareas y cambios dentro), rechazada por el dueño.
+- **Impacto:** qué son exactamente las «reglas» y cuál es el framework
+  «refinado» queda en `Q16`.
+
+### D30 — El registro de cada carga es obligatorio
+- **Decisión:** el registro de qué cambió en cada carga (`D22`, `D25`) es
+  **obligatorio** (dueño, S-14).
+- **Razón:** sin él se pierde la trazabilidad (`D13`).
+- **Alternativas rechazadas:** registro opcional.
+- **Impacto:** cierra lo que `Q16` preguntaba sobre obligatoriedad. Cómo se
+  hace cumplir (p. ej., que el LLM detecte archivos sin entrada al empezar,
+  `D15`) es inferencia del agente: se diseña en `C001`/`C002`.
 
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
@@ -519,25 +559,17 @@ formato portable de un proyecto (motor) y el servidor MCP.
   se sale de Perú) y compra de dominios (`collmena` y `colmena` con su
   variante disponible). Decisión y trámite del dueño; el agente no es
   abogado. No bloquea el piloto; bloquea cualquier lanzamiento público.
-- [ ] **Q16** — Detalles de **panal**. Ya cerrado: es un proyecto (`D24`) y
-  el LLM puede redactar el registro de cada carga con confirmación de la
-  persona (`D25`). Falta: (a) ¿el registro de cada carga es obligatorio?; (b)
-  interpretación del agente, a confirmar: cada panal es una carpeta de Drive
-  con sus propios .txt de control, sus entregables y su carpeta de contexto, y
-  dentro del panal hay tareas y cambios. ¿Es así? Bloquea: diseño de `C001`.
+- [ ] **Q16** — Detalle de **panal** (`D24`, `D29`). Ya cerrado: el LLM
+  redacta el registro con confirmación de la persona (`D25`) y es obligatorio
+  (`D30`). Falta: el dueño dice que el panal define **objetivo y reglas** con
+  SDD u otro framework refinado. Interpretación del agente, a confirmar: el
+  «framework refinado» es el motor del harness adaptado por perfil (`D6`), y
+  las «reglas» son las decisiones y restricciones del proyecto (hoy,
+  `memoria.md` y las specs). ¿Es así? Bloquea: diseño de `C001`.
 - [ ] **Q17** — Planes gratuitos y lectura de Drive (`D20`). No está
   verificado qué puede leer o editar de Drive cada LLM en plan gratuito. Si
   alguno no puede, hace falta un camino alternativo que no sea técnico (p. ej.
   que la persona suba o pegue el archivo). Se verifica como supuesto en `C002`
   con documentación oficial. Bloquea: diseño de `C002`.
-- [ ] **Q18** — Cómo leer el contexto de cada panal gastando menos tokens
-  (`D26`). Opciones, no decididas: (a) **mapa de contexto**: un .txt con una
-  ficha corta por archivo (qué es, de qué trata, cuándo consultarlo); el LLM
-  lee el mapa y abre el archivo solo si lo necesita, como el «Mapa de
-  extractos» del harness (`D8`); (b) **convertir a texto una vez**: PDF, audio
-  y video se transcriben o extraen a .txt la primera vez y después se lee el
-  .txt; cuesta tokens una sola vez y exige un LLM capaz de leer ese formato;
-  (c) **búsqueda en servidor** que trae solo los fragmentos relevantes: ahorra
-  más, pero necesita servidor (Fase 2, `D6`) y choca con `D20` si exige
-  configuración técnica. Recomendación del agente: (a) + (b) para el MVP y (c)
-  en la Fase 2. Bloquea: diseño de `C001` y `C002`.
+- [x] ~~**Q18**~~ → cerrada en S-14 como `D27` (mapa de contexto + conversión
+  a texto).

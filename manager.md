@@ -76,12 +76,14 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   edición en Google u Office y registro en cada carga; `D23` el profesor sin
   rol y carpeta de contexto por panal; `D24` el panal es un proyecto; `D25` el
   LLM redacta el registro y la persona confirma; `D26` contexto multiformato y
-  ahorro de tokens. Cerradas `Q3`, `Q5`, `Q9`, `Q11`, `Q12`.
+  ahorro de tokens; `D27` mapa de contexto + conversión a texto; `D28` sin
+  video ni audio; `D29` el panal define objetivo y reglas; `D30` registro
+  obligatorio. Cerradas `Q3`, `Q5`, `Q9`, `Q11`, `Q12`, `Q18`.
 - **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q4` (datos y
-  acuerdo del grupo), `Q16` (resto de panal), `Q17` (planes gratuitos y
-  Drive), `Q18` (leer contexto con menos tokens).
+  acuerdo del grupo), `Q16` (qué son objetivo y reglas del panal), `Q17`
+  (planes gratuitos y Drive).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
-- **Próximos pasos:** `Q4`, `Q7`, `Q16`, `Q17`, `Q18` → cerrar `T0.3` → `T0.4`.
+- **Próximos pasos:** `Q4`, `Q7`, `Q16`, `Q17` → cerrar `T0.3` → `T0.4`.
 
 ## Mapa de extractos por fase (qué leer/tocar sin abrir todo)
 Convención de anclas: `memoria.md` → `§n`, `Dn`, `Qn`; specs → `<CAP>-Rn`;
