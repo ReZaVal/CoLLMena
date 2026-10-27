@@ -638,15 +638,50 @@ formato portable de un proyecto (motor) y el servidor MCP.
 - [x] ~~**Q18**~~ → cerrada en S-14 como `D27` (mapa de contexto + conversión
   a texto).
 - [ ] **Q20** — ¿Cómo se complementan superpowers y el harness (`D33`)?
-  Solapes que se ven por las descripciones de las skills (falta leer cada
-  `SKILL.md` para confirmarlos): `brainstorming` y `writing-plans` frente a
-  propuesta/diseño y las puertas P1-P5; `using-superpowers` (invocar skills
-  antes de cualquier respuesta) frente al orden de lectura de `agente.md §2`.
-  Recomendación del agente, a confirmar: el protocolo de inicio de `agente.md`
-  va siempre primero; usar superpowers en la ejecución de tareas ya aprobadas
-  (`test-driven-development`, `systematic-debugging`,
-  `verification-before-completion` junto al punto 4 de `agente.md §6`,
-  `requesting-code-review`); dejar `brainstorming` y `writing-plans` fuera del
-  diseño de cambios, que ya cubren `propuesta.md`/`diseno.md`/P1-P5, salvo que
-  el dueño decida otra cosa. Decide el dueño. No bloquea la Fase 0; conviene
-  resolverla antes de la primera tarea que implemente código.
+  En S-15 se leyeron los `SKILL.md` de las 15 skills (instalación completa,
+  con sus `scripts/`). Hechos verificados:
+  - **Precedencia:** `using-superpowers` dice que `CLAUDE.md`/`AGENTS.md` y las
+    instrucciones directas del usuario mandan sobre las skills. El repo tiene
+    `CLAUDE.md`, que importa `agente.md`: la jerarquía de `D33` ya está en la
+    propia skill. Pero exige invocar skills *antes de cualquier respuesta*, y
+    el protocolo de inicio de `agente.md §2` va primero.
+  - **Conflictos reales:**
+    1. `brainstorming` y `writing-plans` escriben spec y plan en
+       `docs/superpowers/specs|plans/` (la ubicación la puede cambiar el
+       usuario), duplicando propuesta/diseño (P1-P2) y `planner.md`.
+    2. `executing-plans` y `subagent-driven-development` mandan no parar entre
+       tareas y *decidir* ambigüedades como «Ruling»; `agente.md §3` dice lo
+       contrario (un hueco es `Pn` y se escala; no se rellena con algo
+       razonable). Llevan además su propio libro (`.superpowers/sdd/`,
+       ignorado por git) en paralelo a la bitácora de `planner.md §6`.
+    3. Los commits de sus planes son tipo `feat: …`; `agente.md §6.5` exige
+       referenciar `TX.Y`/`Cnnn`/`Dn`.
+    4. Plantillas y frases de anuncio en inglés; el proyecto es en español
+       (`agente.md §5`).
+  - **Complementarias, sin choque:** `test-driven-development` (escenario de la
+    spec → prueba en rojo primero; alimenta «Verificado por» `§6.2b` y `§6.4`),
+    `verification-before-completion` (evidencia antes de declarar cierre;
+    refuerza el checklist `§6`), `systematic-debugging` (causa raíz antes de
+    arreglar; alimenta `learn.md`; tras 3 arreglos fallidos se discute con el
+    dueño, coherente con «no decidas solo») y `receiving-code-review`.
+  - **Requieren subagentes** (`subagent-driven-development`,
+    `dispatching-parallel-agents`, `requesting-code-review`,
+    `diagnosing-superpowers`, las pruebas de `writing-skills`): cada subagente
+    arranca sin contexto y tiene costo; solo con petición explícita del dueño
+    en cada uso.
+  - **Sin uso previsto hoy:** `using-git-worktrees` y
+    `finishing-a-development-branch` (suponen ramas y PR; el repo trabaja
+    directo en `main`), `writing-skills`, `diagnosing-superpowers` (sus
+    paquetes de sesión no pueden llevar datos del MBA, `agente.md §4`).
+  Recomendación del agente, a confirmar: (1) el protocolo de inicio de
+  `agente.md` va siempre primero; (2) superpowers solo en la ejecución, tras
+  P5, en tareas con código: TDD, depuración y verificación; (3) no usar
+  `brainstorming`, `writing-plans`, `executing-plans` ni
+  `subagent-driven-development` para diseñar cambios ni como sustituto de
+  `planner.md`; si el dueño quiere un plan de implementación para una tarea con
+  código, que `writing-plans` lo apunte a `diseno.md`/`specs/` en su campo
+  `Spec:` y se guarde dentro de `cambios/Cnnn/` (falta comprobar que
+  `openspec.py` no rechaza archivos extra ahí); (4) commits con referencias y
+  documentos en español. Preguntas para el dueño: ¿se siguen haciendo commits
+  directos en `main` o se adoptan ramas/PR?, ¿se permiten subagentes? No
+  bloquea la Fase 0; resolver antes de la primera tarea que implemente código.
