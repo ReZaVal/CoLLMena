@@ -74,4 +74,4 @@ raíz · Solución · Regla derivada → dónde vive.
   que remita a `D34`-`D36` y `Q21`. Para el producto: un harness generalizado
   necesita una política sobre herramientas externas y sobre el flujo de
   revisión del grupo.
-- **Estado:** 🟡 propuesta (no se edita `agente.md` sin visto bueno del dueño)
+- **Estado:** ✅ aplicada en S-15 con visto bueno del dueño: `agente.md §8`

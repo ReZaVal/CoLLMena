@@ -150,3 +150,20 @@ Si te falta el porqué de una decisión, está en `memoria.md`; no lo reinventes
 Si tras leer estos documentos algo sigue sin quedar claro, es una laguna real:
 repórtalo y pide al usuario que lo aclare, no asumas. Que este proyecto sea
 operable por GPT o Gemini es, además, una prueba del producto (`D1`).
+
+## 8. Skills externas, ramas y subagentes
+Reglas de `D33`-`D37`; el detalle y el porqué están en `memoria.md`.
+- **Skills externas (p. ej. superpowers):** este protocolo va siempre primero y
+  manda sobre cualquier skill. Las de superpowers se usan solo en la
+  **ejecución** de tareas con código ya aprobadas (después de P5): TDD,
+  depuración sistemática y verificación con evidencia antes de declarar cierre.
+  No sustituyen el diseño de cambios ni `planner.md` (`D33`, `D34`).
+- **Subagentes:** nunca sin preguntar antes al dueño, indicando la tarea
+  (`TX.Y`) y el fin (`D36`).
+- **Ramas y PR:** no se commitea en `main`. El trabajo va en una rama por
+  sesión o cambio (`sNN-tema` o `Cnnn-tema`) y se integra por PR, también la
+  documentación. Subir la rama y abrir el PR piden confirmación (`§4`); revisar
+  y fusionar lo hace el dueño, y el agente no fusiona por iniciativa propia
+  (`D35`, `D37`).
+- **Lo que genere una skill** sigue `§5` y `§6.5`: en español y con commits que
+  referencien `TX.Y`/`Cnnn`/`Dn`.
