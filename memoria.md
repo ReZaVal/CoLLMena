@@ -639,6 +639,23 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   (`TX.Y`), el propósito y qué hará el subagente; sin un sí explícito no se
   despacha.
 
+### D37 — Convención de ramas y PR
+- **Decisión:** el dueño aprueba la recomendación del agente de `Q21` (dueño,
+  S-15): una rama por sesión o cambio, con nombre `sNN-tema` o `Cnnn-tema`;
+  todo va por PR, también la documentación; el dueño revisa y fusiona, y el
+  agente no fusiona por iniciativa propia; ramas simples con `git switch -c`,
+  sin worktrees mientras el repo sea de documentación;
+  `finishing-a-development-branch` solo para presentar las opciones al cerrar
+  la rama; el `push` y el PR siguen pidiendo confirmación (`agente.md §4`).
+- **Razón:** el dueño no la dio más allá de aprobar la recomendación.
+- **Alternativas rechazadas:** —
+- **Impacto:** excepción puntual: en el PR #1 de S-15 el dueño pidió
+  expresamente que el agente lo fusionara, y así se hizo (merge commit
+  `e7aa191`; la estrategia de fusión fue un detalle del agente). Si quiere que
+  el agente fusione en adelante, es una decisión nueva. Cierra `Q21` salvo la
+  protección de `main`, que pasa a `Q22`. Las reglas operativas se recogen en
+  `agente.md §8` (`M4`).
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -704,16 +721,9 @@ formato portable de un proyecto (motor) y el servidor MCP.
 - [x] ~~**Q20**~~ → cerrada en S-15 como `D34` (superpowers solo en la
   ejecución, tras P5), `D35` (ramas y PR) y `D36` (subagentes solo con permiso
   del dueño). Deja abierta `Q21`.
-- [ ] **Q21** — Convención de ramas y PR (`D35`). Faltan: (a) cómo se nombran
-  las ramas; (b) quién revisa y fusiona; (c) si la documentación (decisiones,
-  bitácora) también va por PR; (d) si `main` se protege; (e) si se usan
-  `using-git-worktrees` y `finishing-a-development-branch`, que con `D35`
-  dejan de estar «sin uso». Recomendación del agente, a confirmar: una rama por
-  sesión o cambio, `sNN-tema` o `Cnnn-tema` (esta sesión usa
-  `s15-superpowers-ramas-pr`); todo va por PR, también la documentación; el
-  dueño revisa y fusiona, el agente no fusiona; ramas simples con
-  `git switch -c`, sin worktrees mientras el repo sea de documentación;
-  `finishing-a-development-branch` solo para presentar las opciones al cerrar
-  la rama, y el `push` y el PR siguen pidiendo confirmación (`agente.md §4`).
-  No bloquea el PR de S-15 si el dueño lo aprueba así; conviene cerrarla antes
-  del siguiente PR.
+- [x] ~~**Q21**~~ → cerrada en S-15 como `D37` (convención de ramas y PR),
+  salvo la protección de `main`, que pasa a `Q22`.
+- [ ] **Q22** — ¿Se protege `main` en GitHub (exigir PR o revisión antes de
+  fusionar)? `D35` y `D37` prohíben los commits directos por convención; una
+  protección técnica los impediría también por error. Cambiar los ajustes del
+  repositorio es decisión del dueño (`agente.md §4`). No bloquea.
