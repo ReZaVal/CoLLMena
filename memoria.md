@@ -573,7 +573,71 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
 - **Impacto:** `agente.md` sigue siendo el contrato y manda ante cualquier
   conflicto (ya lo dicen las instrucciones del proyecto); el flujo de
   `manager.md`/`planner.md` y las puertas P1-P5 no se sustituyen. Qué skill se
-  usa en qué momento y cómo se resuelven los solapes queda en `Q20`.
+  usa en qué momento y cómo se resuelven los solapes: ver `D34` (cierra `Q20`).
+
+### D34 — Superpowers solo en la ejecución de tareas con código, después de P5
+- **Decisión:** el dueño aprueba la recomendación del agente de `Q20` (dueño,
+  S-15): (1) el protocolo de inicio de `agente.md` va siempre primero; (2) las
+  skills de superpowers se usan solo en la **ejecución**, después de P5, en
+  tareas con código: `test-driven-development`, `systematic-debugging` y
+  `verification-before-completion`; (3) no se usan `brainstorming`,
+  `writing-plans`, `executing-plans` ni `subagent-driven-development` para
+  diseñar cambios ni como sustituto de `planner.md`; si el dueño pide un plan
+  de implementación para una tarea con código, `writing-plans` lo apunta a
+  `diseno.md`/`specs/` en su campo `Spec:` y se guarda dentro de
+  `cambios/Cnnn/`; (4) commits con referencia a `TX.Y`/`Cnnn`/`Dn` y
+  documentos en español.
+- **Razón:** el dueño no la dio más allá de aprobar la recomendación. Los
+  hechos que la sustentan se verificaron en S-15 leyendo los `SKILL.md` de las
+  15 skills (abajo).
+- **Alternativas rechazadas:** usar `brainstorming`, `writing-plans`,
+  `executing-plans` o `subagent-driven-development` para diseñar cambios o en
+  lugar de `planner.md`.
+- **Impacto — hechos verificados (S-15):**
+  - *Precedencia:* `using-superpowers` dice que `CLAUDE.md`/`AGENTS.md` y las
+    instrucciones directas del usuario mandan sobre las skills; el repo tiene
+    `CLAUDE.md`, que importa `agente.md`.
+  - *Conflictos con el harness:* (1) `brainstorming` y `writing-plans` escriben
+    spec y plan en `docs/superpowers/specs|plans/` y duplican propuesta/diseño
+    (P1-P2) y `planner.md`; (2) `executing-plans` y `subagent-driven-development`
+    mandan no parar entre tareas y *decidir* ambigüedades como «Ruling», lo
+    contrario de `agente.md §3` (un hueco es `Pn` y se escala), y llevan su
+    propio libro (`.superpowers/sdd/`, ignorado por git) en paralelo a
+    `planner.md §6`; (3) los commits de sus planes son tipo `feat: …`, y
+    `agente.md §6.5` exige referenciar `TX.Y`/`Cnnn`/`Dn`; (4) plantillas y
+    anuncios en inglés frente al español del proyecto.
+  - *Complementarias:* `test-driven-development` (escenario de la spec →
+    prueba en rojo primero; alimenta «Verificado por» `§6.2b` y `§6.4`),
+    `verification-before-completion` (evidencia antes de declarar cierre),
+    `systematic-debugging` (causa raíz antes de arreglar; alimenta `learn.md`;
+    tras 3 arreglos fallidos se discute con el dueño) y
+    `receiving-code-review`.
+  - *Archivos extra en `cambios/Cnnn/`:* `openspec.py` no los rechaza (prueba
+    en S-15: con un archivo extra el resultado fue idéntico).
+  - *`diagnosing-superpowers`:* si se usa, sus paquetes de sesión no pueden
+    llevar datos del MBA (`agente.md §4`).
+
+### D35 — Se adoptan ramas y PR
+- **Decisión:** el dueño adopta **ramas y pull requests** (dueño, S-15): los
+  cambios ya no se commitean directo en `main`.
+- **Razón:** el dueño no la dio.
+- **Alternativas rechazadas:** seguir con commits directos en `main`.
+- **Impacto:** `agente.md §4` sigue vigente: subir una rama (`push`) y crear un
+  PR requieren confirmación explícita del dueño en esa sesión. Lo ya publicado
+  en `main` no se toca. Cómo se nombran las ramas, quién revisa y fusiona, y si
+  la documentación también va por PR queda en `Q21`.
+
+### D36 — Los subagentes se piden al dueño, con tarea y fin
+- **Decisión:** el agente **siempre le pregunta** al dueño antes de usar un
+  subagente, indicando **para qué tarea y con qué fin** (dueño, S-15).
+- **Razón:** el dueño no la dio.
+- **Alternativas rechazadas:** usar subagentes sin preguntar.
+- **Impacto:** aplica a cualquier skill que despache subagentes
+  (`subagent-driven-development`, `dispatching-parallel-agents`,
+  `requesting-code-review`, `diagnosing-superpowers`, las pruebas de
+  `writing-skills`) y a cualquier otro uso. Cada petición dice la tarea
+  (`TX.Y`), el propósito y qué hará el subagente; sin un sí explícito no se
+  despacha.
 
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
@@ -637,51 +701,19 @@ formato portable de un proyecto (motor) y el servidor MCP.
   diseño de `C001`.
 - [x] ~~**Q18**~~ → cerrada en S-14 como `D27` (mapa de contexto + conversión
   a texto).
-- [ ] **Q20** — ¿Cómo se complementan superpowers y el harness (`D33`)?
-  En S-15 se leyeron los `SKILL.md` de las 15 skills (instalación completa,
-  con sus `scripts/`). Hechos verificados:
-  - **Precedencia:** `using-superpowers` dice que `CLAUDE.md`/`AGENTS.md` y las
-    instrucciones directas del usuario mandan sobre las skills. El repo tiene
-    `CLAUDE.md`, que importa `agente.md`: la jerarquía de `D33` ya está en la
-    propia skill. Pero exige invocar skills *antes de cualquier respuesta*, y
-    el protocolo de inicio de `agente.md §2` va primero.
-  - **Conflictos reales:**
-    1. `brainstorming` y `writing-plans` escriben spec y plan en
-       `docs/superpowers/specs|plans/` (la ubicación la puede cambiar el
-       usuario), duplicando propuesta/diseño (P1-P2) y `planner.md`.
-    2. `executing-plans` y `subagent-driven-development` mandan no parar entre
-       tareas y *decidir* ambigüedades como «Ruling»; `agente.md §3` dice lo
-       contrario (un hueco es `Pn` y se escala; no se rellena con algo
-       razonable). Llevan además su propio libro (`.superpowers/sdd/`,
-       ignorado por git) en paralelo a la bitácora de `planner.md §6`.
-    3. Los commits de sus planes son tipo `feat: …`; `agente.md §6.5` exige
-       referenciar `TX.Y`/`Cnnn`/`Dn`.
-    4. Plantillas y frases de anuncio en inglés; el proyecto es en español
-       (`agente.md §5`).
-  - **Complementarias, sin choque:** `test-driven-development` (escenario de la
-    spec → prueba en rojo primero; alimenta «Verificado por» `§6.2b` y `§6.4`),
-    `verification-before-completion` (evidencia antes de declarar cierre;
-    refuerza el checklist `§6`), `systematic-debugging` (causa raíz antes de
-    arreglar; alimenta `learn.md`; tras 3 arreglos fallidos se discute con el
-    dueño, coherente con «no decidas solo») y `receiving-code-review`.
-  - **Requieren subagentes** (`subagent-driven-development`,
-    `dispatching-parallel-agents`, `requesting-code-review`,
-    `diagnosing-superpowers`, las pruebas de `writing-skills`): cada subagente
-    arranca sin contexto y tiene costo; solo con petición explícita del dueño
-    en cada uso.
-  - **Sin uso previsto hoy:** `using-git-worktrees` y
-    `finishing-a-development-branch` (suponen ramas y PR; el repo trabaja
-    directo en `main`), `writing-skills`, `diagnosing-superpowers` (sus
-    paquetes de sesión no pueden llevar datos del MBA, `agente.md §4`).
-  Recomendación del agente, a confirmar: (1) el protocolo de inicio de
-  `agente.md` va siempre primero; (2) superpowers solo en la ejecución, tras
-  P5, en tareas con código: TDD, depuración y verificación; (3) no usar
-  `brainstorming`, `writing-plans`, `executing-plans` ni
-  `subagent-driven-development` para diseñar cambios ni como sustituto de
-  `planner.md`; si el dueño quiere un plan de implementación para una tarea con
-  código, que `writing-plans` lo apunte a `diseno.md`/`specs/` en su campo
-  `Spec:` y se guarde dentro de `cambios/Cnnn/` (falta comprobar que
-  `openspec.py` no rechaza archivos extra ahí); (4) commits con referencias y
-  documentos en español. Preguntas para el dueño: ¿se siguen haciendo commits
-  directos en `main` o se adoptan ramas/PR?, ¿se permiten subagentes? No
-  bloquea la Fase 0; resolver antes de la primera tarea que implemente código.
+- [x] ~~**Q20**~~ → cerrada en S-15 como `D34` (superpowers solo en la
+  ejecución, tras P5), `D35` (ramas y PR) y `D36` (subagentes solo con permiso
+  del dueño). Deja abierta `Q21`.
+- [ ] **Q21** — Convención de ramas y PR (`D35`). Faltan: (a) cómo se nombran
+  las ramas; (b) quién revisa y fusiona; (c) si la documentación (decisiones,
+  bitácora) también va por PR; (d) si `main` se protege; (e) si se usan
+  `using-git-worktrees` y `finishing-a-development-branch`, que con `D35`
+  dejan de estar «sin uso». Recomendación del agente, a confirmar: una rama por
+  sesión o cambio, `sNN-tema` o `Cnnn-tema` (esta sesión usa
+  `s15-superpowers-ramas-pr`); todo va por PR, también la documentación; el
+  dueño revisa y fusiona, el agente no fusiona; ramas simples con
+  `git switch -c`, sin worktrees mientras el repo sea de documentación;
+  `finishing-a-development-branch` solo para presentar las opciones al cerrar
+  la rama, y el `push` y el PR siguen pidiendo confirmación (`agente.md §4`).
+  No bloquea el PR de S-15 si el dueño lo aprueba así; conviene cerrarla antes
+  del siguiente PR.
