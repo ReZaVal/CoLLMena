@@ -63,3 +63,15 @@ raíz · Solución · Regla derivada → dónde vive.
   este cambio?" son dos preguntas distintas que un grupo no técnico necesita
   ver separadas.
 - **Estado:** 🟡 propuesta (no se parchea `openspec.py` sin visto bueno)
+
+### M4 — El harness no dice cómo conviven las skills externas ni el flujo de ramas y PR
+- **Observación:** en S-15, al instalar superpowers (`D33`) y adoptar ramas y PR
+  (`D35`), `agente.md` no tenía regla sobre skills de terceros (quién manda, en
+  qué fase se usan, qué hacer con las que despachan subagentes) y no menciona
+  ramas ni PR. Se resolvió con decisiones en `memoria.md` (`D34`-`D36`), que un
+  agente nuevo solo lee en el paso 3 del orden de lectura.
+- **Propuesta:** una sección corta en `agente.md` («Skills externas y ramas»)
+  que remita a `D34`-`D36` y `Q21`. Para el producto: un harness generalizado
+  necesita una política sobre herramientas externas y sobre el flujo de
+  revisión del grupo.
+- **Estado:** 🟡 propuesta (no se edita `agente.md` sin visto bueno del dueño)
