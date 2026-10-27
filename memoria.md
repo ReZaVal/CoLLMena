@@ -668,6 +668,16 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   agente, a confirmar:** la petición vale para los PR que el dueño nombre o
   describa en esa sesión, no para otros.
 
+### D39 — `main` no se protege en GitHub: las reglas se mantienen por convención
+- **Decisión:** el dueño decide **no proteger `main`** con reglas técnicas de
+  GitHub y dejar las reglas de ramas y PR **por convención** (dueño, S-15).
+- **Razón:** el dueño no la dio.
+- **Alternativas rechazadas:** activar protección de `main` en GitHub (exigir
+  PR; bloquear force-push y borrado).
+- **Impacto:** cierra `Q22`. Nada técnico impide un push directo a `main`: que
+  no ocurra depende de que el agente cumpla `agente.md §8` (`D35`, `D37`,
+  `D38`). Solo se reabre si el dueño lo pide.
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -735,7 +745,5 @@ formato portable de un proyecto (motor) y el servidor MCP.
   del dueño). Deja abierta `Q21`.
 - [x] ~~**Q21**~~ → cerrada en S-15 como `D37` (convención de ramas y PR),
   salvo la protección de `main`, que pasa a `Q22`.
-- [ ] **Q22** — ¿Se protege `main` en GitHub (exigir PR o revisión antes de
-  fusionar)? `D35` y `D37` prohíben los commits directos por convención; una
-  protección técnica los impediría también por error. Cambiar los ajustes del
-  repositorio es decisión del dueño (`agente.md §4`). No bloquea.
+- [x] ~~**Q22**~~ → cerrada en S-15 como `D39` (`main` sin protección técnica;
+  las reglas de ramas y PR se mantienen por convención).

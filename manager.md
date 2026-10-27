@@ -86,7 +86,8 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   en lugar de commits directos en `main`; `D36` subagentes solo con permiso del
   dueño (tarea y fin); `D37` convención de ramas y PR; `D38` el agente fusiona
   solo cuando el dueño lo pide expresamente; `agente.md §8` recoge las reglas
-  de `D33`-`D38`. Cerradas `Q20` y `Q21`; abierta `Q22` (protección de `main`).
+  de `D33`-`D38`. `D39`: `main` sin protección técnica, por convención.
+  Cerradas `Q20`, `Q21` y `Q22`.
 - **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q17` (ChatGPT gratuito y Drive), `Q19` (quién elige
   el framework).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
