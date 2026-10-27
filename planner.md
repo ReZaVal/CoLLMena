@@ -78,7 +78,7 @@ Dueño: `memoria.md`. Criterio de salida (`manager.md`): `Q1-Q4` cerradas como
 | ✅ T0.0 | soporte | Instalar el harness | — | 1 | — | skill base | todo el repo | `openspec.py validate --strict` en verde |
 | ✅ T0.1 🔒 | soporte | Elegir nombre (`Q1`) y publicar el repo en GitHub (privado) | T0.0 | 1 | — | `memoria.md D5`, `D7`, `D8`, `Q1` | remoto git, `memoria.md` | Repo privado con el commit inicial; `Q1` → `Dn` |
 | ✅ T0.2 🔒 | soporte | Revisar y aprobar/corregir la arquitectura | T0.0 | 1 | — | `memoria.md §2`, `Q2` | `memoria.md §3` (→ `D6`) | `Q2` cerrada como `D6` (S-02) |
-| 🟡 T0.3 🔒 | soporte | Datos del MBA, acuerdo del grupo, planes de LLM y rol del profesor | T0.0 | 1 | — | `memoria.md Q3-Q5`, `Q7` | `memoria.md`, `local_privado/glosario.md` | `Q3` ✅ (S-14, `D20`) y `Q5` ✅ (`D23`); `Q4` referencial (`D31`); falta `Q7` |
+| ✅ T0.3 🔒 | soporte | Datos del MBA, acuerdo del grupo, planes de LLM y rol del profesor | T0.0 | 1 | — | `memoria.md Q3-Q5`, `Q7` | `memoria.md`, `local_privado/glosario.md` | `Q3` ✅ (S-14, `D20`) y `Q5` ✅ (`D23`); `Q4` referencial (`D31`); `Q7` ✅ (S-16, `D40`) |
 | ⬜ T0.4 | soporte | Recalcular el plan con la fecha real de entrega | T0.2, T0.3 | 1 | — | este archivo §1-§2 | este archivo §2, §4, §5 | Cronograma coherente con la entrega del MBA |
 
 **Riesgo de la fase:** que el grupo no acepte ser piloto (`Q4`). Entonces se
@@ -120,9 +120,10 @@ un avance al profesor.
 desplaza el piloto.
 
 **Dónde se puede romper el plan (y qué hacer):**
-1. **La entrega del MBA cae antes de la semana 11** (muy probable: "más de 6
-   semanas" ≈ desde 2026-12-06). El plan base no llega a tiempo. Opciones, a
-   decidir por el usuario en `Q7`:
+1. **El kit llega tarde para el grupo** (con el plan base estaría hacia la
+   semana 11, ≈ enero de 2027). **Resuelto en S-16 con `D40`: opción (a)**;
+   marzo de 2027 es fecha referencial. `T0.4` agrega la tarea del piloto
+   manual y recalcula esta tabla. Opciones que se evaluaron en `Q7`:
    - (a) **Piloto temprano manual:** en la Fase 0 se monta a mano un harness
      MBA para el grupo con el skill actual y vocabulario adaptado
      (≈ 2 sesiones). El grupo lo usa ya; `C001`/`C002` formalizan después,
@@ -159,6 +160,7 @@ que permite arrancar en frío la sesión que viene.
 | S-13 | 2026-10-25 | T0.1 | ✅ | Harness recuperado del zip del chat original (14 commits) y publicado en `ReZaVal/CoLLMena` (privado, `main`); historial sin datos del MBA; GitHub avisa que el repo se movió a `CoLLMena`; el dueño pide CoLLMena en todos los nombres → `D18` | **T0.3** (`Q7`, `Q11`, `Q12`, `Q15`, datos del MBA); luego T0.4 |
 | S-14 | 2026-10-25 | T0.3 (avance) | 🟡 | `D19` el MBA es un caso de uso; `D20` LLM de plan gratuito a pago, con inicio de sesión propio (cierra `Q3`, `Q9`); `D21` panal y .txt de control (cierra `Q11`); `D22` Drive + edición Google/Office + registro en cada carga (cierra `Q12`); `D23` el profesor sin rol y carpeta de contexto por panal (cierra `Q5`); `D24` el panal es un proyecto; `D25` el LLM redacta el registro y la persona confirma; `D26` contexto multiformato y ahorro de tokens; `D27` mapa de contexto + conversión a texto (cierra `Q18`); `D28` sin video ni audio; `D29` el panal define objetivo y reglas con SDD u otro framework; `D30` registro obligatorio; `D31` Q4 es referencial (prueba de producto con una tesis; cierra `Q4`); `D32` cada panal elige un framework refinado del SDD (cierra `Q16`); lectura de Drive por LLM verificada en `memoria.md §2.6`; abiertas `Q17` (ChatGPT gratuito sin confirmar) y `Q19` (quién elige el framework) | **T0.3** (`Q7`; `Q17` y `Q19` bloquean el diseño de C002/C001, no la Fase 0); luego T0.4 |
 | S-15 | 2026-10-26 | soporte (no planificada) | ✅ | Repo `CoLLMena` clonado en la sesión (protocolo de inicio corrido); `D33` las skills de superpowers complementan al harness (`agente.md` manda); leídas las 15 skills; `Q20` → `D34` (superpowers solo en la ejecución de tareas con código, tras P5), `D35` (ramas y PR) y `D36` (subagentes solo con permiso del dueño, con tarea y fin); PR #1 fusionado en `main` (`e7aa191`, a petición del dueño); `Q21` → `D37` (convención de ramas y PR; queda abierta `Q22`, protección de `main`); `M4` aplicada en `agente.md §8`; PR #2 fusionado (`1fb9ed5`, también a petición del dueño); `D38` el agente fusiona solo cuando el dueño lo pide expresamente en la sesión; `Q22` → `D39` (`main` sin protección técnica, por convención) | **T0.3** (`Q7`; `Q17` y `Q19` bloquean el diseño de C002/C001, no la Fase 0); luego T0.4 |
+| S-16 | 2026-10-26 | T0.3 | ✅ | `Q7` → `D40`: piloto temprano manual (opción a) y marzo de 2027 como fecha referencial; corregida la restricción dura de `memoria.md §1`; inferencias a confirmar en `D40` (el piloto manual no necesita cambio; Drive del grupo pide confirmación) | **T0.4** — agregar la tarea del piloto manual y recalcular el cronograma; `Q19` antes de `T1.1` |
 
 ## 7. Cómo se mantiene vivo este plan
 - Al cerrar cada tarea: ✅ en §4 + fila en §6. 30 segundos.
