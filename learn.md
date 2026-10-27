@@ -98,3 +98,17 @@ raíz · Solución · Regla derivada → dónde vive.
   inicio compruebe que está. Para el producto: decidir dónde vive el material
   privado de cada panal.
 - **Estado:** propuesta, sin visto bueno.
+
+### M6 — El skill base asume que el agente escribe los archivos
+- **Origen:** `T1.15` (S-17), al armar el kit del piloto manual.
+- **Problema:** el harness supone que el agente lee y escribe los documentos
+  de control. En un chat de ChatGPT o Claude sin conector que escriba en
+  Drive (y el de Claude no lista .txt, `memoria.md §2.6`), el agente solo
+  puede devolver texto: la persona lo copia y lo sube a mano. El cierre de
+  sesión pasa a depender de un paso manual que se puede olvidar.
+- **Propuesta:** que el skill contemple un modo «sin escritura»: el agente
+  entrega al cerrar, listo para copiar, la entrada de la bitácora y el texto
+  completo de cada archivo que cambió. Para el producto: el piloto mide si
+  este paso es tolerable; es insumo para `C002` y `Q17`.
+- **Estado:** propuesta, sin visto bueno; aplicada a prueba en el kit del
+  piloto (`local_privado/piloto/`).
