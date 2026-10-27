@@ -24,8 +24,9 @@ agnóstico de proveedor.
 
 **Restricciones duras.**
 - Capacidad del dueño: 1-2 sesiones/semana de 30-60 min (`planner.md §1`).
-- El piloto es un trabajo de MBA **real, con fecha de entrega** (marzo de
-  2027, `D3`): el producto no puede poner en riesgo esa entrega.
+- El producto no puede poner en riesgo la entrega del trabajo de MBA del
+  piloto (`D3`). La fecha (marzo de 2027) **no** es restricción dura del
+  cronograma del producto: es referencial (`D31`, `D40`).
 - Los datos y el trabajo de los compañeros del MBA no entran al repositorio
   (`agente.md §4`).
 
@@ -678,6 +679,29 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   no ocurra depende de que el agente cumpla `agente.md §8` (`D35`, `D37`,
   `D38`). Solo se reabre si el dueño lo pide.
 
+### D40 — Piloto temprano manual; marzo de 2027 es fecha referencial
+- **Decisión:** (1) marzo de 2027 es **fecha referencial**, no restricción
+  dura del cronograma del producto; (2) para `Q7` se elige la opción **(a)
+  piloto temprano manual**: se monta a mano un harness MBA para el grupo con
+  el skill actual (`harness-agente-multisesion`) y vocabulario adaptado
+  (≈ 2 sesiones); `C001` y `C002` se diseñan después con evidencia del uso
+  real (dueño, S-16).
+- **Razón:** `D19` y `D31` (el MBA es una prueba de producto, no el fin). El
+  plan base dejaría el kit listo hacia enero de 2027 y el grupo ya sufre el
+  problema de `D8`: usar el harness pronto da evidencia real para los
+  supuestos de P3 en lugar de suposiciones.
+- **Alternativas rechazadas:** (b) subir el ritmo a 2 sesiones/semana; (c)
+  fusionar `C001` y `C002`; (d) usar el MBA solo como fuente de requisitos y
+  pilotear con otro proyecto. Marzo como restricción dura.
+- **Impacto:** cierra `Q7` y con ella `T0.3`. `T0.4` agrega al backlog la
+  tarea del piloto manual y recalcula el cronograma sin anclarlo a marzo.
+  **Inferencias del agente, a confirmar:** el piloto manual es un uso del
+  skill existente, no comportamiento nuevo del producto, así que no necesita
+  cambio `Cnnn`; su material real vive en `local_privado/` o en el almacén
+  del grupo, nunca en el repo (`agente.md §4`). Escribir en el Drive del
+  grupo pide confirmación del dueño (`agente.md §4`) y el grupo decide si lo
+  usa y cómo (`D4`).
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -693,17 +717,8 @@ formato portable de un proyecto (motor) y el servidor MCP.
 - [x] ~~**Q5**~~ → cerrada en S-14 como `D23` (el profesor no tiene rol).
 - [ ] **Q6** — Modelo comercial y licencia (pago, freemium, código abierto).
   No bloquea la fase 1; sí la fase 3.
-- [ ] **Q7** 🔒 — Con 1,5 sesiones/semana el kit del piloto estaría listo
-  hacia la semana 11 (≈ enero 2027). Con entrega en marzo de 2027 sí llega,
-  pero el grupo solo lo usaría en el último tramo y hoy ya sufre el problema
-  de `D8`. ¿Qué se hace? (a) piloto temprano manual con el skill actual adaptado; (b) subir el
-  ritmo en la Fase 1; (c) fusionar C001 y C002; (d) el MBA solo aporta
-  requisitos y el piloto es otro proyecto. Detalle en `planner.md §5`.
-  Recomendación del agente: (a). Bloquea: `T0.4` y el orden de la Fase 1.
-  Actualización S-14: el dueño aclara que el MBA es un caso de uso, no el fin
-  (`D19`); `Q7` sigue abierta. Además `D31` vuelve referencial la fecha de
-  entrega; falta confirmar si marzo de 2027 deja de ser restricción dura
-  (`§1`), lo que cambia el peso de las opciones (a)-(d).
+- [x] ~~**Q7**~~ → cerrada en S-16 como `D40` (piloto temprano manual;
+  marzo de 2027 es fecha referencial).
 - [x] ~~**Q8**~~ → cerrada en S-05 como `D11` (Office + .txt).
 - [x] ~~**Q11**~~ → cerrada en S-14 como `D21` (entregables en Office, control
   en .txt).

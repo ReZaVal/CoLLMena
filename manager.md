@@ -55,7 +55,7 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
 
 ## Contexto activo (lo primero que se lee al arrancar; mantener corto)
 - **En qué estoy:** Fase 0. `T0.1` ✅ (S-13) — repo `ReZaVal/CoLLMena`
-  publicado (privado, 14 commits). `T0.3` 🟡 — faltan datos del MBA. Ningún
+  publicado (privado). `T0.3` ✅ (S-16, `D40`). Toca `T0.4`. Ningún
   cambio aprobado. `D18`: el nombre es CoLLMena en todos lados, igual que el repo.
 - **Cambió en las últimas sesiones (S-02 a S-04):** arquitectura aprobada
   (`D6`); Drive como primer almacén (`D7`); problema del producto desde el
@@ -88,10 +88,13 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   solo cuando el dueño lo pide expresamente; `agente.md §8` recoge las reglas
   de `D33`-`D38`. `D39`: `main` sin protección técnica, por convención.
   Cerradas `Q20`, `Q21` y `Q22`.
-- **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q17` (ChatGPT gratuito y Drive), `Q19` (quién elige
-  el framework).
+- **S-16:** `D40` piloto temprano manual (opción a de `Q7`); marzo de 2027 es
+  fecha referencial, no restricción dura. Cerradas `Q7` y `T0.3`.
+- **Abiertas que más pesan:** `Q19` (quién elige el framework; bloquea el
+  diseño de `C001`), `Q17` (ChatGPT gratuito y Drive; bloquea el de `C002`).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
-- **Próximos pasos:** `Q7` (y `Q17`, `Q19` para el diseño) → cerrar `T0.3` → `T0.4`.
+- **Próximos pasos:** `T0.4` (agregar la tarea del piloto manual de `D40` y
+  recalcular el cronograma) → `Q19` → `T1.1`.
 
 ## Mapa de extractos por fase (qué leer/tocar sin abrir todo)
 Convención de anclas: `memoria.md` → `§n`, `Dn`, `Qn`; specs → `<CAP>-Rn`;
