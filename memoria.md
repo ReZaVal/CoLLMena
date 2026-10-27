@@ -649,12 +649,34 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   la rama; el `push` y el PR siguen pidiendo confirmación (`agente.md §4`).
 - **Razón:** el dueño no la dio más allá de aprobar la recomendación.
 - **Alternativas rechazadas:** —
-- **Impacto:** excepción puntual: en el PR #1 de S-15 el dueño pidió
-  expresamente que el agente lo fusionara, y así se hizo (merge commit
-  `e7aa191`; la estrategia de fusión fue un detalle del agente). Si quiere que
-  el agente fusione en adelante, es una decisión nueva. Cierra `Q21` salvo la
-  protección de `main`, que pasa a `Q22`. Las reglas operativas se recogen en
-  `agente.md §8` (`M4`).
+- **Impacto:** en S-15 el dueño pidió expresamente que el agente fusionara el
+  PR #1 y el PR #2, y así se hizo (merge commits `e7aa191` y `1fb9ed5`; la
+  estrategia de fusión fue un detalle del agente). Quién fusiona se precisa en
+  `D38`. Cierra `Q21` salvo la protección de `main`, que pasa a `Q22`. Las
+  reglas operativas se recogen en `agente.md §8` (`M4`).
+
+### D38 — El agente fusiona un PR solo cuando el dueño lo pide expresamente
+- **Decisión:** el agente **fusiona un PR solo cuando el dueño se lo pide
+  expresamente en la sesión** (dueño, S-15). Sin esa petición, revisar y
+  fusionar lo hace el dueño (`D37`).
+- **Razón:** el dueño no la dio. Contexto: en S-15 pidió fusionar el PR #1 y el
+  PR #2.
+- **Alternativas rechazadas:** —
+- **Impacto:** precisa `D37` y `agente.md §8`. El `push` y la creación del PR
+  siguen pidiendo confirmación (`agente.md §4`); una misma petición del dueño
+  puede cubrir push, PR y fusión, como ocurrió en S-15. **Inferencia del
+  agente, a confirmar:** la petición vale para los PR que el dueño nombre o
+  describa en esa sesión, no para otros.
+
+### D39 — `main` no se protege en GitHub: las reglas se mantienen por convención
+- **Decisión:** el dueño decide **no proteger `main`** con reglas técnicas de
+  GitHub y dejar las reglas de ramas y PR **por convención** (dueño, S-15).
+- **Razón:** el dueño no la dio.
+- **Alternativas rechazadas:** activar protección de `main` en GitHub (exigir
+  PR; bloquear force-push y borrado).
+- **Impacto:** cierra `Q22`. Nada técnico impide un push directo a `main`: que
+  no ocurra depende de que el agente cumpla `agente.md §8` (`D35`, `D37`,
+  `D38`). Solo se reabre si el dueño lo pide.
 
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
@@ -723,7 +745,5 @@ formato portable de un proyecto (motor) y el servidor MCP.
   del dueño). Deja abierta `Q21`.
 - [x] ~~**Q21**~~ → cerrada en S-15 como `D37` (convención de ramas y PR),
   salvo la protección de `main`, que pasa a `Q22`.
-- [ ] **Q22** — ¿Se protege `main` en GitHub (exigir PR o revisión antes de
-  fusionar)? `D35` y `D37` prohíben los commits directos por convención; una
-  protección técnica los impediría también por error. Cambiar los ajustes del
-  repositorio es decisión del dueño (`agente.md §4`). No bloquea.
+- [x] ~~**Q22**~~ → cerrada en S-15 como `D39` (`main` sin protección técnica;
+  las reglas de ramas y PR se mantienen por convención).
