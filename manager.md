@@ -95,8 +95,8 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
 - **Abiertas que más pesan:** `Q19` (quién elige el framework; bloquea el
   diseño de `C001`), `Q17` (ChatGPT gratuito y Drive; bloquea el de `C002`).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
-- **Próximos pasos:** `T1.15` (armar el harness manual; traer o recrear
-  `local_privado/glosario.md`, que no está en este clon) → `T1.16` 🔒 →
+- **Próximos pasos:** `T1.15` (armar el harness manual; antes, recrear
+  `local_privado/glosario.md` con el dictado del dueño, `learn.md L1`) → `T1.16` 🔒 →
   `T1.1`; `Q19` antes de `T1.2`.
 
 ## Mapa de extractos por fase (qué leer/tocar sin abrir todo)
