@@ -81,6 +81,8 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   obligatorio; `D31` Q4 es referencial (prueba de producto). Cerradas `Q3`,
   `Q4`, `Q5`, `Q9`, `Q11`, `Q12`, `Q16`, `Q18`. `D32`: cada panal elige un
   framework refinado del SDD; lectura de Drive por LLM verificada (`§2.6`).
+- **S-15:** `D33` las skills de superpowers complementan al harness
+  (`agente.md` manda); abierta `Q20` (cómo se integran).
 - **Abiertas que más pesan:** `Q7` (cuándo arranca el piloto), `Q17` (ChatGPT gratuito y Drive), `Q19` (quién elige
   el framework).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.

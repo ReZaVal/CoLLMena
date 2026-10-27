@@ -563,6 +563,18 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
 - **Impacto:** cierra `Q16`. Quién elige el framework y qué frameworks hay
   queda en `Q19`. Es el tema central del perfil de `C001` (`PERFIL`).
 
+### D33 — Las skills de superpowers complementan al harness
+- **Decisión:** el dueño quiere que las skills del plugin *superpowers*
+  **complementen** al harness de CoLLMena (dueño, S-15), eligiendo entre
+  reemplazarlo, complementarlo o apoyarlo solo puntualmente.
+- **Razón:** el dueño no la dio. Contexto: el plugin quedó instalado y sus
+  skills aparecen disponibles en la sesión.
+- **Alternativas rechazadas:** que superpowers reemplace al harness.
+- **Impacto:** `agente.md` sigue siendo el contrato y manda ante cualquier
+  conflicto (ya lo dicen las instrucciones del proyecto); el flujo de
+  `manager.md`/`planner.md` y las puertas P1-P5 no se sustituyen. Qué skill se
+  usa en qué momento y cómo se resuelven los solapes queda en `Q20`.
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -625,3 +637,16 @@ formato portable de un proyecto (motor) y el servidor MCP.
   diseño de `C001`.
 - [x] ~~**Q18**~~ → cerrada en S-14 como `D27` (mapa de contexto + conversión
   a texto).
+- [ ] **Q20** — ¿Cómo se complementan superpowers y el harness (`D33`)?
+  Solapes que se ven por las descripciones de las skills (falta leer cada
+  `SKILL.md` para confirmarlos): `brainstorming` y `writing-plans` frente a
+  propuesta/diseño y las puertas P1-P5; `using-superpowers` (invocar skills
+  antes de cualquier respuesta) frente al orden de lectura de `agente.md §2`.
+  Recomendación del agente, a confirmar: el protocolo de inicio de `agente.md`
+  va siempre primero; usar superpowers en la ejecución de tareas ya aprobadas
+  (`test-driven-development`, `systematic-debugging`,
+  `verification-before-completion` junto al punto 4 de `agente.md §6`,
+  `requesting-code-review`); dejar `brainstorming` y `writing-plans` fuera del
+  diseño de cambios, que ya cubren `propuesta.md`/`diseno.md`/P1-P5, salvo que
+  el dueño decida otra cosa. Decide el dueño. No bloquea la Fase 0; conviene
+  resolverla antes de la primera tarea que implemente código.
