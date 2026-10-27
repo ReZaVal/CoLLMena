@@ -649,12 +649,24 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   la rama; el `push` y el PR siguen pidiendo confirmación (`agente.md §4`).
 - **Razón:** el dueño no la dio más allá de aprobar la recomendación.
 - **Alternativas rechazadas:** —
-- **Impacto:** excepción puntual: en el PR #1 de S-15 el dueño pidió
-  expresamente que el agente lo fusionara, y así se hizo (merge commit
-  `e7aa191`; la estrategia de fusión fue un detalle del agente). Si quiere que
-  el agente fusione en adelante, es una decisión nueva. Cierra `Q21` salvo la
-  protección de `main`, que pasa a `Q22`. Las reglas operativas se recogen en
-  `agente.md §8` (`M4`).
+- **Impacto:** en S-15 el dueño pidió expresamente que el agente fusionara el
+  PR #1 y el PR #2, y así se hizo (merge commits `e7aa191` y `1fb9ed5`; la
+  estrategia de fusión fue un detalle del agente). Quién fusiona se precisa en
+  `D38`. Cierra `Q21` salvo la protección de `main`, que pasa a `Q22`. Las
+  reglas operativas se recogen en `agente.md §8` (`M4`).
+
+### D38 — El agente fusiona un PR solo cuando el dueño lo pide expresamente
+- **Decisión:** el agente **fusiona un PR solo cuando el dueño se lo pide
+  expresamente en la sesión** (dueño, S-15). Sin esa petición, revisar y
+  fusionar lo hace el dueño (`D37`).
+- **Razón:** el dueño no la dio. Contexto: en S-15 pidió fusionar el PR #1 y el
+  PR #2.
+- **Alternativas rechazadas:** —
+- **Impacto:** precisa `D37` y `agente.md §8`. El `push` y la creación del PR
+  siguen pidiendo confirmación (`agente.md §4`); una misma petición del dueño
+  puede cubrir push, PR y fusión, como ocurrió en S-15. **Inferencia del
+  agente, a confirmar:** la petición vale para los PR que el dueño nombre o
+  describa en esa sesión, no para otros.
 
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
