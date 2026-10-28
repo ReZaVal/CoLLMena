@@ -720,7 +720,25 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   el grupo sigue siendo una prueba de producto (`D31`), sin cobro, salvo que
   el dueño diga otra cosa; (c) si la parte cobrable depende del servidor MCP
   (`D6`), podría quedar al alcance solo de planes de pago de los LLM
-  (`§2.2`), en tensión con `D20` (ver `Q23`).
+  (`§2.2`), en tensión con `D20` (ver `Q23`, cerrada por `D42`).
+
+### D42 — El cliente de CoLLMena es quien ya paga su LLM
+- **Decisión:** el cliente que paga CoLLMena es la persona que **ya paga su
+  LLM** (dueño, S-17).
+- **Razón:** no indicada por el dueño. Contexto: la orquestación llega por el
+  servidor MCP (`D6`) y en ChatGPT los conectores propios exigen plan de pago
+  (`§2.2`).
+- **Alternativas rechazadas:** llevar la orquestación por otro canal para
+  alcanzar también a quien usa un LLM gratuito.
+- **Impacto:** cierra `Q23`. Precisa `D41` y acota `Q6`: el cobro por
+  integrante o institucional se dirige a usuarios de LLM de pago.
+  **Inferencias del agente, a confirmar:** (a) `D20` sigue valiendo para el
+  piloto manual de la Fase 1 (cada uno con su plan, también el gratuito),
+  pero la plataforma de pago de la Fase 2 sí puede depender de funciones de
+  planes de pago de los LLM: esto corrige el «el MVP no puede depender» de
+  `D20`; (b) falta decidir qué pasa en un grupo mixto, si un integrante usa
+  un LLM gratuito (¿queda fuera, entra con menos funciones o lo cubre la
+  licencia institucional?); se suma a `Q6`.
 
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
@@ -738,7 +756,9 @@ formato portable de un proyecto (motor) y el servidor MCP.
 - [ ] **Q6** — Forma de cobro de la plataforma. Acotada en S-17 por `D41`:
   se cobra por orquestar; el kit manual no es gratuito ni abierto. Candidatas:
   **por integrante** y **institucional** (la escuela paga por sus grupos);
-  pueden combinarse. Falta: elegir, precio y quién paga en el grupo. No
+  pueden combinarse; el cliente es quien ya paga su LLM (`D42`). Falta:
+  elegir, precio, quién paga en el grupo y qué pasa con un integrante que
+  usa un LLM gratuito. No
   bloquea la fase 1; sí la fase 3.
 - [x] ~~**Q7**~~ → cerrada en S-16 como `D40` (piloto temprano manual;
   marzo de 2027 es fecha referencial).
@@ -785,9 +805,9 @@ formato portable de un proyecto (motor) y el servidor MCP.
   salvo la protección de `main`, que pasa a `Q22`.
 - [x] ~~**Q22**~~ → cerrada en S-15 como `D39` (`main` sin protección técnica;
   las reglas de ramas y PR se mantienen por convención).
-- [ ] **Q23** — Si lo que se cobra (la orquestación, `D41`) llega por el
+- [x] ~~**Q23**~~ → cerrada en S-17 como `D42` (el cliente es quien ya paga
+  su LLM). Pregunta original: si lo que se cobra (la orquestación, `D41`) llega por el
   servidor MCP (`D6`) y en ChatGPT los conectores propios exigen plan de pago
   (`§2.2`), ¿el cliente que paga CoLLMena es el que ya paga su LLM, o la
   orquestación debe llegar por otro canal para cumplir `D20`? Inferencia del
-  agente (S-17), a confirmar. Bloquea: diseño de `ACCESO` en la Fase 2 y la
-  forma de cobro de `Q6`.
+  agente (S-17).
