@@ -702,6 +702,26 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   grupo pide confirmación del dueño (`agente.md §4`) y el grupo decide si lo
   usa y cómo (`D4`).
 
+### D41 — CoLLMena cobra por orquestar el trabajo; el kit manual no es gratuito ni abierto
+- **Decisión:** (1) los ingresos vienen de la **plataforma que orquesta el
+  trabajo** del grupo, que funciona sobre Google Drive y sobre los LLM de
+  cada persona; (2) el **kit manual** (el harness en .txt del piloto) **no
+  será gratuito ni de código abierto** (dueño, S-17). La forma de cobro aún no
+  está definida: sigue en `Q6`.
+- **Razón:** el almacén y el LLM los pone el usuario (`D7`, `D20`); lo que
+  aporta CoLLMena es la orquestación, y por eso se cobra.
+- **Alternativas rechazadas:** el kit manual gratuito como vía de entrada
+  (freemium, opción (c) del agente en S-17); el kit como código abierto.
+- **Impacto:** acota `Q6`: la licencia ya no es abierta y las formas de cobro
+  candidatas son **por integrante** y **institucional**. Los tokens los paga
+  cada usuario con su LLM, así que el costo por cliente es sobre todo el
+  servidor. **Inferencias del agente, a confirmar:** (a) el kit manual también
+  es producto cobrable, no solo la plataforma automatizada; (b) el piloto con
+  el grupo sigue siendo una prueba de producto (`D31`), sin cobro, salvo que
+  el dueño diga otra cosa; (c) si la parte cobrable depende del servidor MCP
+  (`D6`), podría quedar al alcance solo de planes de pago de los LLM
+  (`§2.2`), en tensión con `D20` (ver `Q23`).
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -715,8 +735,11 @@ formato portable de un proyecto (motor) y el servidor MCP.
 - [x] ~~**Q4**~~ → cerrada en S-14 como `D31` (datos referenciales; el trabajo
   de tesis es una prueba de producto).
 - [x] ~~**Q5**~~ → cerrada en S-14 como `D23` (el profesor no tiene rol).
-- [ ] **Q6** — Modelo comercial y licencia (pago, freemium, código abierto).
-  No bloquea la fase 1; sí la fase 3.
+- [ ] **Q6** — Forma de cobro de la plataforma. Acotada en S-17 por `D41`:
+  se cobra por orquestar; el kit manual no es gratuito ni abierto. Candidatas:
+  **por integrante** y **institucional** (la escuela paga por sus grupos);
+  pueden combinarse. Falta: elegir, precio y quién paga en el grupo. No
+  bloquea la fase 1; sí la fase 3.
 - [x] ~~**Q7**~~ → cerrada en S-16 como `D40` (piloto temprano manual;
   marzo de 2027 es fecha referencial).
 - [x] ~~**Q8**~~ → cerrada en S-05 como `D11` (Office + .txt).
@@ -762,3 +785,9 @@ formato portable de un proyecto (motor) y el servidor MCP.
   salvo la protección de `main`, que pasa a `Q22`.
 - [x] ~~**Q22**~~ → cerrada en S-15 como `D39` (`main` sin protección técnica;
   las reglas de ramas y PR se mantienen por convención).
+- [ ] **Q23** — Si lo que se cobra (la orquestación, `D41`) llega por el
+  servidor MCP (`D6`) y en ChatGPT los conectores propios exigen plan de pago
+  (`§2.2`), ¿el cliente que paga CoLLMena es el que ya paga su LLM, o la
+  orquestación debe llegar por otro canal para cumplir `D20`? Inferencia del
+  agente (S-17), a confirmar. Bloquea: diseño de `ACCESO` en la Fase 2 y la
+  forma de cobro de `Q6`.
