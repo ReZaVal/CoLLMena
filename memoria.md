@@ -754,11 +754,10 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   el producto **sí puede depender de funciones de planes de pago** de los LLM.
   Sigue de `D20` que cada persona inicia sesión en su propia app, con su
   propio LLM. Resuelve las dos inferencias de `D42`: no hay grupos mixtos.
-  **Inferencias del agente, a confirmar:** (a) `Q17` deja de tratar los planes
-  gratuitos y pasa a verificar qué leen de Drive los planes de pago; (b) el
-  piloto manual (`D40`, Fase 1) es una prueba de producto (`D31`): si un
-  integrante del grupo usa un LLM gratuito puede participar igual, y lo que se
-  observe sirve como evidencia.
+  **Inferencia del agente, a confirmar:** `Q17` deja de tratar los planes
+  gratuitos y pasa a verificar qué leen de Drive los planes de pago. **En el
+  grupo piloto todos usan un LLM** (dueño, S-17): el piloto manual (`D40`)
+  encaja con este perfil de comprador.
 
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
