@@ -54,8 +54,9 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
 --strict --cambio Cnnn` en verde. Recién ahí se implementa.
 
 ## Contexto activo (lo primero que se lee al arrancar; mantener corto)
-- **En qué estoy:** Fase 0. `T0.1` ✅ (S-13) — repo `ReZaVal/CoLLMena`
-  publicado (privado). `T0.3` ✅ (S-16, `D40`). Toca `T0.4`. Ningún
+- **En qué estoy:** Fase 1 🟡: `T1.15` ✅ (S-17, kit aprobado por el dueño);
+  sigue `T1.16` 🔒. `T0.1` ✅ (S-13) — repo `ReZaVal/CoLLMena`
+  publicado (privado). `T0.3` y `T0.4` ✅ (S-16, `D40`). Ningún
   cambio aprobado. `D18`: el nombre es CoLLMena en todos lados, igual que el repo.
 - **Cambió en las últimas sesiones (S-02 a S-04):** arquitectura aprobada
   (`D6`); Drive como primer almacén (`D7`); problema del producto desde el
@@ -89,12 +90,22 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   de `D33`-`D38`. `D39`: `main` sin protección técnica, por convención.
   Cerradas `Q20`, `Q21` y `Q22`.
 - **S-16:** `D40` piloto temprano manual (opción a de `Q7`); marzo de 2027 es
-  fecha referencial, no restricción dura. Cerradas `Q7` y `T0.3`.
+  fecha referencial, no restricción dura. Cerradas `Q7` y `T0.3`. `T0.4`:
+  nuevas `T1.15`-`T1.16` (piloto manual) y cronograma recalculado; cierre
+  estimado de la Fase 1: 2027-01-24.
+- **S-17:** `T1.15` ✅: kit del piloto manual en `local_privado/piloto/`
+  (plantillas .txt para ChatGPT y Claude); inferencias a confirmar en
+  `local_privado/piloto_revision_T1.15.md`; nueva `M6` (modo sin escritura).
+  `D41`: CoLLMena cobra por orquestar; el kit manual no es gratuito ni
+  abierto; `Q6` acotada a cobro por integrante o institucional; `Q23` → `D42`:
+  el cliente es quien ya paga su LLM; `D43`: todos los usuarios pagan un
+  LLM (corrige `D20`).
 - **Abiertas que más pesan:** `Q19` (quién elige el framework; bloquea el
   diseño de `C001`), `Q17` (ChatGPT gratuito y Drive; bloquea el de `C002`).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
-- **Próximos pasos:** `T0.4` (agregar la tarea del piloto manual de `D40` y
-  recalcular el cronograma) → `Q19` → `T1.1`.
+- **Próximos pasos:** `T1.16` 🔒 (subir el kit al Drive del grupo, con
+  confirmación) →
+  `T1.1`; `Q19` antes de `T1.2`.
 
 ## Mapa de extractos por fase (qué leer/tocar sin abrir todo)
 Convención de anclas: `memoria.md` → `§n`, `Dn`, `Qn`; specs → `<CAP>-Rn`;
@@ -113,6 +124,7 @@ no existe donde dice esta tabla, es un error de la tabla → corregirla aquí.
 ### Fase 1 — Piloto MBA sin servidor
 | Tarea | Leer | Tocar |
 |---|---|---|
+| T1.15-T1.16 (piloto manual, `D40`) | skill base, `memoria.md D4`, `D21`, `D22`, `D40`, `Q17` | `local_privado/piloto/`, Drive del grupo (con confirmación), `learn.md` |
 | T1.1-T1.5 (C001) | `memoria.md §2.4`, `D3`, `D4`, `specs/PERFIL.md`, `specs/COLAB.md` | `cambios/C001-*/`, (al archivar) `specs/` |
 | T1.6-T1.10 (C002) | `memoria.md §2.2`, `D1`, `specs/ACCESO.md`, `specs/VALID.md` | `cambios/C002-*/` |
 
@@ -120,17 +132,20 @@ no existe donde dice esta tabla, es un error de la tabla → corregirla aquí.
 
 ## Fases del proyecto
 
-### Fase 0 — Arranque y alineación ⬅ actual
+### Fase 0 — Arranque y alineación ✅
 Dueño: `memoria.md`.
 - [x] Instalar el harness (2026-10-25).
-- [ ] Repo publicado en GitHub (`Q1`).
+- [x] Repo publicado en GitHub (`D10`, `D18`, S-13).
 - [x] Arquitectura aprobada (`D6`, S-02).
-- [ ] Datos del MBA y acuerdo del grupo (`Q4` referencial por `D31`, pendiente confirmar que no exige acuerdo formal; `Q3` y `Q5` cerradas en S-14).
+- [x] Datos del MBA y acuerdo del grupo (`Q3`, `Q5` cerradas en S-14; `Q4` referencial por `D31`; `Q7` → `D40`, S-16).
+- [x] Cronograma recalculado (`T0.4`, S-16).
 Criterio de salida: `Q1`, `Q2`, `Q3` y `Q4` cerradas como `Dn`; cronograma
 recalculado con la fecha real de entrega del MBA.
 
-### Fase 1 — Piloto MBA sin servidor
+### Fase 1 — Piloto MBA sin servidor ⬅ actual
 Dueño: `cambios/` + `specs/`.
+- Piloto manual (`D40`): el grupo usa un harness hecho a mano mientras se
+  construye el kit (`T1.15`-`T1.16`).
 - C001 — Crear el perfil MBA (`PERFIL`, `COLAB` en modo manual).
 - C002 — Empaquetar el kit portable para Claude y ChatGPT (`ACCESO`, `VALID`
   asistida por el LLM).
@@ -154,8 +169,8 @@ detallar hasta cerrar la Fase 2.
 ## Estado actual (actualizar en cada sesión)
 | Fase | Estado |
 |---|---|
-| 0 — Arranque y alineación | 🟡 en curso |
-| 1 — Piloto MBA sin servidor | ⬜ no iniciada |
+| 0 — Arranque y alineación | ✅ completada (S-16) |
+| 1 — Piloto MBA sin servidor | 🟡 en curso (S-17) |
 | 2 — Servidor MCP + adaptador | ⬜ no iniciada |
 | 3 — Producto | ⬜ no iniciada |
 Convención: ⬜ no iniciada · 🟡 en curso · ✅ completada · 🔴 bloqueada (por qué).

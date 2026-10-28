@@ -426,6 +426,9 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   técnicos).
 - **Alternativas rechazadas:** exigir un plan de pago; configurar conexiones
   técnicas por persona.
+- **Corregida por `D43` (S-17):** todos los usuarios pagan un LLM; el producto
+  sí puede depender de funciones de pago. Queda vigente el inicio de sesión
+  propio en la app de cada uno.
 - **Impacto:** cierra `Q3` y `Q9` (como principio). No reabre `D6`, pero el
   piloto y el MVP **no pueden depender** de funciones exclusivas de planes de
   pago (p. ej. servidor MCP propio en ChatGPT, `§2.2`). Qué puede leer cada LLM
@@ -702,6 +705,60 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   grupo pide confirmación del dueño (`agente.md §4`) y el grupo decide si lo
   usa y cómo (`D4`).
 
+### D41 — CoLLMena cobra por orquestar el trabajo; el kit manual no es gratuito ni abierto
+- **Decisión:** (1) los ingresos vienen de la **plataforma que orquesta el
+  trabajo** del grupo, que funciona sobre Google Drive y sobre los LLM de
+  cada persona; (2) el **kit manual** (el harness en .txt del piloto) **no
+  será gratuito ni de código abierto** (dueño, S-17). La forma de cobro aún no
+  está definida: sigue en `Q6`.
+- **Razón:** el almacén y el LLM los pone el usuario (`D7`, `D20`); lo que
+  aporta CoLLMena es la orquestación, y por eso se cobra.
+- **Alternativas rechazadas:** el kit manual gratuito como vía de entrada
+  (freemium, opción (c) del agente en S-17); el kit como código abierto.
+- **Impacto:** acota `Q6`: la licencia ya no es abierta y las formas de cobro
+  candidatas son **por integrante** y **institucional**. Los tokens los paga
+  cada usuario con su LLM, así que el costo por cliente es sobre todo el
+  servidor. **Inferencias del agente, a confirmar:** (a) el kit manual también
+  es producto cobrable, no solo la plataforma automatizada; (b) el piloto con
+  el grupo sigue siendo una prueba de producto (`D31`), sin cobro, salvo que
+  el dueño diga otra cosa; (c) si la parte cobrable depende del servidor MCP
+  (`D6`), podría quedar al alcance solo de planes de pago de los LLM
+  (`§2.2`), en tensión con `D20` (ver `Q23`, cerrada por `D42`).
+
+### D42 — El cliente de CoLLMena es quien ya paga su LLM
+- **Decisión:** el cliente que paga CoLLMena es la persona que **ya paga su
+  LLM** (dueño, S-17).
+- **Razón:** no indicada por el dueño. Contexto: la orquestación llega por el
+  servidor MCP (`D6`) y en ChatGPT los conectores propios exigen plan de pago
+  (`§2.2`).
+- **Alternativas rechazadas:** llevar la orquestación por otro canal para
+  alcanzar también a quien usa un LLM gratuito.
+- **Impacto:** cierra `Q23`. Precisa `D41` y acota `Q6`: el cobro por
+  integrante o institucional se dirige a usuarios de LLM de pago.
+  **Inferencias del agente, a confirmar:** (a) `D20` sigue valiendo para el
+  piloto manual de la Fase 1 (cada uno con su plan, también el gratuito),
+  pero la plataforma de pago de la Fase 2 sí puede depender de funciones de
+  planes de pago de los LLM: esto corrige el «el MVP no puede depender» de
+  `D20`; (b) falta decidir qué pasa en un grupo mixto, si un integrante usa
+  un LLM gratuito (¿queda fuera, entra con menos funciones o lo cubre la
+  licencia institucional?); se suma a `Q6`. Ambas resueltas por `D43`.
+
+### D43 — Todos los usuarios de CoLLMena pagan un LLM (perfil del comprador)
+- **Decisión:** **todos** los usuarios del producto pagan un LLM; es parte de
+  cómo el dueño define al comprador de CoLLMena (dueño, S-17). Generaliza
+  `D42`.
+- **Razón:** es la definición del comprador que hace el dueño.
+- **Alternativas rechazadas:** usuarios con LLM de plan gratuito dentro del
+  producto (lo que admitía `D20`).
+- **Impacto:** corrige `D20`: los planes ya no van «de gratuitos a de pago»;
+  el producto **sí puede depender de funciones de planes de pago** de los LLM.
+  Sigue de `D20` que cada persona inicia sesión en su propia app, con su
+  propio LLM. Resuelve las dos inferencias de `D42`: no hay grupos mixtos.
+  **Inferencia del agente, a confirmar:** `Q17` deja de tratar los planes
+  gratuitos y pasa a verificar qué leen de Drive los planes de pago. **En el
+  grupo piloto todos usan un LLM** (dueño, S-17): el piloto manual (`D40`)
+  encaja con este perfil de comprador.
+
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
 formato portable de un proyecto (motor) y el servidor MCP.
@@ -715,8 +772,12 @@ formato portable de un proyecto (motor) y el servidor MCP.
 - [x] ~~**Q4**~~ → cerrada en S-14 como `D31` (datos referenciales; el trabajo
   de tesis es una prueba de producto).
 - [x] ~~**Q5**~~ → cerrada en S-14 como `D23` (el profesor no tiene rol).
-- [ ] **Q6** — Modelo comercial y licencia (pago, freemium, código abierto).
-  No bloquea la fase 1; sí la fase 3.
+- [ ] **Q6** — Forma de cobro de la plataforma. Acotada en S-17 por `D41`:
+  se cobra por orquestar; el kit manual no es gratuito ni abierto. Candidatas:
+  **por integrante** y **institucional** (la escuela paga por sus grupos);
+  pueden combinarse; todos los usuarios pagan un LLM (`D42`, `D43`). Falta:
+  elegir, precio y quién paga en el grupo. No
+  bloquea la fase 1; sí la fase 3.
 - [x] ~~**Q7**~~ → cerrada en S-16 como `D40` (piloto temprano manual;
   marzo de 2027 es fecha referencial).
 - [x] ~~**Q8**~~ → cerrada en S-05 como `D11` (Office + .txt).
@@ -741,7 +802,10 @@ formato portable de un proyecto (motor) y el servidor MCP.
   abogado. No bloquea el piloto; bloquea cualquier lanzamiento público.
 - [x] ~~**Q16**~~ → cerrada en S-14 como `D32` (cada panal elige un framework
   refinado del SDD para que el grupo fije sus reglas). Deja abierta `Q19`.
-- [ ] **Q17** — Planes gratuitos y lectura de Drive (`D20`). Verificado en
+- [ ] **Q17** — Planes gratuitos y lectura de Drive (`D20`). **S-17:** con
+  `D43` (todos pagan un LLM), inferencia del agente a confirmar: la pregunta
+  pasa a ser qué leen de Drive los planes de pago; lo de abajo sobre el plan
+  gratuito queda como antecedente. Verificado en
   S-14 con documentación oficial (`§2.6`): Claude (incluido el plan gratuito)
   y Gemini (con Workspace conectado) leen archivos de Drive; **ChatGPT: la
   documentación no confirma que el plan gratuito pueda conectar Drive**. Falta:
@@ -762,3 +826,9 @@ formato portable de un proyecto (motor) y el servidor MCP.
   salvo la protección de `main`, que pasa a `Q22`.
 - [x] ~~**Q22**~~ → cerrada en S-15 como `D39` (`main` sin protección técnica;
   las reglas de ramas y PR se mantienen por convención).
+- [x] ~~**Q23**~~ → cerrada en S-17 como `D42` (el cliente es quien ya paga
+  su LLM). Pregunta original: si lo que se cobra (la orquestación, `D41`) llega por el
+  servidor MCP (`D6`) y en ChatGPT los conectores propios exigen plan de pago
+  (`§2.2`), ¿el cliente que paga CoLLMena es el que ya paga su LLM, o la
+  orquestación debe llegar por otro canal para cumplir `D20`? Inferencia del
+  agente (S-17).

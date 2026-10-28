@@ -19,7 +19,7 @@ salvo que cambie el alcance.
 |---|---|---|
 | Ritmo | 1-2 sesiones/semana (se planifica con **1,5**) | Cronograma en semanas, no en días |
 | Duración de sesión | 30-60 min | Tareas muy pequeñas: una puerta o un entregable acotado por sesión |
-| Deadline de negocio | Producto: ninguno (fechas referenciales). **Piloto: entrega de la tesis del MBA en marzo de 2027** (día exacto pendiente, `Q4`; actualizado en S-02) | El piloto debe empezar con margen para que el grupo lo use en al menos un avance antes de marzo |
+| Deadline de negocio | Ninguno: fechas referenciales. La entrega de la tesis del MBA (marzo de 2027) también es referencial (`D31`, `D40`; actualizado en S-16) | El piloto manual (`D40`) arranca en cuanto cierra la Fase 0; el kit formal no tiene que llegar antes de marzo |
 | Arranque del plan | 2026-10-26 | Semana 1 = 2026-10-26 → 2026-11-01 |
 
 **Unidad de estimación: la sesión.** No se estima en horas. Una tarea que no
@@ -28,15 +28,18 @@ cabe en una sesión está mal partida → hay que partirla.
 ## 2. Resumen del proyecto en números
 | Fase | Tareas | Sesiones est. | Semanas est. (1,5 ses/sem) | Ventana referencial |
 |---|---|---|---|---|
-| 0 — Arranque y alineación | 4 | 4 | ~3 | 2026-10-26 → 2026-11-15 |
-| 1 — Piloto MBA sin servidor | 14 | 14 | ~9-10 | 2026-11-16 → 2027-01-24 |
+| 0 — Arranque y alineación | 5 | 4 est. · **16 reales** (S-01 a S-16) | 1 | 2026-10-25 → 2026-11-01 ✅ |
+| 1 — Piloto MBA sin servidor | 16 | 16 | ~11 | 2026-11-02 → 2027-01-24 |
 | 2 — Servidor MCP + adaptador | se detalla al cerrar la Fase 1 | — | — | — |
-| **Total planificado (Fases 0-1)** | 18 | 18 | ~12-13 | **cierre est. 2027-01-24** |
+| **Total planificado (Fases 0-1)** | 21 | 16 por delante (Fase 1) | ~12 | **cierre est. 2027-01-24** |
 
-⚠️ **Con el ritmo actual, el kit llega justo:** estaría listo (`T1.12`)
-cerca de la semana 11 (≈ enero 2027) y la entrega es en marzo de 2027. El
-grupo lo usaría solo ~6-8 semanas, y el problema de `memoria.md D8` lo sufre
-hoy. Ver §5, «Dónde se puede romper el plan», y `memoria.md Q7`.
+**Recalculado en S-16 (`T0.4`, `D40`).** La Fase 0 se estimó en 4 sesiones y
+costó 16: fueron sesiones cortas de decisión, casi todas el 2026-10-25, y
+cerraron 40 decisiones (`D1`-`D40`). Por eso no se re-estima el ritmo: sigue
+en 1,5 sesiones/semana hasta tener sesiones de ejecución con las que medirlo.
+La semana que ahorra la Fase 0 la usa el **piloto manual** (`T1.15`-`T1.16`):
+el grupo trabaja con un harness hecho a mano desde ≈ mediados de noviembre y
+el kit formal (`C001`, `C002`) llega hacia enero con evidencia de ese uso.
 
 El cierre estimado es una proyección aritmética, no una promesa: se
 **recalcula al cerrar cada fase** con las sesiones realmente gastadas.
@@ -69,7 +72,7 @@ Cierre: el checklist de `agente.md §6`.
 
 ## 4. Backlog de tareas por fase
 
-### Fase 0 — Arranque y alineación 🟡
+### Fase 0 — Arranque y alineación ✅
 Dueño: `memoria.md`. Criterio de salida (`manager.md`): `Q1-Q4` cerradas como
 `Dn` y cronograma recalculado.
 
@@ -79,7 +82,7 @@ Dueño: `memoria.md`. Criterio de salida (`manager.md`): `Q1-Q4` cerradas como
 | ✅ T0.1 🔒 | soporte | Elegir nombre (`Q1`) y publicar el repo en GitHub (privado) | T0.0 | 1 | — | `memoria.md D5`, `D7`, `D8`, `Q1` | remoto git, `memoria.md` | Repo privado con el commit inicial; `Q1` → `Dn` |
 | ✅ T0.2 🔒 | soporte | Revisar y aprobar/corregir la arquitectura | T0.0 | 1 | — | `memoria.md §2`, `Q2` | `memoria.md §3` (→ `D6`) | `Q2` cerrada como `D6` (S-02) |
 | ✅ T0.3 🔒 | soporte | Datos del MBA, acuerdo del grupo, planes de LLM y rol del profesor | T0.0 | 1 | — | `memoria.md Q3-Q5`, `Q7` | `memoria.md`, `local_privado/glosario.md` | `Q3` ✅ (S-14, `D20`) y `Q5` ✅ (`D23`); `Q4` referencial (`D31`); `Q7` ✅ (S-16, `D40`) |
-| ⬜ T0.4 | soporte | Recalcular el plan con la fecha real de entrega | T0.2, T0.3 | 1 | — | este archivo §1-§2 | este archivo §2, §4, §5 | Cronograma coherente con la entrega del MBA |
+| ✅ T0.4 | soporte | Recalcular el plan con la fecha real de entrega | T0.2, T0.3 | 1 | — | este archivo §1-§2 | este archivo §2, §4, §5 | Cronograma coherente con la entrega del MBA |
 
 **Riesgo de la fase:** que el grupo no acepte ser piloto (`Q4`). Entonces se
 busca otro proyecto grupal no tecnológico y el plan de la Fase 1 cambia.
@@ -91,7 +94,9 @@ un avance al profesor.
 
 | ID | Cambio | Tarea | Dep. | Ses. | Escenarios que cierra | Leer | Tocar | Criterio de salida |
 |---|---|---|---|---|---|---|---|---|
-| ⬜ T1.1 🔒 | C001 | Propuesta del perfil MBA (P1) | T0.4 | 1 | — | `memoria.md §2.4`, `D3`, `D4` | `cambios/C001-*/propuesta.md` | Aprobada por el usuario |
+| ✅ T1.15 | soporte | Armar a mano el harness MBA del piloto (`D40`): skill actual, vocabulario no técnico, documentos de control .txt (`D21`) | T0.4 | 1 | — | skill base, `memoria.md D21`, `D22`, `D25`, `D27`, `D40` | `local_privado/piloto/` | Carpeta lista y revisada por el dueño; `local_privado/glosario.md` presente y `local_privado/` ignorada |
+| ⬜ T1.16 🔒 | soporte | Arranque del piloto manual con el grupo (subir al Drive del grupo, primera sesión de uso) | T1.15 | 1 | — | `local_privado/piloto/`, `memoria.md D4`, `Q17` | Drive del grupo (con confirmación), `learn.md` | El grupo trabaja con el harness; primeros hallazgos anonimizados en `learn.md` (incluido lo que se vea de `Q17`) |
+| ⬜ T1.1 🔒 | C001 | Propuesta del perfil MBA (P1) | T1.16 | 1 | — | `memoria.md §2.4`, `D3`, `D4` | `cambios/C001-*/propuesta.md` | Aprobada por el usuario |
 | ⬜ T1.2 | C001 | Diseño + delta + verificar supuestos (P2-P3) | T1.1 | 1 | — | `specs/PERFIL.md`, `specs/COLAB.md` | `diseno.md`, `delta.md` | Ningún supuesto ⬜ |
 | ⬜ T1.3 🔒 | C001 | Disposición de preguntas + validación (P4-P5) | T1.2 | 1 | — | `diseno.md §6` | `diseno.md`, `delta.md` | `openspec.py validate --strict --cambio C001` en verde |
 | ⬜ T1.4 | C001 | Plantillas del perfil MBA (documentos del proyecto del grupo) | T1.3 | 1 | (se fijan en `T1.2`) | `diseno.md §1-2` | `perfiles/mba/` | Escenarios asignados en verde + «Verificado por» |
@@ -111,19 +116,21 @@ un avance al profesor.
 ## 5. Cronograma referencial
 | Semanas | Ventana | Fase | Tareas previstas | Hito |
 |---|---|---|---|---|
-| 1-3 | 2026-10-26 → 2026-11-15 | 0 | T0.1-T0.4 | 🏁 Arquitectura aprobada, datos del MBA |
+| 1 | 2026-10-25 → 2026-11-01 | 0 | T0.0-T0.4 | 🏁 Fase 0 cerrada (S-16) ✅ |
+| 2-3 | 2026-11-02 → 2026-11-15 | 1 | T1.15-T1.16 | 🏁 Piloto manual en uso |
 | 4-7 | 2026-11-16 → 2026-12-13 | 1 | T1.1-T1.6 | 🏁 Perfil MBA archivado (C001) |
-| 7-11 | 2026-12-07 → 2027-01-10 | 1 | T1.7-T1.12 | 🏁 Kit portable archivado (C002) |
-| 11-13 | 2027-01-04 → 2027-01-24 | 1 | T1.13-T1.14 | 🏁 Piloto en uso |
+| 8-11 | 2026-12-14 → 2027-01-10 | 1 | T1.7-T1.12 | 🏁 Kit portable archivado (C002) |
+| 12-13 | 2027-01-11 → 2027-01-24 | 1 | T1.13-T1.14 | 🏁 Grupo pasa del piloto manual al kit |
 
-**Ruta crítica:** `T0.2 → T0.4 → T1.1 → … → T1.12 → T1.13`. Todo retraso ahí
-desplaza el piloto.
+**Ruta crítica:** `T0.4 → T1.15 → T1.16 → T1.1 → … → T1.12 → T1.13`. `Q19`
+tiene que estar cerrada antes de `T1.2` y `Q17` antes de `T1.8`; si no, esas
+tareas quedan 🔴 y el cronograma se corre.
 
 **Dónde se puede romper el plan (y qué hacer):**
 1. **El kit llega tarde para el grupo** (con el plan base estaría hacia la
    semana 11, ≈ enero de 2027). **Resuelto en S-16 con `D40`: opción (a)**;
-   marzo de 2027 es fecha referencial. `T0.4` agrega la tarea del piloto
-   manual y recalcula esta tabla. Opciones que se evaluaron en `Q7`:
+   marzo de 2027 es fecha referencial. `T0.4` agregó `T1.15`-`T1.16` y
+   recalculó la tabla (S-16). Opciones que se evaluaron en `Q7`:
    - (a) **Piloto temprano manual:** en la Fase 0 se monta a mano un harness
      MBA para el grupo con el skill actual y vocabulario adaptado
      (≈ 2 sesiones). El grupo lo usa ya; `C001`/`C002` formalizan después,
@@ -160,7 +167,8 @@ que permite arrancar en frío la sesión que viene.
 | S-13 | 2026-10-25 | T0.1 | ✅ | Harness recuperado del zip del chat original (14 commits) y publicado en `ReZaVal/CoLLMena` (privado, `main`); historial sin datos del MBA; GitHub avisa que el repo se movió a `CoLLMena`; el dueño pide CoLLMena en todos los nombres → `D18` | **T0.3** (`Q7`, `Q11`, `Q12`, `Q15`, datos del MBA); luego T0.4 |
 | S-14 | 2026-10-25 | T0.3 (avance) | 🟡 | `D19` el MBA es un caso de uso; `D20` LLM de plan gratuito a pago, con inicio de sesión propio (cierra `Q3`, `Q9`); `D21` panal y .txt de control (cierra `Q11`); `D22` Drive + edición Google/Office + registro en cada carga (cierra `Q12`); `D23` el profesor sin rol y carpeta de contexto por panal (cierra `Q5`); `D24` el panal es un proyecto; `D25` el LLM redacta el registro y la persona confirma; `D26` contexto multiformato y ahorro de tokens; `D27` mapa de contexto + conversión a texto (cierra `Q18`); `D28` sin video ni audio; `D29` el panal define objetivo y reglas con SDD u otro framework; `D30` registro obligatorio; `D31` Q4 es referencial (prueba de producto con una tesis; cierra `Q4`); `D32` cada panal elige un framework refinado del SDD (cierra `Q16`); lectura de Drive por LLM verificada en `memoria.md §2.6`; abiertas `Q17` (ChatGPT gratuito sin confirmar) y `Q19` (quién elige el framework) | **T0.3** (`Q7`; `Q17` y `Q19` bloquean el diseño de C002/C001, no la Fase 0); luego T0.4 |
 | S-15 | 2026-10-26 | soporte (no planificada) | ✅ | Repo `CoLLMena` clonado en la sesión (protocolo de inicio corrido); `D33` las skills de superpowers complementan al harness (`agente.md` manda); leídas las 15 skills; `Q20` → `D34` (superpowers solo en la ejecución de tareas con código, tras P5), `D35` (ramas y PR) y `D36` (subagentes solo con permiso del dueño, con tarea y fin); PR #1 fusionado en `main` (`e7aa191`, a petición del dueño); `Q21` → `D37` (convención de ramas y PR; queda abierta `Q22`, protección de `main`); `M4` aplicada en `agente.md §8`; PR #2 fusionado (`1fb9ed5`, también a petición del dueño); `D38` el agente fusiona solo cuando el dueño lo pide expresamente en la sesión; `Q22` → `D39` (`main` sin protección técnica, por convención) | **T0.3** (`Q7`; `Q17` y `Q19` bloquean el diseño de C002/C001, no la Fase 0); luego T0.4 |
-| S-16 | 2026-10-26 | T0.3 | ✅ | `Q7` → `D40`: piloto temprano manual (opción a) y marzo de 2027 como fecha referencial; corregida la restricción dura de `memoria.md §1`; inferencias a confirmar en `D40` (el piloto manual no necesita cambio; Drive del grupo pide confirmación) | **T0.4** — agregar la tarea del piloto manual y recalcular el cronograma; `Q19` antes de `T1.1` |
+| S-16 | 2026-10-26 | T0.3, T0.4 | ✅ | `Q7` → `D40`: piloto temprano manual (opción a) y marzo de 2027 como fecha referencial; corregida la restricción dura de `memoria.md §1`; inferencias a confirmar en `D40` (el piloto manual no necesita cambio; Drive del grupo pide confirmación); `T0.4`: nuevas `T1.15` (armar el harness manual) y `T1.16` 🔒 (arranque con el grupo), `T1.1` pasa a depender de `T1.16`, cronograma recalculado (cierre est. 2027-01-24 sin cambio); **Fase 0 cerrada** | **T1.15** — armar el harness manual en `local_privado/piloto/` (antes: recrear `local_privado/glosario.md` con los seudónimos que dicta el dueño; el original se perdió, `learn.md L1`); `Q19` antes de `T1.2` |
+| S-17 | 2026-10-26 | T1.15 | ✅ | Kit del piloto manual armado en `local_privado/piloto/` (9 .txt: léeme, instrucciones para el asistente, panal, en qué estamos, decisiones, tareas, registro de cambios, mapa de contexto, aprendizajes; carpetas `contexto/` y `entregables/`), en plantilla para que lo llene el grupo, con instrucciones para ChatGPT y Claude; glosario de S-16 en uso; flujo «adjuntar y copiar de vuelta» por `memoria.md §2.6`; inferencias a confirmar en `local_privado/piloto_revision_T1.15.md`; nueva `M6`; glosario completado con lo que dictó el dueño (integrantes ficticios); el dueño aprobó el kit (2026-10-27) | **T1.16** 🔒 — subir el kit al Drive del grupo (con confirmación) y primera sesión de uso; `D41` (se cobra por orquestar; el kit manual no es gratuito ni abierto), `Q6` acotada (por integrante o institucional), `Q23` → `D42` (el cliente es quien ya paga su LLM); `D43` todos los usuarios pagan un LLM (corrige `D20`) |
 
 ## 7. Cómo se mantiene vivo este plan
 - Al cerrar cada tarea: ✅ en §4 + fila en §6. 30 segundos.

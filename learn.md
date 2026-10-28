@@ -30,7 +30,20 @@ raíz · Solución · Regla derivada → dónde vive.
 | — | (sin entradas aún) | | |
 
 ## 2. Log de errores
-(sin entradas aún)
+### L1 — `local_privado/` no viaja con el repo y el glosario se perdió
+- **Estado:** 🔴 Abierto (se resuelve al recrear el glosario en `T1.15`).
+- **Detectado en:** S-16, al cerrar `T0.4`.
+- **Tipo:** entorno.
+- **Síntoma:** `local_privado/glosario.md`, creado en S-02 en otra carpeta de
+  trabajo, no existe en el clon de S-15 y el dueño no encuentra el original.
+- **Causa raíz:** `local_privado/` está ignorada por git (a propósito) y nada
+  del harness pide respaldarla ni llevarla a un clon nuevo; el protocolo de
+  inicio de S-15 no comprobó que existiera.
+- **Solución:** el dueño dicta de nuevo los seudónimos y el agente recrea el
+  glosario en `T1.15`.
+- **Regla derivada → dónde vive:** pendiente (candidata: al clonar o cambiar
+  de máquina, comprobar `local_privado/` como paso del protocolo de inicio,
+  y que el dueño guarde una copia fuera del repo). Ver `M5`.
 
 ## 3. Errores de comportamiento del agente
 (sin entradas aún)
@@ -75,3 +88,27 @@ raíz · Solución · Regla derivada → dónde vive.
   necesita una política sobre herramientas externas y sobre el flujo de
   revisión del grupo.
 - **Estado:** ✅ aplicada en S-15 con visto bueno del dueño: `agente.md §8`
+
+### M5 — Los datos privados del proyecto no tienen dónde sobrevivir
+- **Origen:** `L1` (S-16).
+- **Problema:** lo que no entra al repo (`local_privado/`) vive en una sola
+  carpeta local: se pierde al clonar, cambiar de máquina o de entorno.
+- **Propuesta:** que el harness indique dónde se respalda lo privado (p. ej.
+  el almacén del grupo o una carpeta personal del dueño) y que el protocolo de
+  inicio compruebe que está. Para el producto: decidir dónde vive el material
+  privado de cada panal.
+- **Estado:** propuesta, sin visto bueno.
+
+### M6 — El skill base asume que el agente escribe los archivos
+- **Origen:** `T1.15` (S-17), al armar el kit del piloto manual.
+- **Problema:** el harness supone que el agente lee y escribe los documentos
+  de control. En un chat de ChatGPT o Claude sin conector que escriba en
+  Drive (y el de Claude no lista .txt, `memoria.md §2.6`), el agente solo
+  puede devolver texto: la persona lo copia y lo sube a mano. El cierre de
+  sesión pasa a depender de un paso manual que se puede olvidar.
+- **Propuesta:** que el skill contemple un modo «sin escritura»: el agente
+  entrega al cerrar, listo para copiar, la entrada de la bitácora y el texto
+  completo de cada archivo que cambió. Para el producto: el piloto mide si
+  este paso es tolerable; es insumo para `C002` y `Q17`.
+- **Estado:** propuesta, sin visto bueno; aplicada a prueba en el kit del
+  piloto (`local_privado/piloto/`).
