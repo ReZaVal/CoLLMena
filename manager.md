@@ -98,7 +98,8 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   `local_privado/piloto_revision_T1.15.md`; nueva `M6` (modo sin escritura).
   `D41`: CoLLMena cobra por orquestar; el kit manual no es gratuito ni
   abierto; `Q6` acotada a cobro por integrante o institucional; `Q23` → `D42`:
-  el cliente es quien ya paga su LLM.
+  el cliente es quien ya paga su LLM; `D43`: todos los usuarios pagan un
+  LLM (corrige `D20`).
 - **Abiertas que más pesan:** `Q19` (quién elige el framework; bloquea el
   diseño de `C001`), `Q17` (ChatGPT gratuito y Drive; bloquea el de `C002`).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.

@@ -426,6 +426,9 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   técnicos).
 - **Alternativas rechazadas:** exigir un plan de pago; configurar conexiones
   técnicas por persona.
+- **Corregida por `D43` (S-17):** todos los usuarios pagan un LLM; el producto
+  sí puede depender de funciones de pago. Queda vigente el inicio de sesión
+  propio en la app de cada uno.
 - **Impacto:** cierra `Q3` y `Q9` (como principio). No reabre `D6`, pero el
   piloto y el MVP **no pueden depender** de funciones exclusivas de planes de
   pago (p. ej. servidor MCP propio en ChatGPT, `§2.2`). Qué puede leer cada LLM
@@ -738,7 +741,24 @@ Se formaliza (o se corrige) en el diseño del cambio que cree el perfil MBA.
   planes de pago de los LLM: esto corrige el «el MVP no puede depender» de
   `D20`; (b) falta decidir qué pasa en un grupo mixto, si un integrante usa
   un LLM gratuito (¿queda fuera, entra con menos funciones o lo cubre la
-  licencia institucional?); se suma a `Q6`.
+  licencia institucional?); se suma a `Q6`. Ambas resueltas por `D43`.
+
+### D43 — Todos los usuarios de CoLLMena pagan un LLM (perfil del comprador)
+- **Decisión:** **todos** los usuarios del producto pagan un LLM; es parte de
+  cómo el dueño define al comprador de CoLLMena (dueño, S-17). Generaliza
+  `D42`.
+- **Razón:** es la definición del comprador que hace el dueño.
+- **Alternativas rechazadas:** usuarios con LLM de plan gratuito dentro del
+  producto (lo que admitía `D20`).
+- **Impacto:** corrige `D20`: los planes ya no van «de gratuitos a de pago»;
+  el producto **sí puede depender de funciones de planes de pago** de los LLM.
+  Sigue de `D20` que cada persona inicia sesión en su propia app, con su
+  propio LLM. Resuelve las dos inferencias de `D42`: no hay grupos mixtos.
+  **Inferencias del agente, a confirmar:** (a) `Q17` deja de tratar los planes
+  gratuitos y pasa a verificar qué leen de Drive los planes de pago; (b) el
+  piloto manual (`D40`, Fase 1) es una prueba de producto (`D31`): si un
+  integrante del grupo usa un LLM gratuito puede participar igual, y lo que se
+  observe sirve como evidencia.
 
 ## 4. Contrato de datos / estructura
 Aún no hay contrato entre sistemas. Nacerá con el cambio que defina el
@@ -756,9 +776,8 @@ formato portable de un proyecto (motor) y el servidor MCP.
 - [ ] **Q6** — Forma de cobro de la plataforma. Acotada en S-17 por `D41`:
   se cobra por orquestar; el kit manual no es gratuito ni abierto. Candidatas:
   **por integrante** y **institucional** (la escuela paga por sus grupos);
-  pueden combinarse; el cliente es quien ya paga su LLM (`D42`). Falta:
-  elegir, precio, quién paga en el grupo y qué pasa con un integrante que
-  usa un LLM gratuito. No
+  pueden combinarse; todos los usuarios pagan un LLM (`D42`, `D43`). Falta:
+  elegir, precio y quién paga en el grupo. No
   bloquea la fase 1; sí la fase 3.
 - [x] ~~**Q7**~~ → cerrada en S-16 como `D40` (piloto temprano manual;
   marzo de 2027 es fecha referencial).
@@ -784,7 +803,10 @@ formato portable de un proyecto (motor) y el servidor MCP.
   abogado. No bloquea el piloto; bloquea cualquier lanzamiento público.
 - [x] ~~**Q16**~~ → cerrada en S-14 como `D32` (cada panal elige un framework
   refinado del SDD para que el grupo fije sus reglas). Deja abierta `Q19`.
-- [ ] **Q17** — Planes gratuitos y lectura de Drive (`D20`). Verificado en
+- [ ] **Q17** — Planes gratuitos y lectura de Drive (`D20`). **S-17:** con
+  `D43` (todos pagan un LLM), inferencia del agente a confirmar: la pregunta
+  pasa a ser qué leen de Drive los planes de pago; lo de abajo sobre el plan
+  gratuito queda como antecedente. Verificado en
   S-14 con documentación oficial (`§2.6`): Claude (incluido el plan gratuito)
   y Gemini (con Workspace conectado) leen archivos de Drive; **ChatGPT: la
   documentación no confirma que el plan gratuito pueda conectar Drive**. Falta:
