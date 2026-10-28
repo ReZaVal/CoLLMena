@@ -54,8 +54,8 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
 --strict --cambio Cnnn` en verde. Recién ahí se implementa.
 
 ## Contexto activo (lo primero que se lee al arrancar; mantener corto)
-- **En qué estoy:** Fase 1 🟡: `T1.15` con el kit armado (S-17), falta la
-  revisión del dueño. `T0.1` ✅ (S-13) — repo `ReZaVal/CoLLMena`
+- **En qué estoy:** Fase 1 🟡: `T1.15` ✅ (S-17, kit aprobado por el dueño);
+  sigue `T1.16` 🔒. `T0.1` ✅ (S-13) — repo `ReZaVal/CoLLMena`
   publicado (privado). `T0.3` y `T0.4` ✅ (S-16, `D40`). Ningún
   cambio aprobado. `D18`: el nombre es CoLLMena en todos lados, igual que el repo.
 - **Cambió en las últimas sesiones (S-02 a S-04):** arquitectura aprobada
@@ -93,14 +93,14 @@ P4 Preguntas con disposición (🔒 usuario) → P5 `openspec.py validate
   fecha referencial, no restricción dura. Cerradas `Q7` y `T0.3`. `T0.4`:
   nuevas `T1.15`-`T1.16` (piloto manual) y cronograma recalculado; cierre
   estimado de la Fase 1: 2027-01-24.
-- **S-17:** `T1.15` 🟡: kit del piloto manual en `local_privado/piloto/`
+- **S-17:** `T1.15` ✅: kit del piloto manual en `local_privado/piloto/`
   (plantillas .txt para ChatGPT y Claude); inferencias a confirmar en
   `local_privado/piloto_revision_T1.15.md`; nueva `M6` (modo sin escritura).
 - **Abiertas que más pesan:** `Q19` (quién elige el framework; bloquea el
   diseño de `C001`), `Q17` (ChatGPT gratuito y Drive; bloquea el de `C002`).
 - **Cambios abiertos:** `C001` — 🟡 borrador, antes de P1.
-- **Próximos pasos:** cerrar `T1.15` (revisión del dueño del kit; datos
-  reales en `local_privado/glosario.md`, `learn.md L1`) → `T1.16` 🔒 →
+- **Próximos pasos:** `T1.16` 🔒 (subir el kit al Drive del grupo, con
+  confirmación) →
   `T1.1`; `Q19` antes de `T1.2`.
 
 ## Mapa de extractos por fase (qué leer/tocar sin abrir todo)
