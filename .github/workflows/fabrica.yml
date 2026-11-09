@@ -1,0 +1,25 @@
+# IA Factory — CI obligatorio para el merge automático (D4, D19, T2.5).
+# Check obligatorio: `tests`. Lo exige la protección de rama (scripts/fabrica/proteger-rama.sh).
+# PRUEBA de T2.5: aquí `tests` es solo una comprobación de humo (openspec.py compila).
+# `openspec validate --strict` hoy falla en main (C001 sin aprobar), así que no puede ser el check obligatorio.
+# Si cambias el nombre del job `tests`, cambia también CHECKS en proteger-rama.sh.
+name: fabrica
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m py_compile openspec.py
