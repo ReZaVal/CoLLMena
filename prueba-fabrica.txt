@@ -1,0 +1,1 @@
+Prueba de extremo a extremo de integrar.mjs (IA Factory T2.6). Archivo desechable.
